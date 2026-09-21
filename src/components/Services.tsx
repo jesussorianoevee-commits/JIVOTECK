@@ -6,100 +6,100 @@ import {
   TrendingUp, 
   Check, 
   ArrowRight,
-  Workflow
+  Layers
 } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const services = [
     {
-      id: 'automatizacion',
-      title: 'Automatización',
-      subtitle: 'Ingeniería de Control & Procesos Industriales',
-      description: 'Diseño e implementación de sistemas de control inteligente, programación de PLCs, integración de sensórica, buses de campo y gemelos digitales para maximizar la eficiencia y seguridad en planta.',
-      icon: Bot,
-      color: 'from-cyan-500/20 to-brand-blue/20',
-      borderColor: 'group-hover:border-brand-cyan',
-      textColor: 'text-brand-cyan',
-      badge: 'Hardware & Control',
+      id: 'programacion',
+      title: 'Programación & Software',
+      subtitle: 'Desarrollo a la Medida, Escalable y Moderno',
+      description: 'Construimos plataformas web, aplicaciones en la nube, APIs y software empresarial diseñados para resolver los retos operativos de tu organización con la máxima velocidad y seguridad.',
+      icon: Code2,
+      color: 'from-indigo-500/20 to-blue-500/20',
+      textColor: 'text-indigo-400',
+      badgeColor: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20',
+      badge: 'Software & Cloud',
       tags: [
-        'Programación de PLC & SCADA',
-        'Protocolos (Modbus, Profinet, EtherNet/IP)',
-        'Sensórica e Integración IoT',
-        'Optimización de Tiempos de Ciclo',
-        'Gemelos Digitales y Simulación'
+        'Desarrollo Web & SaaS a la Medida',
+        'Arquitecturas Cloud Escalables y Seguras',
+        'APIs RESTful y Conectores de Datos',
+        'Dashboards Operativos en Tiempo Real',
+        'Código Limpio y Mantenimiento Garantizado'
       ]
     },
     {
-      id: 'programacion',
-      title: 'Programación',
-      subtitle: 'Desarrollo de Software Moderno & Escalable',
-      description: 'Construcción de software a medida, aplicaciones web de alto rendimiento, microservicios, bases de datos optimizadas y dashboards en tiempo real diseñados con estándares de código de nivel mundial.',
-      icon: Code2,
-      color: 'from-sky-500/20 to-indigo-500/20',
-      borderColor: 'group-hover:border-sky-400',
-      textColor: 'text-sky-400',
-      badge: 'Full-Stack & Cloud',
+      id: 'automatizacion',
+      title: 'Automatización Inteligente',
+      subtitle: 'Ingeniería de Control y Procesos Eficientes',
+      description: 'Integramos sistemas de control y automatización para optimizar tus procesos operativos. Desde programación de PLCs y sensórica hasta supervisión digital para reducir costos y tiempos muertos.',
+      icon: Bot,
+      color: 'from-blue-500/20 to-cyan-500/20',
+      textColor: 'text-blue-400',
+      badgeColor: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
+      badge: 'Control & IoT',
       tags: [
-        'Desarrollo Web & SaaS a la Medida',
-        'Arquitectura Cloud & Microservicios',
-        'APIs RESTful & Conectores de Datos',
-        'Dashboards Operativos en Tiempo Real',
-        'Seguridad y Alta Concurrencia'
+        'Programación de PLCs y Sistemas SCADA',
+        'Integración de Sensórica y Redes Industriales',
+        'Optimización y Reducción de Tiempos de Ciclo',
+        'Monitoreo y Telemetría en Tiempo Real',
+        'Gemelos Digitales y Simulación de Procesos'
       ]
     },
     {
       id: 'orientacion',
       title: 'Orientación & Consultoría',
-      subtitle: 'Estrategia Tecnológica & Dirección Técnica',
-      description: 'Acompañamos a tu empresa en la toma de decisiones tecnológicas críticas. Auditamos infraestructura existente, evaluamos viabilidad técnica y trazamos hojas de ruta claras para acelerar tus proyectos.',
+      subtitle: 'Dirección Técnica y Acompañamiento Estratégico',
+      description: 'Acompañamos a directores y equipos en la toma de decisiones tecnológicas clave. Diagnosticamos tu infraestructura, identificamos oportunidades y trazamos planes de ejecución viables y rentables.',
       icon: Compass,
-      color: 'from-emerald-500/20 to-teal-500/20',
-      borderColor: 'group-hover:border-emerald-400',
-      textColor: 'text-emerald-400',
-      badge: 'Estrategia & Mentoring',
+      color: 'from-sky-500/20 to-indigo-500/20',
+      textColor: 'text-sky-400',
+      badgeColor: 'bg-sky-500/10 text-sky-300 border-sky-500/20',
+      badge: 'Estrategia & Asesoría',
       tags: [
-        'Diagnóstico y Auditoría Tecnológica',
-        'Hojas de Ruta de Transformación Digital',
-        'Selección de Arquitectura & Componentes',
-        'Optimización de Costos y Recursos',
-        'Supervisión y Asesoría Continuada'
+        'Diagnóstico y Auditoría de Sistemas',
+        'Hojas de Ruta para Transformación Digital',
+        'Selección Óptima de Tecnologías y Proveedores',
+        'Estimación y Mitigación de Riesgos Técnicos',
+        'Acompañamiento y Soporte Técnico Continuo'
       ]
     },
     {
       id: 'marketing',
       title: 'Marketing Tecnológico',
-      subtitle: 'Posicionamiento & Tracción para Startups y B2B',
-      description: 'El marketing para soluciones de tecnología e ingeniería requiere rigor y conocimiento técnico. Desarrollamos la narrativa de tu producto, generamos canales de adquisición B2B y posicionamos tu propuesta de valor.',
+      subtitle: 'Posicionamiento y Tracción para Negocios B2B',
+      description: 'Sabemos cómo comunicar productos técnicos y de ingeniería. Desarrollamos la propuesta de valor, posicionamiento digital y estrategias de adquisición que conectan tu empresa con clientes de alto valor.',
       icon: TrendingUp,
-      color: 'from-amber-500/20 to-orange-500/20',
-      borderColor: 'group-hover:border-amber-400',
-      textColor: 'text-amber-400',
-      badge: 'Crecimiento & Mercado',
+      color: 'from-purple-500/20 to-indigo-500/20',
+      textColor: 'text-purple-400',
+      badgeColor: 'bg-purple-500/10 text-purple-300 border-purple-500/20',
+      badge: 'Crecimiento B2B',
       tags: [
-        'Marketing Especializado B2B & Tech',
-        'Posicionamiento de Marca y Autoridad',
-        'Estrategias de Lanzamiento de Producto',
-        'Generación de Leads Cualificados',
-        'Contenido Técnico de Alto Valor'
+        'Posicionamiento y Narrativa de Marca Tech',
+        'Marketing Especializado para Industria y B2B',
+        'Estrategias de Lanzamiento de Productos',
+        'Captación de Clientes y Leads Calificados',
+        'Contenido Técnico que Genera Confianza'
       ]
     }
   ];
 
   return (
-    <section id="servicios" className="py-24 relative bg-[#080C15]">
+    <section id="servicios" className="py-24 relative bg-[#0E131F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono text-slate-300">
-            <Workflow className="w-3.5 h-3.5 text-brand-cyan" />
-            <span>NUESTRO ECOSISTEMA INTEGRAL</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-white/[0.08] text-xs font-medium text-slate-300">
+            <Layers className="w-3.5 h-3.5 text-indigo-400" />
+            <span>SOLUCIONES Y SERVICIOS INTEGRALES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Los 4 Pilares de <span className="text-brand-cyan font-mono">JIVOTECK</span>
+            Nuestros 4 Pilares de Especialización
           </h2>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-            Una startup única porque unimos la ingeniería física de control con el desarrollo de software moderno, la orientación estratégica y el posicionamiento de mercado.
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            Una propuesta de valor única en el mercado: un solo socio tecnológico capaz de abarcar desde el software hasta el control físico y la comercialización.
           </p>
         </div>
 
@@ -110,52 +110,54 @@ export const Services: React.FC = () => {
             return (
               <div 
                 key={srv.id}
-                className={`group glass-panel rounded-2xl p-7 sm:p-8 border border-brand-border transition-all duration-300 hover:scale-[1.01] hover:shadow-xl hover:shadow-cyan-950/20 ${srv.borderColor}`}
+                className="startup-card rounded-2xl p-7 sm:p-8 border border-white/[0.08] transition-all duration-300 hover:scale-[1.01] hover:border-indigo-500/30 flex flex-col justify-between"
               >
-                {/* Header of card */}
-                <div className="flex items-start justify-between gap-4 mb-5">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${srv.color} border border-slate-700 flex items-center justify-center transition-transform group-hover:scale-110`}>
-                    <Icon className={`w-7 h-7 ${srv.textColor}`} />
+                <div>
+                  {/* Header of card */}
+                  <div className="flex items-start justify-between gap-4 mb-5">
+                    <div className={`w-13 h-13 p-3.5 rounded-xl bg-gradient-to-br ${srv.color} border border-white/[0.08] flex items-center justify-center`}>
+                      <Icon className={`w-6 h-6 ${srv.textColor}`} />
+                    </div>
+                    <span className={`px-2.5 py-1 text-[11px] font-medium rounded-full border ${srv.badgeColor}`}>
+                      {srv.badge}
+                    </span>
                   </div>
-                  <span className={`px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md bg-slate-900 border border-slate-800 ${srv.textColor}`}>
-                    {srv.badge}
-                  </span>
-                </div>
 
-                {/* Title & description */}
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors">
-                  {srv.title}
-                </h3>
-                <h4 className={`text-xs font-mono uppercase tracking-wider font-semibold mb-3 ${srv.textColor}`}>
-                  {srv.subtitle}
-                </h4>
-                <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
-                  {srv.description}
-                </p>
+                  {/* Title & description */}
+                  <h3 className="text-2xl font-bold text-white mb-1.5">
+                    {srv.title}
+                  </h3>
+                  <h4 className={`text-xs font-semibold mb-3 ${srv.textColor}`}>
+                    {srv.subtitle}
+                  </h4>
+                  <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
+                    {srv.description}
+                  </p>
 
-                {/* Tag list */}
-                <div className="space-y-2 pt-4 border-t border-slate-800/80">
-                  <div className="text-[11px] font-mono uppercase text-slate-400 tracking-wider mb-2">
-                    Capacidades Clave:
-                  </div>
-                  <div className="space-y-1.5">
-                    {srv.tags.map((tag, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                        <Check className={`w-3.5 h-3.5 ${srv.textColor} shrink-0`} />
-                        <span>{tag}</span>
-                      </div>
-                    ))}
+                  {/* Capabilities List */}
+                  <div className="space-y-2 pt-4 border-t border-white/[0.06]">
+                    <div className="text-[11px] font-medium uppercase text-slate-400 tracking-wider mb-2">
+                      Lo que incluye el servicio:
+                    </div>
+                    <div className="space-y-2">
+                      {srv.tags.map((tag, idx) => (
+                        <div key={idx} className="flex items-center gap-2.5 text-xs text-slate-200">
+                          <Check className={`w-3.5 h-3.5 ${srv.textColor} shrink-0`} />
+                          <span>{tag}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 {/* Card CTA */}
-                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between">
+                <div className="mt-7 pt-4 border-t border-white/[0.06] flex items-center justify-between">
                   <a
                     href="#contacto"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 group-hover:text-white hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
                   >
                     <span>Cotizar proyecto en {srv.title}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-brand-cyan group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 text-indigo-400 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
 

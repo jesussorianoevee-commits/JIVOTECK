@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, Menu, X, ArrowUpRight, Mail } from 'lucide-react';
+import { Layers, Menu, X, ArrowUpRight, Mail } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const Navbar: React.FC = () => {
@@ -25,38 +25,43 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#080C15]/90 backdrop-blur-md border-b border-brand-border py-3 shadow-lg shadow-black/20' : 'bg-transparent py-5'
+      isScrolled 
+        ? 'bg-[#0A0D14]/85 backdrop-blur-xl border-b border-white/[0.08] py-3.5 shadow-xl shadow-black/30' 
+        : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
+        
+        {/* Brand Logo */}
         <a href="#inicio" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan/20 via-brand-blue/30 to-brand-cyan/10 border border-brand-cyan/40 flex items-center justify-center transition-transform group-hover:scale-105 group-hover:border-brand-cyan shadow-sm shadow-cyan-500/20">
-            <Cpu className="w-5 h-5 text-brand-cyan transition-colors group-hover:text-white" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 via-blue-500/20 to-purple-500/10 border border-indigo-500/30 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:border-indigo-400 group-hover:shadow-lg group-hover:shadow-indigo-500/20">
+            <Layers className="w-5 h-5 text-indigo-400 transition-colors group-hover:text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-wider text-white font-mono flex items-center gap-1.5">
+            <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1.5 font-sans">
               {siteConfig.name}
-              <span className="inline-block w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
             </span>
-            <span className="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Tech & Automation</span>
+            <span className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">
+              Software & Automation
+            </span>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+        <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-900/50 p-1.5 rounded-xl border border-white/[0.06] backdrop-blur-md">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs lg:text-sm font-medium transition-all duration-200 ${
                 link.isHighlight
-                  ? 'text-brand-cyan bg-brand-cyan/10 border border-brand-cyan/30 hover:bg-brand-cyan/20'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                  ? 'text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20'
+                  : 'text-slate-300 hover:text-white hover:bg-white/[0.04]'
               }`}
             >
-              {link.name}
+              <span>{link.name}</span>
               {link.isHighlight && (
-                <span className="ml-1.5 px-1.5 py-0.5 text-[9px] uppercase tracking-wider font-bold bg-brand-cyan/30 text-brand-cyan rounded">
+                <span className="ml-1.5 px-1.5 py-0.5 text-[9px] uppercase tracking-wider font-semibold bg-indigo-500/20 text-indigo-300 rounded">
                   Próx
                 </span>
               )}
@@ -68,17 +73,18 @@ export const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-3">
           <a
             href={`mailto:${siteConfig.contact.primaryEmail}`}
-            className="flex items-center gap-2 text-xs text-slate-300 hover:text-brand-cyan font-mono transition-colors px-2 py-1"
+            className="flex items-center gap-2 text-xs text-slate-300 hover:text-indigo-400 font-mono transition-colors px-2 py-1"
             title={siteConfig.contact.primaryEmail}
           >
-            <Mail className="w-3.5 h-3.5 text-brand-cyan" />
+            <Mail className="w-3.5 h-3.5 text-indigo-400" />
             <span className="hidden xl:inline">{siteConfig.contact.primaryEmail}</span>
           </a>
+          
           <a
             href="#contacto"
-            className="px-4 py-2 text-sm font-medium text-black bg-gradient-to-r from-brand-cyan to-sky-400 rounded-lg font-mono hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-200 flex items-center gap-1.5 hover:scale-[1.02] active:scale-[0.98]"
+            className="px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600 hover:from-indigo-400 hover:to-blue-500 rounded-lg shadow-md shadow-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-200 flex items-center gap-1.5 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Cotizar</span>
+            <span>Iniciar Consulta</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
@@ -95,40 +101,40 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0B1220]/95 backdrop-blur-xl border-b border-brand-border px-4 pt-3 pb-6 space-y-2 mt-2 shadow-2xl">
+        <div className="md:hidden bg-[#0A0D14]/95 backdrop-blur-2xl border-b border-white/[0.08] px-4 pt-3 pb-6 space-y-2 mt-2 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-3 py-2.5 rounded-lg text-base font-medium ${
+              className={`block px-3.5 py-2.5 rounded-lg text-sm font-medium ${
                 link.isHighlight
-                  ? 'text-brand-cyan bg-brand-cyan/10 border border-brand-cyan/20'
-                  : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                  ? 'text-indigo-300 bg-indigo-500/10 border border-indigo-500/20'
+                  : 'text-slate-300 hover:bg-white/[0.04] hover:text-white'
               }`}
             >
               <div className="flex items-center justify-between">
                 <span>{link.name}</span>
                 {link.isHighlight && (
-                  <span className="px-2 py-0.5 text-[10px] font-bold uppercase bg-brand-cyan/20 text-brand-cyan rounded">
+                  <span className="px-2 py-0.5 text-[10px] font-semibold uppercase bg-indigo-500/20 text-indigo-300 rounded">
                     Próximamente
                   </span>
                 )}
               </div>
             </a>
           ))}
-          <div className="pt-4 border-t border-slate-800 flex flex-col gap-2">
+          <div className="pt-4 border-t border-white/[0.08] flex flex-col gap-2">
             <a
               href={`mailto:${siteConfig.contact.primaryEmail}`}
-              className="flex items-center justify-center gap-2 py-2 text-sm text-slate-300 bg-slate-900/60 rounded-lg border border-slate-800"
+              className="flex items-center justify-center gap-2 py-2 text-xs text-slate-300 bg-slate-900/60 rounded-lg border border-white/[0.08]"
             >
-              <Mail className="w-4 h-4 text-brand-cyan" />
+              <Mail className="w-3.5 h-3.5 text-indigo-400" />
               <span>{siteConfig.contact.primaryEmail}</span>
             </a>
             <a
               href="#contacto"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2.5 text-sm font-semibold text-black bg-brand-cyan rounded-lg shadow-md font-mono"
+              className="w-full text-center py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-md font-sans"
             >
               Hablemos de tu Proyecto
             </a>
