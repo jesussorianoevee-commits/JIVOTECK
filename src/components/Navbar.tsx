@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Layers, Menu, X, ArrowUpRight, Mail } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Mail } from 'lucide-react';
+import { JivoteckLogo } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
 
 export const Navbar: React.FC = () => {
@@ -8,7 +9,7 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,75 +25,62 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-[#0A0D14]/85 backdrop-blur-xl border-b border-white/[0.08] py-3.5 shadow-xl shadow-black/30' 
-        : 'bg-transparent py-5'
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm py-3.5' : 'bg-white/90 backdrop-blur-sm border-b border-slate-100 py-4'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Brand Logo */}
-        <a href="#inicio" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 via-blue-500/20 to-purple-500/10 border border-indigo-500/30 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:border-indigo-400 group-hover:shadow-lg group-hover:shadow-indigo-500/20">
-            <Layers className="w-5 h-5 text-indigo-400 transition-colors group-hover:text-white" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1.5 font-sans">
-              {siteConfig.name}
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-            </span>
-            <span className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">
-              Software & Automation
-            </span>
-          </div>
+        {/* Brand Logo matching Base44 reference */}
+        <a href="#inicio" className="flex items-center gap-2">
+          <JivoteckLogo size="md" darkText={true} />
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-900/50 p-1.5 rounded-xl border border-white/[0.06] backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 sm:gap-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`px-3.5 py-1.5 rounded-lg text-xs lg:text-sm font-medium transition-all duration-200 ${
+              className={`px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider transition-colors ${
                 link.isHighlight
-                  ? 'text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20'
-                  : 'text-slate-300 hover:text-white hover:bg-white/[0.04]'
+                  ? 'text-[#0099CC] hover:text-[#00B4D8]'
+                  : 'text-slate-600 hover:text-slate-950'
               }`}
             >
               <span>{link.name}</span>
               {link.isHighlight && (
-                <span className="ml-1.5 px-1.5 py-0.5 text-[9px] uppercase tracking-wider font-semibold bg-indigo-500/20 text-indigo-300 rounded">
-                  Próx
+                <span className="ml-1.5 px-1.5 py-0.5 text-[9px] font-mono font-bold bg-[#EAF4FE] text-[#0099CC] rounded">
+                  PRÓX
                 </span>
               )}
             </a>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Desktop Actions */}
+        <div className="hidden md:flex items-center gap-4">
           <a
             href={`mailto:${siteConfig.contact.primaryEmail}`}
-            className="flex items-center gap-2 text-xs text-slate-300 hover:text-indigo-400 font-mono transition-colors px-2 py-1"
+            className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-900 font-mono transition-colors"
             title={siteConfig.contact.primaryEmail}
           >
-            <Mail className="w-3.5 h-3.5 text-indigo-400" />
+            <Mail className="w-3.5 h-3.5 text-[#0099CC]" />
             <span className="hidden xl:inline">{siteConfig.contact.primaryEmail}</span>
           </a>
-          
+
           <a
             href="#contacto"
-            className="px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600 hover:from-indigo-400 hover:to-blue-500 rounded-lg shadow-md shadow-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-200 flex items-center gap-1.5 hover:scale-[1.02] active:scale-[0.98]"
+            className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-slate-900 hover:bg-slate-800 rounded transition-all flex items-center gap-1.5 shadow-sm"
           >
-            <span>Iniciar Consulta</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <span>Contacto</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none"
+          className="md:hidden p-2 rounded text-slate-700 hover:text-slate-950 focus:outline-none"
           aria-label="Abrir menú"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -101,40 +89,40 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0A0D14]/95 backdrop-blur-2xl border-b border-white/[0.08] px-4 pt-3 pb-6 space-y-2 mt-2 shadow-2xl">
+        <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-3.5 py-2.5 rounded-lg text-sm font-medium ${
+              className={`block px-3 py-2 text-sm font-semibold uppercase tracking-wider ${
                 link.isHighlight
-                  ? 'text-indigo-300 bg-indigo-500/10 border border-indigo-500/20'
-                  : 'text-slate-300 hover:bg-white/[0.04] hover:text-white'
+                  ? 'text-[#0099CC] bg-[#EAF4FE] rounded'
+                  : 'text-slate-700 hover:text-slate-950'
               }`}
             >
               <div className="flex items-center justify-between">
                 <span>{link.name}</span>
                 {link.isHighlight && (
-                  <span className="px-2 py-0.5 text-[10px] font-semibold uppercase bg-indigo-500/20 text-indigo-300 rounded">
-                    Próximamente
+                  <span className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#D2E8FD] text-[#0099CC] rounded">
+                    COMING SOON
                   </span>
                 )}
               </div>
             </a>
           ))}
-          <div className="pt-4 border-t border-white/[0.08] flex flex-col gap-2">
+          <div className="pt-4 border-t border-slate-200 flex flex-col gap-2">
             <a
               href={`mailto:${siteConfig.contact.primaryEmail}`}
-              className="flex items-center justify-center gap-2 py-2 text-xs text-slate-300 bg-slate-900/60 rounded-lg border border-white/[0.08]"
+              className="flex items-center justify-center gap-2 py-2 text-xs font-mono text-slate-600 bg-slate-50 rounded border border-slate-200"
             >
-              <Mail className="w-3.5 h-3.5 text-indigo-400" />
+              <Mail className="w-4 h-4 text-[#0099CC]" />
               <span>{siteConfig.contact.primaryEmail}</span>
             </a>
             <a
               href="#contacto"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-md font-sans"
+              className="w-full text-center py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-slate-900 rounded shadow"
             >
               Hablemos de tu Proyecto
             </a>
