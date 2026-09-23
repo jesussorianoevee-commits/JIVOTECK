@@ -15,6 +15,7 @@ export interface SiteConfig {
     instagram: string;
   };
   industrialpedia: {
+    websiteUrl: string;
     status: string;
     badge: string;
     title: string;
@@ -37,16 +38,17 @@ export const siteConfig: SiteConfig = {
   },
   social: {
     github: "https://github.com/jesussorianoevee-commits/JIVOTECK",
-    linkedin: "#", // Preparado para integrar enlace oficial
-    twitter: "#",  // Preparado para integrar enlace oficial
-    instagram: "#" // Preparado para integrar enlace oficial
+    linkedin: "#",
+    twitter: "#",
+    instagram: "#"
   },
   industrialpedia: {
+    websiteUrl: "https://industrialpedia.com.mx",
     status: "En desarrollo activo",
-    badge: "Próximamente",
+    badge: "Coming Soon",
     title: "Industrialpedia",
-    subtitle: "La Plataforma Inteligente de Componentes y Automatización Industrial",
-    description: "Ecosistema de homologación, comparativa técnica multi-marca (FESTO, SMC y más) y simulación digital de componentes industriales.",
+    subtitle: "The Industrial Information Platform",
+    description: "Plataforma de información y comparación técnica inteligente para componentes de automatización industrial.",
     ownershipNote: "Proyecto de desarrollo original concebido, desarrollado y respaldado al 100% por JIVOTECK.",
     teaserFeatures: [
       "Homologador Inteligente de Componentes Neumáticos y Electrónicos",

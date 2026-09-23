@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Mail } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Mail, ExternalLink, Globe } from 'lucide-react';
 import { JivoteckLogo } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lang, setLang] = useState<'ES' | 'EN'>('ES');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +19,12 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
-    { name: 'Industrialpedia', href: '#industrialpedia', isHighlight: true },
+    { 
+      name: 'Industrialpedia', 
+      href: siteConfig.industrialpedia.websiteUrl, 
+      isHighlight: true,
+      isExternal: true 
+    },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contacto', href: '#contacto' },
@@ -26,7 +32,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm py-3.5' : 'bg-white/90 backdrop-blur-sm border-b border-slate-100 py-4'
+      isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm py-3' : 'bg-white/90 backdrop-blur-sm border-b border-slate-100 py-3.5'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
@@ -41,7 +47,9 @@ export const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider transition-colors ${
+              target={link.isExternal ? '_blank' : undefined}
+              rel={link.isExternal ? 'noopener noreferrer' : undefined}
+              className={`px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider transition-colors flex items-center gap-1 ${
                 link.isHighlight
                   ? 'text-[#0099CC] hover:text-[#00B4D8]'
                   : 'text-slate-600 hover:text-slate-950'
@@ -49,16 +57,30 @@ export const Navbar: React.FC = () => {
             >
               <span>{link.name}</span>
               {link.isHighlight && (
-                <span className="ml-1.5 px-1.5 py-0.5 text-[9px] font-mono font-bold bg-[#EAF4FE] text-[#0099CC] rounded">
-                  PRÓX
-                </span>
+                <>
+                  <span className="ml-1 px-1.5 py-0.5 text-[9px] font-mono font-bold bg-[#EAF4FE] text-[#0099CC] rounded">
+                    PRÓX
+                  </span>
+                  <ExternalLink className="w-3 h-3 text-[#0099CC]" />
+                </>
               )}
             </a>
           ))}
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          
+          {/* Interactive Language Selector matching Screenshot 1 */}
+          <button
+            onClick={() => setLang(lang === 'ES' ? 'EN' : 'ES')}
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-semibold rounded border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition-colors"
+            title="Cambiar idioma"
+          >
+            <Globe className="w-3 h-3 text-slate-500" />
+            <span>{lang}</span>
+          </button>
+
           <a
             href={`mailto:${siteConfig.contact.primaryEmail}`}
             className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-900 font-mono transition-colors"
@@ -94,6 +116,8 @@ export const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
+              target={link.isExternal ? '_blank' : undefined}
+              rel={link.isExternal ? 'noopener noreferrer' : undefined}
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-3 py-2 text-sm font-semibold uppercase tracking-wider ${
                 link.isHighlight
@@ -102,10 +126,13 @@ export const Navbar: React.FC = () => {
               }`}
             >
               <div className="flex items-center justify-between">
-                <span>{link.name}</span>
+                <span className="flex items-center gap-1.5">
+                  <span>{link.name}</span>
+                  {link.isExternal && <ExternalLink className="w-3.5 h-3.5" />}
+                </span>
                 {link.isHighlight && (
                   <span className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#D2E8FD] text-[#0099CC] rounded">
-                    COMING SOON
+                    industrialpedia.com.mx
                   </span>
                 )}
               </div>

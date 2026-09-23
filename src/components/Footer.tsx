@@ -41,7 +41,14 @@ export const Footer: React.FC = () => {
               <a href="#nosotros" className="hover:text-white transition-colors">Values</a>
               <a href="#servicios" className="hover:text-white transition-colors">Future Launches</a>
               <a href="#contacto" className="hover:text-white transition-colors">Contact</a>
-              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+              <a 
+                href={siteConfig.industrialpedia.websiteUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#00D4FF] hover:underline"
+              >
+                Industrialpedia ↗
+              </a>
             </div>
           </div>
 
