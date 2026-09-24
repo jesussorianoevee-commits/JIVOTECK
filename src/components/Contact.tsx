@@ -103,11 +103,11 @@ export const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Response Time & Guarantee */}
-            <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 flex items-center gap-3 text-xs text-[#006254] font-medium font-sans">
-              <ShieldCheck className="w-5 h-5 text-[#007362] shrink-0" />
+            {/* Response Time */}
+            <div className="p-4 rounded-2xl bg-sky-50 border border-sky-200/80 flex items-center gap-3 text-xs text-[#0284C7] font-medium font-sans">
+              <ShieldCheck className="w-5 h-5 text-[#0284C7] shrink-0" />
               <span>
-                Respuesta garantizada en menos de 24 horas hábiles con asesoría de un ingeniero especializado.
+                Atención técnica en menos de 24 horas hábiles con asesoría de un ingeniero especializado.
               </span>
             </div>
 
@@ -213,7 +213,7 @@ export const Contact: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
                     >
-                      <option value="automatizacion">Automatización & Control de Procesos (PLCs, SCADA, Robótica)</option>
+                      <option value="automatizacion">Automatización & Control de Procesos (SCADA, Robótica, Sensórica)</option>
                       <option value="software">Desarrollo de Software a la Medida (Cloud, APIs, Dashboards)</option>
                       <option value="consultoria">Orientación & Consultoría Técnica (Auditoría y Diagnóstico)</option>
                       <option value="marketing">Marketing Tecnológico B2B (Estrategia y Posicionamiento Industrial)</option>

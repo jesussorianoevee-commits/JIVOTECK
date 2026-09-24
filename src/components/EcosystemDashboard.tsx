@@ -20,17 +20,17 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Automatización Industrial',
       percentage: 35,
-      color: '#007362',
-      lightColor: '#E8F5F1',
+      color: '#00D4FF',
+      lightColor: '#E0F2FE',
       icon: Cpu,
       status: 'Activo',
-      desc: 'Control de procesos, PLC, sistemas SCADA, neumática e integración de celdas robóticas.'
+      desc: 'Control de procesos industriales, sistemas SCADA, sensórica avanzada e integración de celdas robóticas.'
     },
     {
       name: 'Desarrollo de Software',
       percentage: 30,
-      color: '#0D9488',
-      lightColor: '#CCFBF1',
+      color: '#0284C7',
+      lightColor: '#BAE6FD',
       icon: Code2,
       status: 'Activo',
       desc: 'Plataformas SaaS, arquitecturas web escalables y APIs de interconexión fabril.'
@@ -47,8 +47,8 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Marketing & Estrategia',
       percentage: 15,
-      color: '#3B82F6',
-      lightColor: '#DBEAFE',
+      color: '#8B5CF6',
+      lightColor: '#EDE9FE',
       icon: TrendingUp,
       status: 'Activo',
       desc: 'Posicionamiento para el sector B2B técnico y lanzamiento de productos industriales.'
@@ -100,7 +100,7 @@ export const EcosystemDashboard: React.FC = () => {
     },
     {
       label: 'Transferencia de Código & Confidencialidad',
-      status: 'Garantizado',
+      status: 'Cumplimiento Total',
       score: '100%',
       desc: 'Propiedad intelectual absoluta del cliente y contratos de confidencialidad estrictos.'
     }
@@ -168,7 +168,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#007362"
+                    stroke="#00D4FF"
                     strokeWidth="14"
                     strokeDasharray="105.5 301.6"
                     strokeDashoffset="0"
@@ -180,7 +180,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#0D9488"
+                    stroke="#0284C7"
                     strokeWidth="14"
                     strokeDasharray="90.5 301.6"
                     strokeDashoffset="-105.5"
@@ -204,7 +204,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#3B82F6"
+                    stroke="#8B5CF6"
                     strokeWidth="14"
                     strokeDasharray="45.2 301.6"
                     strokeDashoffset="-256.3"
@@ -294,7 +294,7 @@ export const EcosystemDashboard: React.FC = () => {
                         : 'text-slate-500 hover:text-slate-900'
                     }`}
                   >
-                    Garantías
+                    Verificación
                   </button>
                 </div>
               </div>

@@ -17,7 +17,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué servicios y áreas cubre JIVOTECK como startup?",
-      answer: "Nuestras capacidades abarcan 4 pilares: Automatización Industrial (PLCs, control de procesos, sensórica, robótica y SCADA), Desarrollo de Software a la Medida (plataformas web, cloud y APIs seguras), Orientación & Consultoría Técnica (auditoría en planta y dirección de proyectos), y Marketing Tecnológico B2B (narrativa y posicionamiento para soluciones de ingeniería)."
+      answer: "Nuestras capacidades abarcan 4 pilares: Automatización Industrial (control de procesos, sensórica avanzada, robótica y sistemas SCADA), Desarrollo de Software a la Medida (plataformas web, cloud y APIs seguras), Orientación & Consultoría Técnica (auditoría en planta y dirección de proyectos), y Marketing Tecnológico B2B (narrativa y posicionamiento para soluciones de ingeniería)."
     },
     {
       question: "¿Dónde están ubicados y cuál es su alcance de trabajo?",

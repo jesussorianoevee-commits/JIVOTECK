@@ -15,7 +15,7 @@ export const About: React.FC = () => {
     },
     {
       icon: ShieldCheck,
-      title: 'Propiedad Intelectual Garantizada',
+      title: 'Propiedad Intelectual y Código Abierto',
       description: 'Todo el código fuente desarrollado para tu empresa, los esquemáticos y la documentación técnica son 100% propiedad de tu organización.'
     },
     {

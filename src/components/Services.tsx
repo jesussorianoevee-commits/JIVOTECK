@@ -15,23 +15,23 @@ export const Services: React.FC = () => {
     {
       id: 'JVT-AUT-01',
       title: 'Automatización & Control de Procesos',
-      subtitle: 'Ingeniería de control industrial, programación de PLCs, integración de sensórica, robótica y SCADA.',
+      subtitle: 'Ingeniería de control industrial, integración de sensórica, robótica y sistemas SCADA.',
       category: 'Automatización',
       status: 'Activo',
-      badgeColor: 'bg-emerald-50 text-[#006254] border-emerald-200',
+      badgeColor: 'bg-sky-50 text-[#0284C7] border-sky-200',
       description: 'Soluciones integrales de hardware y control para líneas de ensamble, celdas robotizadas y plantas de manufactura.',
       overview: 'Diseñamos e implementamos arquitecturas de automatización completas desde Aguascalientes para clientes en México e internacionalmente. Nos enfocamos en reducción de tiempos muertos, seguridad operativa y trazabilidad total.',
       deliverables: [
-        'Lógica de control para PLC (Siemens, Allen-Bradley, Omron)',
+        'Lógica de control de procesos industriales e interconexión',
         'Diseño de interfaces HMI y sistemas SCADA de supervisión',
         'Diagramas unifilares y esquemáticos eléctricos normalizados',
         'Puesta en marcha y capacitación técnica del personal'
       ],
       specs: [
-        { label: 'Controladores soportados', value: 'Siemens S7, Rockwell ControlLogix, Omron Sysmac' },
+        { label: 'Controladores soportados', value: 'Siemens, Rockwell Automation, Omron' },
         { label: 'Protocolos de red', value: 'Profinet, Ethernet/IP, Modbus TCP, IO-Link' },
         { label: 'Ubicación de atención', value: 'Presencial en Bajío/México y soporte remoto' },
-        { label: 'Garantía de código', value: 'Código fuente abierto y documentado al cliente' }
+        { label: 'Entrega de código', value: 'Código fuente abierto y documentado al cliente' }
       ]
     },
     {

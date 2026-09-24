@@ -44,11 +44,11 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
         className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Header Banner with Upstream / Image 2 aesthetic */}
-        <div className="relative bg-gradient-to-r from-[#00483D] via-[#006254] to-[#0A2E28] p-6 sm:p-8 text-white">
+        {/* Modal Header Banner with Bento / Light-blue aesthetic */}
+        <div className="relative bg-gradient-to-r from-[#070B14] via-[#0A1424] to-[#0284C7] p-6 sm:p-8 text-white">
           
           {/* Subtle grid pattern overlay */}
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#00D4FF_1px,transparent_1px)] [background-size:16px_16px]"></div>
           
           {/* Close button */}
           <button
@@ -60,7 +60,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
           </button>
 
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-300 mb-3">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#00D4FF] mb-3">
             <span>JIVOTECK</span>
             <span>/</span>
             <span>SOLUCIONES</span>
@@ -100,7 +100,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             onClick={() => setActiveTab('overview')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'overview'
-                ? 'border-[#007362] text-[#007362]'
+                ? 'border-[#0284C7] text-[#0284C7]'
                 : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
@@ -110,7 +110,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             onClick={() => setActiveTab('deliverables')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'deliverables'
-                ? 'border-[#007362] text-[#007362]'
+                ? 'border-[#0284C7] text-[#0284C7]'
                 : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
@@ -120,7 +120,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             onClick={() => setActiveTab('specs')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'specs'
-                ? 'border-[#007362] text-[#007362]'
+                ? 'border-[#0284C7] text-[#0284C7]'
                 : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
@@ -217,7 +217,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             <a
               href="#contacto"
               onClick={onClose}
-              className="flex-1 sm:flex-none px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider text-white bg-[#007362] hover:bg-[#00584B] rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm"
+              className="flex-1 sm:flex-none px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-950 bg-[#00D4FF] hover:bg-[#38BDF8] rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-cyan-500/20"
             >
               <span>Cotizar con JIVOTECK</span>
               <ArrowRight className="w-3.5 h-3.5" />

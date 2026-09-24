@@ -25,10 +25,14 @@ export const JivoteckLogo: React.FC<LogoProps> = ({
 
   return (
     <div className="flex items-center gap-2.5">
-      {/* Upstream-style Tech Emblem */}
-      <div className={`${boxSizes[size]} rounded-lg bg-gradient-to-br from-[#00584B] to-[#007362] flex items-center justify-center shrink-0 shadow-sm border border-emerald-400/30 transition-transform duration-200 group-hover:scale-105`}>
-        <div className="w-full h-full rounded-[4px] bg-[#00D4B2] flex items-center justify-center shadow-inner">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#00584B]"></div>
+      {/* Light-blue signature nexus emblem matching Image 3 & Base44 */}
+      <div className={`${boxSizes[size]} rounded-lg ${
+        darkText 
+          ? 'bg-slate-900 border border-slate-700 shadow-sm' 
+          : 'bg-white/10 backdrop-blur-md border border-white/20 shadow-md'
+      } flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105`}>
+        <div className="w-full h-full rounded-[4px] bg-[#00D4FF] flex items-center justify-center shadow-[0_0_12px_rgba(0,212,255,0.7)]">
+          <div className="w-1.5 h-1.5 rounded-full bg-slate-950"></div>
         </div>
       </div>
       
@@ -40,12 +44,12 @@ export const JivoteckLogo: React.FC<LogoProps> = ({
           }`}>
             JIVOTECK
           </span>
-          <span className="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-mono font-bold uppercase rounded bg-emerald-50 text-[#007362] border border-emerald-200/60">
+          <span className="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-mono font-bold uppercase rounded bg-sky-50 text-[#0284C7] border border-sky-200/70">
             Startup
           </span>
         </div>
         {showSubtitle && (
-          <span className="text-[10px] font-mono tracking-wider text-slate-500 uppercase">
+          <span className="text-[10px] font-mono tracking-wider text-slate-400 uppercase">
             Aguascalientes, MX
           </span>
         )}
