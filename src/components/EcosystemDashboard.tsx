@@ -20,8 +20,8 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Automatización Industrial',
       percentage: 35,
-      color: '#00D4FF',
-      lightColor: '#E0F2FE',
+      color: '#13262F',
+      lightColor: '#E2DDD4',
       icon: Cpu,
       status: 'Activo',
       desc: 'Control de procesos industriales, sistemas SCADA, sensórica avanzada e integración de celdas robóticas.'
@@ -29,8 +29,8 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Desarrollo de Software',
       percentage: 30,
-      color: '#0284C7',
-      lightColor: '#BAE6FD',
+      color: '#2E4846',
+      lightColor: '#D0E0DA',
       icon: Code2,
       status: 'Activo',
       desc: 'Plataformas SaaS, arquitecturas web escalables y APIs de interconexión fabril.'
@@ -38,8 +38,8 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Consultoría Técnica',
       percentage: 20,
-      color: '#F59E0B',
-      lightColor: '#FEF3C7',
+      color: '#50756C',
+      lightColor: '#E2EBE8',
       icon: Compass,
       status: 'Disponible',
       desc: 'Diagnóstico de viabilidad tecnológica, auditoría de planta y modernización de equipos.'
@@ -47,8 +47,8 @@ export const EcosystemDashboard: React.FC = () => {
     {
       name: 'Marketing & Estrategia',
       percentage: 15,
-      color: '#8B5CF6',
-      lightColor: '#EDE9FE',
+      color: '#8FA89B',
+      lightColor: '#F0F5F2',
       icon: TrendingUp,
       status: 'Activo',
       desc: 'Posicionamiento para el sector B2B técnico y lanzamiento de productos industriales.'
@@ -62,7 +62,7 @@ export const EcosystemDashboard: React.FC = () => {
       category: 'Software & Datos',
       date: '2026',
       status: 'En desarrollo',
-      statusColor: 'bg-amber-100 text-amber-800 border-amber-200',
+      statusColor: 'bg-[#F4F1EA] text-[#2E4846] border-[#D8D2C6]',
       desc: 'Indexación unificada y arquitectura de comparativa técnica para componentes neumáticos y eléctricos.'
     },
     {
@@ -71,7 +71,7 @@ export const EcosystemDashboard: React.FC = () => {
       category: 'Ingeniería en Planta',
       date: 'ACTIVO',
       status: 'Operativo',
-      statusColor: 'bg-sky-100 text-[#0284C7] border-sky-200',
+      statusColor: 'bg-[#FAF8F5] text-[#13262F] border-[#D8D2C6]',
       desc: 'Integración y programación de controladores industriales con protocolos industriales estándar.'
     },
     {
@@ -80,7 +80,7 @@ export const EcosystemDashboard: React.FC = () => {
       category: 'Plataforma Web',
       date: 'PRÓXIMO',
       status: 'Planificado',
-      statusColor: 'bg-cyan-100 text-cyan-800 border-cyan-200',
+      statusColor: 'bg-[#E2DDD4] text-[#2E4846] border-[#D8D2C6]',
       desc: 'Acceso directo a la plataforma oficial para ingenieros, integradores y departamentos de compras.'
     }
   ];
@@ -107,27 +107,27 @@ export const EcosystemDashboard: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-[#F8FAFC] border-y border-slate-200/80">
+    <section className="py-16 bg-[#FAF8F5] border-y border-[#EAE5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 mb-2 shadow-2xs">
-              <Layers className="w-3.5 h-3.5 text-[#00D4FF]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] mb-2 shadow-2xs">
+              <Layers className="w-3.5 h-3.5 text-[#50756C]" />
               <span>ECOSISTEMA INTEGRAL JIVOTECK</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-sans">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13262F] tracking-tight font-serif">
               Panel de Control Tecnológico
             </h2>
-            <p className="text-sm text-slate-600 mt-1 max-w-xl">
+            <p className="text-sm text-[#4A635B] mt-1 max-w-xl font-sans">
               Monitoreo visual de nuestras 4 divisiones de ingeniería y estado de desarrollo de proyectos estratégicos.
             </p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-xs font-mono text-slate-500">Sede central:</span>
-            <span className="px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-white border border-slate-200 text-slate-800 shadow-2xs">
+            <span className="text-xs font-mono text-[#638379]">Sede central:</span>
+            <span className="px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-white border border-[#D8D2C6] text-[#13262F] shadow-2xs">
               Aguascalientes, Ags. México
             </span>
           </div>
@@ -137,16 +137,16 @@ export const EcosystemDashboard: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Card 1: Capabilities Distribution (Donut Chart Visual) - 4 cols */}
-          <div className="lg:col-span-4 bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-white rounded-2xl p-6 border border-[#EAE5DC] shadow-xs flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+              <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3 mb-4">
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-mono">
+                  <h3 className="text-sm font-bold text-[#13262F] uppercase tracking-[0.15em] font-mono">
                     Capacidades JIVOTECK
                   </h3>
-                  <p className="text-xs text-slate-500">Distribución de especialidad técnica</p>
+                  <p className="text-xs text-[#638379]">Distribución de especialidad técnica</p>
                 </div>
-                <span className="px-2 py-0.5 text-[10px] font-mono font-bold bg-sky-50 text-[#0284C7] rounded border border-sky-200/60">
+                <span className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#F4F1EA] text-[#2E4846] rounded border border-[#D8D2C6]">
                   4 PILARES
                 </span>
               </div>
@@ -159,7 +159,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#F1F5F9"
+                    stroke="#F4F1EA"
                     strokeWidth="14"
                     fill="transparent"
                   />
@@ -168,7 +168,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#00D4FF"
+                    stroke="#13262F"
                     strokeWidth="14"
                     strokeDasharray="105.5 301.6"
                     strokeDashoffset="0"
@@ -180,7 +180,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#0284C7"
+                    stroke="#2E4846"
                     strokeWidth="14"
                     strokeDasharray="90.5 301.6"
                     strokeDashoffset="-105.5"
@@ -192,7 +192,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#F59E0B"
+                    stroke="#50756C"
                     strokeWidth="14"
                     strokeDasharray="60.3 301.6"
                     strokeDashoffset="-196"
@@ -204,7 +204,7 @@ export const EcosystemDashboard: React.FC = () => {
                     cx="60"
                     cy="60"
                     r="48"
-                    stroke="#8B5CF6"
+                    stroke="#8FA89B"
                     strokeWidth="14"
                     strokeDasharray="45.2 301.6"
                     strokeDashoffset="-256.3"
@@ -215,10 +215,10 @@ export const EcosystemDashboard: React.FC = () => {
 
                 {/* Center Donut Label */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                  <span className="text-2xl font-black text-slate-900 font-sans tracking-tight">
+                  <span className="text-2xl font-bold font-serif text-[#13262F] tracking-tight">
                     100%
                   </span>
-                  <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+                  <span className="text-[10px] font-mono text-[#638379] uppercase tracking-widest">
                     Cobertura
                   </span>
                 </div>
@@ -235,8 +235,8 @@ export const EcosystemDashboard: React.FC = () => {
                       onClick={() => setSelectedPillar(idx)}
                       className={`w-full text-left p-2 rounded-xl transition-all flex items-center justify-between text-xs border ${
                         isSelected 
-                          ? 'bg-slate-50 border-slate-300 shadow-2xs' 
-                          : 'bg-transparent border-transparent hover:bg-slate-50/60'
+                          ? 'bg-[#F4F1EA] border-[#D8D2C6] shadow-2xs' 
+                          : 'bg-transparent border-transparent hover:bg-[#FAF8F5]'
                       }`}
                     >
                       <div className="flex items-center gap-2">
@@ -244,10 +244,10 @@ export const EcosystemDashboard: React.FC = () => {
                           className="w-2.5 h-2.5 rounded-full shrink-0" 
                           style={{ backgroundColor: item.color }}
                         ></span>
-                        <Icon className="w-3.5 h-3.5 text-slate-500" />
-                        <span className="font-medium text-slate-800">{item.name}</span>
+                        <Icon className="w-3.5 h-3.5 text-[#50756C]" />
+                        <span className="font-medium text-[#13262F]">{item.name}</span>
                       </div>
-                      <span className="font-mono font-bold text-slate-700">{item.percentage}%</span>
+                      <span className="font-mono font-bold text-[#2E4846]">{item.percentage}%</span>
                     </button>
                   );
                 })}
@@ -255,8 +255,8 @@ export const EcosystemDashboard: React.FC = () => {
             </div>
 
             {/* Selected Pillar Brief */}
-            <div className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 font-sans">
-              <span className="font-mono font-bold text-slate-900 block mb-0.5">
+            <div className="mt-4 pt-3 border-t border-[#EAE5DC] text-xs text-[#4A635B] font-sans">
+              <span className="font-mono font-bold text-[#13262F] block mb-0.5">
                 {pillars[selectedPillar].name}:
               </span>
               {pillars[selectedPillar].desc}
@@ -264,24 +264,24 @@ export const EcosystemDashboard: React.FC = () => {
           </div>
 
           {/* Card 2: Technical Pipeline & Milestones - 5 cols */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-[#EAE5DC] shadow-xs flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+              <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3 mb-4">
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-mono">
+                  <h3 className="text-sm font-bold text-[#13262F] uppercase tracking-[0.15em] font-mono">
                     Hitos & Pipeline Técnico
                   </h3>
-                  <p className="text-xs text-slate-500">Cronograma de innovación continua</p>
+                  <p className="text-xs text-[#638379]">Cronograma de innovación continua</p>
                 </div>
                 
                 {/* Tab Switcher */}
-                <div className="flex rounded-lg p-0.5 bg-slate-100 border border-slate-200">
+                <div className="flex rounded-lg p-0.5 bg-[#FAF8F5] border border-[#D8D2C6]">
                   <button
                     onClick={() => setActiveTab('hitos')}
                     className={`px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md transition-all ${
                       activeTab === 'hitos' 
-                        ? 'bg-white text-slate-900 shadow-2xs' 
-                        : 'text-slate-500 hover:text-slate-900'
+                        ? 'bg-[#13262F] text-white shadow-2xs' 
+                        : 'text-[#4A635B] hover:text-[#13262F]'
                     }`}
                   >
                     Hitos
@@ -290,8 +290,8 @@ export const EcosystemDashboard: React.FC = () => {
                     onClick={() => setActiveTab('validacion')}
                     className={`px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md transition-all ${
                       activeTab === 'validacion' 
-                        ? 'bg-white text-slate-900 shadow-2xs' 
-                        : 'text-slate-500 hover:text-slate-900'
+                        ? 'bg-[#13262F] text-white shadow-2xs' 
+                        : 'text-[#4A635B] hover:text-[#13262F]'
                     }`}
                   >
                     Verificación
@@ -305,14 +305,14 @@ export const EcosystemDashboard: React.FC = () => {
                   {milestones.map((m) => (
                     <div 
                       key={m.phase}
-                      className="p-3.5 rounded-xl border border-slate-200 bg-white hover:border-[#0284C7]/50 hover:shadow-2xs transition-all"
+                      className="p-3.5 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] hover:border-[#2E4846] transition-all"
                     >
                       <div className="flex items-center justify-between gap-2 mb-1.5">
                         <div className="flex items-center gap-2">
-                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-[#13262F] border border-[#D8D2C6]">
                             {m.phase}
                           </span>
-                          <span className="text-xs font-bold text-slate-900 font-sans">
+                          <span className="text-xs font-bold text-[#13262F] font-sans">
                             {m.title}
                           </span>
                         </div>
@@ -320,7 +320,7 @@ export const EcosystemDashboard: React.FC = () => {
                           {m.status}
                         </span>
                       </div>
-                      <p className="text-xs text-slate-600 font-sans leading-relaxed">
+                      <p className="text-xs text-[#4A635B] font-sans leading-relaxed">
                         {m.desc}
                       </p>
                     </div>
@@ -332,18 +332,18 @@ export const EcosystemDashboard: React.FC = () => {
                   {validationChecks.map((v) => (
                     <div 
                       key={v.label}
-                      className="p-3.5 rounded-xl border border-slate-200 bg-white hover:border-[#0284C7]/50 transition-all"
+                      className="p-3.5 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] hover:border-[#2E4846] transition-all"
                     >
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-bold text-slate-900">
+                        <span className="text-xs font-bold text-[#13262F]">
                           {v.label}
                         </span>
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-sky-50 text-[#0284C7] border border-sky-200">
-                          <CheckCircle2 className="w-3 h-3 text-[#0284C7]" />
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-mono font-bold rounded-full bg-white text-[#2E4846] border border-[#D8D2C6]">
+                          <CheckCircle2 className="w-3 h-3 text-[#50756C]" />
                           {v.status}
                         </span>
                       </div>
-                      <p className="text-xs text-slate-600 font-sans">
+                      <p className="text-xs text-[#4A635B] font-sans">
                         {v.desc}
                       </p>
                     </div>
@@ -353,95 +353,95 @@ export const EcosystemDashboard: React.FC = () => {
             </div>
 
             {/* Industrialpedia Direct Link Box */}
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span className="text-xs font-mono text-slate-500">
+            <div className="mt-4 pt-3 border-t border-[#EAE5DC] flex items-center justify-between">
+              <span className="text-xs font-mono text-[#638379]">
                 Plataforma insigne:
               </span>
               <a
                 href={siteConfig.industrialpedia.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#0284C7] hover:text-[#0369A1] hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#2E4846] hover:text-[#13262F] hover:underline"
               >
                 <span>industrialpedia.com.mx</span>
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3 h-3 text-[#2E4846]" />
               </a>
             </div>
           </div>
 
           {/* Card 3: Impact & Operational Metrics (Bar Chart Visual) - 3 cols */}
-          <div className="lg:col-span-3 bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-3 bg-white rounded-2xl p-6 border border-[#EAE5DC] shadow-xs flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+              <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3 mb-4">
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-mono">
+                  <h3 className="text-sm font-bold text-[#13262F] uppercase tracking-[0.15em] font-mono">
                     Impacto Operativo
                   </h3>
-                  <p className="text-xs text-slate-500">Ventajas de integración</p>
+                  <p className="text-xs text-[#638379]">Ventajas de integración</p>
                 </div>
-                <BarChart3 className="w-4 h-4 text-[#0284C7]" />
+                <BarChart3 className="w-4 h-4 text-[#2E4846]" />
               </div>
 
               {/* Stat 1 */}
               <div className="space-y-1 mb-4">
-                <span className="text-[11px] font-mono uppercase text-slate-500">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#638379]">
                   Agilidad de Entrega
                 </span>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-black text-slate-900 font-sans tracking-tight">
+                  <span className="text-3xl font-bold font-serif text-[#13262F] tracking-tight">
                     -40%
                   </span>
-                  <span className="text-xs font-mono text-[#0284C7] font-bold">
+                  <span className="text-xs font-mono text-[#2E4846] font-bold">
                     vs método tradicional
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-500">
+                <p className="text-[11px] text-[#4A635B]">
                   Arquitecturas modulares para puesta en marcha acelerada.
                 </p>
               </div>
 
-              {/* Visual Bars in light blue / sky tones */}
+              {/* Visual Bars matching the brand guide swatches */}
               <div className="space-y-3 pt-2">
                 <div>
                   <div className="flex justify-between text-[11px] font-mono mb-1">
-                    <span className="text-slate-600">Disponibilidad / Confiabilidad</span>
-                    <span className="font-bold text-[#0284C7]">99.8%</span>
+                    <span className="text-[#3E5C54]">Disponibilidad / Confiabilidad</span>
+                    <span className="font-bold text-[#13262F]">99.8%</span>
                   </div>
-                  <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#0284C7] to-[#00D4FF] rounded-full" style={{ width: '99.8%' }}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-[11px] font-mono mb-1">
-                    <span className="text-slate-600">Estandarización de Código</span>
-                    <span className="font-bold text-[#00A3FF]">100%</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#00A3FF] to-[#38BDF8] rounded-full" style={{ width: '100%' }}></div>
+                  <div className="h-2 rounded-full bg-[#F4F1EA] overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#13262F] to-[#2E4846] rounded-full" style={{ width: '99.8%' }}></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between text-[11px] font-mono mb-1">
-                    <span className="text-slate-600">Soporte y Respuesta</span>
-                    <span className="font-bold text-[#F59E0B]">&lt; 24h</span>
+                    <span className="text-[#3E5C54]">Estandarización de Código</span>
+                    <span className="font-bold text-[#2E4846]">100%</span>
                   </div>
-                  <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#F59E0B] to-[#FDE68A] rounded-full" style={{ width: '92%' }}></div>
+                  <div className="h-2 rounded-full bg-[#F4F1EA] overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#2E4846] to-[#50756C] rounded-full" style={{ width: '100%' }}></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between text-[11px] font-mono mb-1">
+                    <span className="text-[#3E5C54]">Soporte y Respuesta</span>
+                    <span className="font-bold text-[#50756C]">&lt; 24h</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-[#F4F1EA] overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-[#50756C] to-[#8FA89B] rounded-full" style={{ width: '92%' }}></div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Quick Action Button */}
-            <div className="mt-6 pt-3 border-t border-slate-100">
+            <div className="mt-6 pt-3 border-t border-[#EAE5DC]">
               <a
                 href="#contacto"
-                className="w-full py-2.5 px-3 rounded-xl bg-[#00D4FF] hover:bg-[#38BDF8] text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-cyan-500/20"
+                className="w-full py-2.5 px-3 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-xs"
               >
                 <span>Solicitar Diagnóstico</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-950" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-white" />
               </a>
             </div>
           </div>

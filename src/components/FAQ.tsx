@@ -30,19 +30,19 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-white border-t border-slate-200">
+    <section id="faq" className="py-16 sm:py-24 bg-[#FAF8F5] border-t border-[#EAE5DC]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Header */}
-        <div className="space-y-2 border-b border-slate-200 pb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 shadow-2xs">
-            <HelpCircle className="w-3.5 h-3.5 text-[#0284C7]" />
+        <div className="space-y-2 border-b border-[#EAE5DC] pb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
+            <HelpCircle className="w-3.5 h-3.5 text-[#50756C]" />
             <span>RESPUESTAS FRECUENTES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-sans">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#13262F] tracking-tight font-serif">
             Preguntas Frecuentes
           </h2>
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-[#4A635B] font-sans">
             Claridad sobre nuestro modelo de trabajo, propiedad de proyectos y alcance tecnológico.
           </p>
         </div>
@@ -56,8 +56,8 @@ export const FAQ: React.FC = () => {
                 key={idx} 
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-[#0284C7] bg-sky-50/30 shadow-xs' 
-                    : 'border-slate-200 bg-slate-50/50 hover:border-slate-300'
+                    ? 'border-[#2E4846] bg-[#F4F1EA]/60 shadow-xs' 
+                    : 'border-[#EAE5DC] bg-white hover:border-[#D8D2C6]'
                 }`}
               >
                 <button
@@ -65,19 +65,19 @@ export const FAQ: React.FC = () => {
                   className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
                   <span className={`text-sm sm:text-base font-bold transition-colors font-sans ${
-                    isOpen ? 'text-[#0284C7]' : 'text-slate-900 hover:text-slate-950'
+                    isOpen ? 'text-[#13262F]' : 'text-[#3E5C54] hover:text-[#13262F]'
                   }`}>
                     {faq.question}
                   </span>
                   <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 bg-[#0284C7] text-white' : 'bg-slate-100 text-slate-500'
+                    isOpen ? 'rotate-180 bg-[#13262F] text-white' : 'bg-[#F4F1EA] text-[#2E4846]'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 font-sans">
+                  <div className="px-6 pb-5 pt-1 text-[#4A635B] text-xs sm:text-sm leading-relaxed border-t border-[#EAE5DC] font-sans">
                     <p>{faq.answer}</p>
                   </div>
                 )}

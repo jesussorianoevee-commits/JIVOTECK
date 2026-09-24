@@ -26,20 +26,20 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="nosotros" className="py-16 sm:py-24 bg-[#F8FAFC] border-t border-slate-200">
+    <section id="nosotros" className="py-16 sm:py-24 bg-[#FAF8F5] border-t border-[#EAE5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 shadow-2xs">
-            <Users className="w-3.5 h-3.5 text-[#0284C7]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
+            <Users className="w-3.5 h-3.5 text-[#50756C]" />
             <span>SOBRE NOSOTROS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight font-sans">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
             Ingeniería que conecta con tus metas productivas.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-sans">
-            <strong>JIVOTECK</strong> es una startup mexicana de base tecnológica fundada con la convicción de que los sistemas de automatización industrial y el software moderno deben operar en perfecta armonía.
+          <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
+            <strong>JIVOTECK</strong> es una startup mexicana de base tecnológica fundada con la convicción de que los sistemas de automatización industrial y el software moderno deben operar con propósito y cercanía.
           </p>
         </div>
 
@@ -50,16 +50,16 @@ export const About: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 border border-[#EAE5DC] shadow-xs hover:shadow-md hover:border-[#638379] transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200/70 flex items-center justify-center text-[#0284C7] mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#F4F1EA] border border-[#E5E0D5] flex items-center justify-center text-[#2E4846] mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 font-sans tracking-tight mb-2">
+                  <h3 className="text-base font-bold text-[#13262F] font-sans tracking-tight mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                  <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
                     {item.description}
                   </p>
                 </div>
