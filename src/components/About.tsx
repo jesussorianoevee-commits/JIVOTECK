@@ -31,8 +31,8 @@ export const About: React.FC = () => {
         
         {/* Header */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-50 text-[#007362] border border-emerald-200/70">
-            <Users className="w-3.5 h-3.5 text-[#00D4B2]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 shadow-2xs">
+            <Users className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>SOBRE NOSOTROS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight font-sans">
@@ -43,17 +43,17 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        {/* Bento Grid Layout (Image 3 inspired) */}
+        {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-upstream hover:shadow-upstream-hover transition-all flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/70 flex items-center justify-center text-[#007362] mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200/70 flex items-center justify-center text-[#0284C7] mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-base font-bold text-slate-900 font-sans tracking-tight mb-2">

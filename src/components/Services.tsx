@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
       subtitle: 'Plataformas web empresariales, dashboards operativos, microservicios cloud y APIs seguras.',
       category: 'Software',
       status: 'Activo',
-      badgeColor: 'bg-teal-50 text-teal-800 border-teal-200',
+      badgeColor: 'bg-cyan-50 text-cyan-800 border-cyan-200',
       description: 'Ingeniería de software moderna para digitalizar operaciones de planta, logística, inventarios y analítica técnica.',
       overview: 'Construimos software con tecnologías de última generación (React, TypeScript, Node.js, Python, PostgreSQL, Cloud). Cada sistema es escalable, seguro y optimizado para funcionar en entornos industriales exigentes.',
       deliverables: [
@@ -84,7 +84,7 @@ export const Services: React.FC = () => {
       subtitle: 'Posicionamiento estratégico para productos y servicios del sector industrial y tecnológico.',
       category: 'Marketing',
       status: 'Activo',
-      badgeColor: 'bg-blue-50 text-blue-800 border-blue-200',
+      badgeColor: 'bg-sky-50 text-sky-800 border-sky-200',
       description: 'Estrategias de comunicación orientadas a ingenieros, directores de compras y tomadores de decisiones industriales.',
       overview: 'El marketing industrial requiere lenguaje técnico riguroso y credibilidad. Diseñamos la presencia digital, la narrativa de ventas y la generación de oportunidades para empresas que venden tecnología a otras empresas.',
       deliverables: [
@@ -151,7 +151,7 @@ export const Services: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-6">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#007362] block mb-1">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0284C7] block mb-1">
               CATÁLOGO DE SOLUCIONES & PRODUCTOS
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-sans">
@@ -167,7 +167,7 @@ export const Services: React.FC = () => {
           </span>
         </div>
 
-        {/* Search & Filter Bar matching Upstream Image 1 */}
+        {/* Search & Filter Bar */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-200">
           
           {/* Category Tabs */}
@@ -178,7 +178,7 @@ export const Services: React.FC = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all whitespace-nowrap ${
                   activeCategory === cat.id
-                    ? 'bg-[#007362] text-white shadow-sm'
+                    ? 'bg-[#0284C7] text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-950 hover:bg-slate-200/60'
                 }`}
               >
@@ -194,7 +194,7 @@ export const Services: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Filtrar por palabra clave..."
-              className="w-full pl-9 pr-4 py-1.5 text-xs bg-white rounded-xl border border-slate-200 focus:border-[#007362] focus:outline-none focus:ring-1 focus:ring-[#007362] text-slate-700 placeholder-slate-400 font-sans"
+              className="w-full pl-9 pr-4 py-1.5 text-xs bg-white rounded-xl border border-slate-200 focus:border-[#0284C7] focus:outline-none focus:ring-1 focus:ring-[#0284C7] text-slate-700 placeholder-slate-400 font-sans"
             />
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5 pointer-events-none" />
           </div>
@@ -207,10 +207,10 @@ export const Services: React.FC = () => {
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className={`group bg-white rounded-2xl border transition-all duration-300 p-6 flex flex-col justify-between hover:shadow-upstream-hover cursor-pointer relative overflow-hidden ${
+              className={`group bg-white rounded-2xl border transition-all duration-300 p-6 flex flex-col justify-between hover:shadow-md cursor-pointer relative overflow-hidden ${
                 item.isIndustrialpedia 
                   ? 'border-amber-200 hover:border-amber-400 bg-gradient-to-b from-white to-amber-50/20' 
-                  : 'border-slate-200 hover:border-[#007362]'
+                  : 'border-slate-200 hover:border-[#0284C7]'
               }`}
             >
               {/* Top Meta & Status */}
@@ -225,7 +225,7 @@ export const Services: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#007362] transition-colors font-sans tracking-tight mb-2">
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#0284C7] transition-colors font-sans tracking-tight mb-2">
                   {item.title}
                 </h3>
 
@@ -237,7 +237,7 @@ export const Services: React.FC = () => {
                 <div className="space-y-1.5">
                   {item.deliverables.slice(0, 2).map((d, dIdx) => (
                     <div key={dIdx} className="flex items-center gap-2 text-[11px] font-mono text-slate-600 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#007362]"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00D4FF]"></span>
                       <span className="truncate">{d}</span>
                     </div>
                   ))}
@@ -246,12 +246,12 @@ export const Services: React.FC = () => {
 
               {/* Bottom Action Footer */}
               <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-mono text-slate-500 flex items-center gap-1 group-hover:text-[#007362] transition-colors">
+                <span className="text-xs font-mono text-slate-500 flex items-center gap-1 group-hover:text-[#0284C7] transition-colors">
                   <Info className="w-3.5 h-3.5" />
                   <span>Ver Ficha Técnica</span>
                 </span>
 
-                <div className="w-7 h-7 rounded-full bg-slate-50 group-hover:bg-[#007362] group-hover:text-white text-slate-500 flex items-center justify-center transition-colors">
+                <div className="w-7 h-7 rounded-full bg-slate-50 group-hover:bg-[#0284C7] group-hover:text-white text-slate-500 flex items-center justify-center transition-colors">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </div>
               </div>
@@ -260,13 +260,15 @@ export const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Modal when an item is selected */}
-        <ProjectDetailModal 
-          item={selectedItem} 
-          onClose={() => setSelectedItem(null)} 
-        />
-
       </div>
+
+      {/* Interactive Detail Modal */}
+      {selectedItem && (
+        <ProjectDetailModal
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
+      )}
     </section>
   );
 };

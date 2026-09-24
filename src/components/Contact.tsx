@@ -34,8 +34,8 @@ export const Contact: React.FC = () => {
         
         {/* Header */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-50 text-[#007362] border border-emerald-200/70">
-            <MessageSquare className="w-3.5 h-3.5 text-[#00D4B2]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 shadow-2xs">
+            <MessageSquare className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>CONTACTO DIRECTO</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight font-sans">
@@ -52,7 +52,7 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-5">
             
             {/* Email Card */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 shadow-upstream">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 shadow-xs">
               <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-semibold block">
                 Canal Oficial de Atención
               </span>
@@ -68,8 +68,8 @@ export const Contact: React.FC = () => {
                 >
                   {copiedEmail ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-[#007362]" />
-                      <span className="text-[#007362]">Copiado</span>
+                      <Check className="w-3.5 h-3.5 text-[#0284C7]" />
+                      <span className="text-[#0284C7]">Copiado</span>
                     </>
                   ) : (
                     <>
@@ -82,17 +82,17 @@ export const Contact: React.FC = () => {
 
               <a
                 href={`mailto:${siteConfig.contact.primaryEmail}`}
-                className="w-full py-2.5 px-4 bg-gradient-to-r from-[#00584B] to-[#007362] hover:from-[#00483D] hover:to-[#00584B] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="w-full py-2.5 px-4 bg-gradient-to-r from-[#0284C7] to-[#00D4FF] hover:from-[#0369A1] hover:to-[#38BDF8] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-sky-500/20"
               >
-                <Mail className="w-3.5 h-3.5 text-[#00D4B2]" />
+                <Mail className="w-3.5 h-3.5 text-white" />
                 <span>Escribir Mensaje Directo</span>
               </a>
             </div>
 
             {/* Location & Sede Card */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-upstream">
-              <div className="text-xs font-mono uppercase tracking-wider text-[#007362] font-semibold flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#007362]" />
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 shadow-xs">
+              <div className="text-xs font-mono uppercase tracking-wider text-[#0284C7] font-semibold flex items-center gap-1.5">
+                <MapPin className="w-4 h-4 text-[#0284C7]" />
                 <span>Sede Principal</span>
               </div>
               <div className="text-base font-bold text-slate-900 font-sans">
@@ -115,15 +115,15 @@ export const Contact: React.FC = () => {
 
           {/* Form right (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-upstream">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs">
               
               {submitted ? (
                 <div className="py-8 text-center space-y-4">
-                  <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#007362] mx-auto flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-sky-100 text-[#0284C7] mx-auto flex items-center justify-center">
                     <Check className="w-7 h-7" />
                   </div>
                   <div>
-                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-50 text-[#006254] border border-emerald-200">
+                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-sky-50 text-[#0284C7] border border-sky-200">
                       FOLIO: {ticketFolio}
                     </span>
                     <h3 className="text-2xl font-black text-slate-900 font-sans mt-3">
@@ -138,7 +138,7 @@ export const Contact: React.FC = () => {
                       setSubmitted(false);
                       setFormData({ name: '', email: '', phone: '', company: '', service: 'automatizacion', message: '' });
                     }}
-                    className="mt-4 px-5 py-2.5 bg-[#007362] text-white text-xs font-mono font-bold rounded-xl hover:bg-[#00584B] transition-colors"
+                    className="mt-4 px-5 py-2.5 bg-[#00D4FF] hover:bg-[#38BDF8] text-slate-950 text-xs font-mono font-bold rounded-xl transition-all shadow-md shadow-cyan-500/20"
                   >
                     Enviar otra consulta
                   </button>
@@ -157,7 +157,7 @@ export const Contact: React.FC = () => {
                         placeholder="Ej. Ing. Roberto Mendoza"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
 
@@ -171,7 +171,7 @@ export const Contact: React.FC = () => {
                         placeholder="tu-correo@empresa.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export const Contact: React.FC = () => {
                         placeholder="Ej. +52 449 123 4567"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
 
@@ -199,7 +199,7 @@ export const Contact: React.FC = () => {
                         placeholder="Ej. Manufactura Bajío"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
+                        className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all"
                       />
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export const Contact: React.FC = () => {
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all"
+                      className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all"
                     >
                       <option value="automatizacion">Automatización & Control de Procesos (SCADA, Robótica, Sensórica)</option>
                       <option value="software">Desarrollo de Software a la Medida (Cloud, APIs, Dashboards)</option>
@@ -232,15 +232,15 @@ export const Contact: React.FC = () => {
                       placeholder="Describe las metas de tu proyecto, maquinaria a integrar o dudas técnicas..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#007362] focus:ring-1 focus:ring-[#007362] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#0284C7] focus:ring-1 focus:ring-[#0284C7] transition-all resize-none"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 bg-gradient-to-r from-[#00584B] to-[#007362] hover:from-[#00483D] hover:to-[#00584B] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                    className="w-full py-3.5 px-6 bg-[#00D4FF] hover:bg-[#38BDF8] text-slate-950 font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-cyan-500/25 hover:shadow-lg hover:shadow-cyan-500/35"
                   >
-                    <Send className="w-3.5 h-3.5 text-[#00D4B2]" />
+                    <Send className="w-3.5 h-3.5 text-slate-950" />
                     <span>Enviar Consulta a JIVOTECK</span>
                   </button>
 

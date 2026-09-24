@@ -35,8 +35,8 @@ export const FAQ: React.FC = () => {
         
         {/* Header */}
         <div className="space-y-2 border-b border-slate-200 pb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-50 text-[#007362] border border-emerald-200/70">
-            <HelpCircle className="w-3.5 h-3.5 text-[#00D4B2]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-50 text-[#0284C7] border border-sky-200/70 shadow-2xs">
+            <HelpCircle className="w-3.5 h-3.5 text-[#0284C7]" />
             <span>RESPUESTAS FRECUENTES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-sans">
@@ -56,7 +56,7 @@ export const FAQ: React.FC = () => {
                 key={idx} 
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-[#007362] bg-emerald-50/20 shadow-sm' 
+                    ? 'border-[#0284C7] bg-sky-50/30 shadow-xs' 
                     : 'border-slate-200 bg-slate-50/50 hover:border-slate-300'
                 }`}
               >
@@ -65,12 +65,12 @@ export const FAQ: React.FC = () => {
                   className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
                   <span className={`text-sm sm:text-base font-bold transition-colors font-sans ${
-                    isOpen ? 'text-[#007362]' : 'text-slate-900 hover:text-slate-950'
+                    isOpen ? 'text-[#0284C7]' : 'text-slate-900 hover:text-slate-950'
                   }`}>
                     {faq.question}
                   </span>
                   <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 bg-[#007362] text-white' : 'bg-slate-100 text-slate-500'
+                    isOpen ? 'rotate-180 bg-[#0284C7] text-white' : 'bg-slate-100 text-slate-500'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>

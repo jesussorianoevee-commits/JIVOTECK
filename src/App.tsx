@@ -11,7 +11,7 @@ import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-[#00D4B2] selection:text-black">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-[#00D4FF] selection:text-slate-950">
       <Navbar />
       <main className="flex-grow">
         <Hero />

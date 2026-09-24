@@ -158,7 +158,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
                     href={siteConfig.industrialpedia.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#007362] hover:bg-[#00584B] text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4FF] hover:bg-[#38BDF8] text-slate-950 text-xs font-mono font-bold rounded-xl transition-all shadow-md shadow-cyan-500/20"
                   >
                     <span>Abrir industrialpedia.com.mx</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -176,7 +176,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {item.deliverables.map((d, index) => (
                   <div key={index} className="p-3 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#007362] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
                     <span className="text-xs text-slate-700 font-medium">{d}</span>
                   </div>
                 ))}
