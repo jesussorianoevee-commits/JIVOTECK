@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Instagram, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, ArrowUp, ExternalLink, MapPin, Mail } from 'lucide-react';
 import { JivoteckLogo } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
 
@@ -16,68 +16,101 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#0A0E17] border-t border-slate-800 text-slate-400 font-sans pt-16 pb-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <footer className="bg-gradient-to-b from-[#081512] to-[#040C0A] border-t border-emerald-950/80 text-slate-400 font-sans pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        {/* Brand header matching Screenshot 2 */}
-        <div className="space-y-3">
-          <JivoteckLogo size="lg" darkText={false} />
-          <p className="text-sm text-slate-300 font-sans font-light">
-            Technology for the future of industry.
-          </p>
+        {/* Top brand row */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+          <div className="space-y-2">
+            <JivoteckLogo size="lg" darkText={false} showSubtitle={true} />
+            <p className="text-sm text-slate-400 max-w-md font-sans">
+              Ingeniería en automatización de procesos, desarrollo de software a la medida y creadores de Industrialpedia.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="#contacto"
+              className="px-5 py-2.5 rounded-xl bg-[#007362] hover:bg-[#00584B] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow"
+            >
+              Iniciar Proyecto
+            </a>
+            <button
+              onClick={scrollToTop}
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-colors"
+              title="Volver arriba"
+            >
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
-        {/* Links Navigation Grid matching Screenshot 2 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-4 border-t border-slate-800/80">
+        {/* Links Navigation Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           
-          {/* Col 1 & 2: NAVIGATION */}
+          {/* Col 1: SERVICIOS */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 font-semibold">
-              NAVIGATION
+            <h4 className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+              SOLUCIONES
             </h4>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-slate-300">
-              <a href="#nosotros" className="hover:text-white transition-colors">About Us</a>
-              <a href="#servicios" className="hover:text-white transition-colors">What We Do</a>
-              <a href="#nosotros" className="hover:text-white transition-colors">Values</a>
-              <a href="#servicios" className="hover:text-white transition-colors">Future Launches</a>
-              <a href="#contacto" className="hover:text-white transition-colors">Contact</a>
+            <div className="flex flex-col space-y-2 text-xs font-mono text-slate-300">
+              <a href="#servicios" className="hover:text-white transition-colors">Automatización Industrial</a>
+              <a href="#servicios" className="hover:text-white transition-colors">Software a la Medida</a>
+              <a href="#servicios" className="hover:text-white transition-colors">Consultoría Técnica</a>
+              <a href="#servicios" className="hover:text-white transition-colors">Marketing B2B Tech</a>
+            </div>
+          </div>
+
+          {/* Col 2: INDUSTRIALPEDIA */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold">
+              INNOVACIÓN & I+D
+            </h4>
+            <div className="space-y-2 text-xs font-mono text-slate-300">
               <a 
                 href={siteConfig.industrialpedia.websiteUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-[#00D4FF] hover:underline"
+                className="text-[#00D4B2] hover:underline flex items-center gap-1 font-bold"
               >
-                Industrialpedia ↗
+                <span>Industrialpedia.com.mx</span>
+                <ExternalLink className="w-3 h-3" />
               </a>
+              <p className="text-[11px] text-slate-500 font-sans leading-relaxed">
+                Plataforma de comparación técnica de componentes industriales desarrollada 100% por JIVOTECK.
+              </p>
             </div>
           </div>
 
-          {/* Col 2: LEGAL */}
+          {/* Col 3: EMPRESA */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 font-semibold">
-              LEGAL
+            <h4 className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+              EMPRESA
             </h4>
-            <div className="space-y-2 text-sm text-slate-300">
-              <div>Privacy</div>
-              <div>Cookie Disclosure</div>
-              <div>Industrialpedia Trademark</div>
+            <div className="flex flex-col space-y-2 text-xs font-mono text-slate-300">
+              <a href="#nosotros" className="hover:text-white transition-colors">Sobre JIVOTECK</a>
+              <a href="#faq" className="hover:text-white transition-colors">Preguntas Frecuentes</a>
+              <a href="#contacto" className="hover:text-white transition-colors">Contacto Oficial</a>
+              <span className="text-slate-600">Aguascalientes, México</span>
             </div>
           </div>
 
-          {/* Col 3: SOCIAL & LOCATION */}
+          {/* Col 4: CANALES & CONTACTO */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 font-semibold">
-              CONTACT & CHANNELS
+            <h4 className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+              ATENCIÓN OFICIAL
             </h4>
-            <div className="space-y-2 text-xs font-mono text-slate-300">
+            <div className="space-y-2.5 text-xs font-mono text-slate-300">
               <a 
                 href={`mailto:${siteConfig.contact.primaryEmail}`} 
-                className="text-[#00D4FF] hover:underline block break-all font-semibold"
+                className="text-[#00D4B2] hover:underline flex items-center gap-1.5 font-bold break-all"
               >
-                {siteConfig.contact.primaryEmail}
+                <Mail className="w-3.5 h-3.5 shrink-0" />
+                <span>{siteConfig.contact.primaryEmail}</span>
               </a>
-              <div className="text-slate-400 font-sans">
-                Aguascalientes, México
+              <div className="flex items-center gap-1.5 text-slate-400 font-sans text-xs">
+                <MapPin className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                <span>Aguascalientes, Ags. México</span>
               </div>
               <div className="flex items-center gap-2 pt-2">
                 {socialLinks.map((s) => {
@@ -88,7 +121,7 @@ export const Footer: React.FC = () => {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                      className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-emerald-600 transition-colors"
                       title={s.name}
                     >
                       <Icon className="w-4 h-4" />
@@ -101,23 +134,14 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom bar matching Screenshot 2 */}
+        {/* Bottom copyright row */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-500">
           <div>
-            &copy; 2026 JIVOTECK — ALL RIGHTS RESERVED
+            &copy; 2026 JIVOTECK — Todos los derechos reservados.
           </div>
-
-          <div className="text-[11px] text-slate-400 uppercase tracking-widest">
-            EN / INDUSTRIAL TECHNOLOGY
+          <div className="text-[11px] text-slate-400">
+            JIVOTECK STARTUP • AGUASCALIENTES, MÉXICO
           </div>
-
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition-colors"
-          >
-            <span>TOP</span>
-            <ArrowUp className="w-3 h-3" />
-          </button>
         </div>
 
       </div>

@@ -1,206 +1,270 @@
-import React, { useState } from 'react';
-import { ArrowRight, ExternalLink } from 'lucide-react';
-import { siteConfig } from '../config/siteConfig';
+import React, { useState, useMemo } from 'react';
+import { 
+  ArrowUpRight, 
+  Search, 
+  Info
+} from 'lucide-react';
+import { ProjectDetailModal, ServiceDetail } from './ProjectDetailModal';
 
 export const Services: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'live' | 'future'>('all');
+  const [activeCategory, setActiveCategory] = useState<string>('todos');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedItem, setSelectedItem] = useState<ServiceDetail | null>(null);
 
-  const launches = [
+  const capabilities: ServiceDetail[] = [
     {
-      label: 'CAPABILITY 01',
-      status: 'AVAILABLE NOW',
-      isLive: true,
-      title: 'Programación & Software a la Medida',
-      subtitle: 'Desarrollo web moderno, plataformas en la nube, APIs seguras y arquitectura de software escalable.',
-      tags: ['SaaS & Web Apps', 'Cloud Architecture', 'APIs & Backend', 'Dashboards Operativos'],
-      link: '#contacto'
+      id: 'JVT-AUT-01',
+      title: 'Automatización & Control de Procesos',
+      subtitle: 'Ingeniería de control industrial, programación de PLCs, integración de sensórica, robótica y SCADA.',
+      category: 'Automatización',
+      status: 'Activo',
+      badgeColor: 'bg-emerald-50 text-[#006254] border-emerald-200',
+      description: 'Soluciones integrales de hardware y control para líneas de ensamble, celdas robotizadas y plantas de manufactura.',
+      overview: 'Diseñamos e implementamos arquitecturas de automatización completas desde Aguascalientes para clientes en México e internacionalmente. Nos enfocamos en reducción de tiempos muertos, seguridad operativa y trazabilidad total.',
+      deliverables: [
+        'Lógica de control para PLC (Siemens, Allen-Bradley, Omron)',
+        'Diseño de interfaces HMI y sistemas SCADA de supervisión',
+        'Diagramas unifilares y esquemáticos eléctricos normalizados',
+        'Puesta en marcha y capacitación técnica del personal'
+      ],
+      specs: [
+        { label: 'Controladores soportados', value: 'Siemens S7, Rockwell ControlLogix, Omron Sysmac' },
+        { label: 'Protocolos de red', value: 'Profinet, Ethernet/IP, Modbus TCP, IO-Link' },
+        { label: 'Ubicación de atención', value: 'Presencial en Bajío/México y soporte remoto' },
+        { label: 'Garantía de código', value: 'Código fuente abierto y documentado al cliente' }
+      ]
     },
     {
-      label: 'CAPABILITY 02',
-      status: 'AVAILABLE NOW',
-      isLive: true,
-      title: 'Automatización Inteligente de Procesos',
-      subtitle: 'Ingeniería de control, programación de PLCs, integración de sensórica, robótica y telemetría.',
-      tags: ['Control PLC & SCADA', 'Sensórica Industrial', 'Optimización de Ciclo', 'Redes de Campo'],
-      link: '#contacto'
+      id: 'JVT-SFT-02',
+      title: 'Desarrollo de Software a la Medida',
+      subtitle: 'Plataformas web empresariales, dashboards operativos, microservicios cloud y APIs seguras.',
+      category: 'Software',
+      status: 'Activo',
+      badgeColor: 'bg-teal-50 text-teal-800 border-teal-200',
+      description: 'Ingeniería de software moderna para digitalizar operaciones de planta, logística, inventarios y analítica técnica.',
+      overview: 'Construimos software con tecnologías de última generación (React, TypeScript, Node.js, Python, PostgreSQL, Cloud). Cada sistema es escalable, seguro y optimizado para funcionar en entornos industriales exigentes.',
+      deliverables: [
+        'Aplicaciones web y portales de clientes de alto rendimiento',
+        'Integración con bases de datos SQL y almacenes en la nube',
+        'APIs REST / GraphQL para conectar ERPs y sistemas de piso',
+        'Despliegue automatizado CI/CD y monitoreo 24/7'
+      ],
+      specs: [
+        { label: 'Stack frontend', value: 'React, TypeScript, Tailwind CSS, Next.js' },
+        { label: 'Stack backend', value: 'Node.js, Express, Python FastAPI, PostgreSQL' },
+        { label: 'Seguridad', value: 'Autenticación JWT, RBAC, cifrado TLS 1.3' },
+        { label: 'Propiedad', value: '100% código propiedad del cliente' }
+      ]
     },
     {
-      label: 'CAPABILITY 03',
-      status: 'AVAILABLE NOW',
-      isLive: true,
-      title: 'Orientación & Consultoría Estratégica',
-      subtitle: 'Diagnóstico técnico de sistemas, auditoría de procesos y hojas de ruta para modernización tecnológica.',
-      tags: ['Diagnóstico Técnico', 'Selección de Tecnologías', 'Acompañamiento Continuo', 'Mitigación de Riesgos'],
-      link: '#contacto'
+      id: 'JVT-CON-03',
+      title: 'Orientación & Consultoría Técnica',
+      subtitle: 'Diagnóstico de sistemas en planta, auditoría de viabilidad tecnológica y modernización de equipos obsoletos.',
+      category: 'Consultoría',
+      status: 'Disponible',
+      badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
+      description: 'Asesoría especializada para empresas que requieren definir inversiones en tecnología, modernizar maquinaria o auditar código industrial.',
+      overview: 'Analizamos a fondo los cuellos de botella en procesos de manufactura o software interno. Entregamos un diagnóstico imparcial con estimaciones de costos, riesgos y retorno de inversión claro.',
+      deliverables: [
+        'Informe exhaustivo de diagnóstico de infraestructura en planta',
+        'Matriz de riesgos técnicos y alternativas de sustitución',
+        'Hoja de ruta por fases con cronograma y presupuesto',
+        'Acompañamiento en licitaciones o selección de proveedores'
+      ],
+      specs: [
+        { label: 'Metodología', value: 'Auditoría en sitio + Levantamiento de señales' },
+        { label: 'Tiempo de diagnóstico', value: 'Reporte ejecutivo en 5 a 10 días hábiles' },
+        { label: 'Modalidad', value: 'Presencial o híbrida (Remota)' },
+        { label: 'Confidencialidad', value: 'NDA firmado previo a cualquier levantamiento' }
+      ]
     },
     {
-      label: 'CAPABILITY 04',
-      status: 'AVAILABLE NOW',
-      isLive: true,
-      title: 'Marketing Tecnológico B2B',
-      subtitle: 'Posicionamiento estratégico de marca, narrativa de ingeniería y generación de demanda para soluciones tech.',
-      tags: ['Narrativa de Producto', 'Estrategia B2B Tech', 'Generación de Leads', 'Posicionamiento Digital'],
-      link: '#contacto'
+      id: 'JVT-MKT-04',
+      title: 'Marketing Tecnológico & B2B',
+      subtitle: 'Posicionamiento estratégico para productos y servicios del sector industrial y tecnológico.',
+      category: 'Marketing',
+      status: 'Activo',
+      badgeColor: 'bg-blue-50 text-blue-800 border-blue-200',
+      description: 'Estrategias de comunicación orientadas a ingenieros, directores de compras y tomadores de decisiones industriales.',
+      overview: 'El marketing industrial requiere lenguaje técnico riguroso y credibilidad. Diseñamos la presencia digital, la narrativa de ventas y la generación de oportunidades para empresas que venden tecnología a otras empresas.',
+      deliverables: [
+        'Estrategia de posicionamiento de marca y catálogo digital',
+        'Narrativa técnica para fichas de producto y whitepapers',
+        'Campañas dirigidas a tomadores de decisión B2B',
+        'Optimización de embudos y captura de prospectos calificados'
+      ],
+      specs: [
+        { label: 'Enfoque', value: 'B2B Técnico, Ingeniería y Manufactura' },
+        { label: 'Canales', value: 'LinkedIn B2B, Búsqueda Técnica, Email Outreach' },
+        { label: 'Materiales', value: 'Hojas técnicas, decks comerciales, landing pages' }
+      ]
     },
     {
-      label: 'FUTURE PRODUCT 01',
-      status: 'COMING SOON',
-      isLive: false,
+      id: 'JVT-PRD-05',
       title: 'Industrialpedia Platform',
-      subtitle: 'La plataforma unificada de comparación, homologación técnica y especificaciones de componentes industriales.',
-      tags: ['Homologador Multi-marca', 'Catálogo de Especificaciones', 'Mantenimiento 4.5'],
-      link: siteConfig.industrialpedia.websiteUrl,
-      isExternal: true
-    },
-    {
-      label: 'FUTURE PRODUCT 02',
-      status: 'COMING SOON',
-      isLive: false,
-      title: 'JIVOTECK Telemetry & IoT Suite',
-      subtitle: 'Suite modular de adquisición de datos en planta y sincronización directa con infraestructura cloud.',
-      tags: ['Edge Gateways', 'Telemetría Segura', 'In development'],
-      link: '#contacto'
+      subtitle: 'The Industrial Information Platform. Plataforma inteligente de comparación y homologación de componentes industriales.',
+      category: 'Industrialpedia',
+      status: 'En desarrollo',
+      badgeColor: 'bg-amber-100 text-amber-900 border-amber-300 font-bold',
+      description: 'Proyecto insignia de JIVOTECK en desarrollo activo para transformar la forma en que los ingenieros eligen componentes de automatización.',
+      overview: 'Industrialpedia es una plataforma de software creada y desarrollada exclusivamente por JIVOTECK. Permite cruzar especificaciones técnicas entre marcas líderes mundiales, encontrar reemplazos directos y acceder a fichas técnicas estandarizadas.',
+      deliverables: [
+        'Motor de búsqueda y comparación de actuadores y válvulas',
+        'Directorio unificado de fabricantes industriales',
+        'Fichas técnicas normalizadas descargables',
+        'Módulo de telemetría y gemelos digitales en fase de desarrollo'
+      ],
+      specs: [
+        { label: 'Estado', value: 'En desarrollo activo (Coming Soon)' },
+        { label: 'Web Oficial', value: 'https://industrialpedia.com.mx' },
+        { label: 'Propiedad', value: '100% Creada y Desarrollada por JIVOTECK' },
+        { label: 'Lanzamiento previsto', value: 'Fase Beta 2026' }
+      ],
+      isIndustrialpedia: true
     }
   ];
 
-  const filteredLaunches = launches.filter((item) => {
-    if (filter === 'live') return item.isLive;
-    if (filter === 'future') return !item.isLive;
-    return true;
-  });
+  const categories = [
+    { id: 'todos', label: 'Todos' },
+    { id: 'Automatización', label: 'Automatización' },
+    { id: 'Software', label: 'Software' },
+    { id: 'Consultoría', label: 'Consultoría' },
+    { id: 'Marketing', label: 'Marketing' },
+    { id: 'Industrialpedia', label: 'Industrialpedia' },
+  ];
+
+  const filteredItems = useMemo(() => {
+    return capabilities.filter(item => {
+      const matchesCategory = activeCategory === 'todos' || item.category === activeCategory;
+      const matchesSearch = searchQuery === '' || 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [activeCategory, searchQuery]);
 
   return (
-    <section id="servicios" className="py-20 sm:py-28 bg-[#F8FAFC] border-t border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section id="servicios" className="py-16 sm:py-24 bg-white text-slate-900 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-6">
-          <div className="space-y-2">
-            <div className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
-              CAPABILITIES & FUTURE LAUNCHES
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight font-sans">
-              Servicios y Productos
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-6">
+          <div>
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#007362] block mb-1">
+              CATÁLOGO DE SOLUCIONES & PRODUCTOS
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-sans">
+              Servicios e Innovación
             </h2>
+            <p className="text-sm text-slate-600 mt-1 max-w-xl">
+              Explora las especialidades de ingeniería que ofrecemos para transformar tu planta y optimizar tus operaciones.
+            </p>
           </div>
 
-          {/* Interactive filter tabs */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-200/70 rounded-lg text-xs font-mono">
-            <button
-              onClick={() => setFilter('all')}
-              className={`px-3 py-1.5 rounded transition-all font-semibold ${
-                filter === 'all' ? 'bg-white text-slate-950 shadow-xs' : 'text-slate-600 hover:text-slate-950'
-              }`}
-            >
-              Todos ({launches.length})
-            </button>
-            <button
-              onClick={() => setFilter('live')}
-              className={`px-3 py-1.5 rounded transition-all font-semibold ${
-                filter === 'live' ? 'bg-white text-slate-950 shadow-xs' : 'text-slate-600 hover:text-slate-950'
-              }`}
-            >
-              Disponibles (4)
-            </button>
-            <button
-              onClick={() => setFilter('future')}
-              className={`px-3 py-1.5 rounded transition-all font-semibold ${
-                filter === 'future' ? 'bg-white text-slate-950 shadow-xs' : 'text-slate-600 hover:text-slate-950'
-              }`}
-            >
-              Próximos (2)
-            </button>
-          </div>
+          <span className="text-xs font-mono text-slate-500">
+            Mostrando <strong>{filteredItems.length}</strong> de {capabilities.length} soluciones
+          </span>
         </div>
 
-        {/* List of Cards matching Screenshot 3 */}
-        <div className="space-y-5">
-          {filteredLaunches.map((item, idx) => (
+        {/* Search & Filter Bar matching Upstream Image 1 */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+          
+          {/* Category Tabs */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all whitespace-nowrap ${
+                  activeCategory === cat.id
+                    ? 'bg-[#007362] text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-950 hover:bg-slate-200/60'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Quick Search Input */}
+          <div className="relative w-full lg:w-72">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Filtrar por palabra clave..."
+              className="w-full pl-9 pr-4 py-1.5 text-xs bg-white rounded-xl border border-slate-200 focus:border-[#007362] focus:outline-none focus:ring-1 focus:ring-[#007362] text-slate-700 placeholder-slate-400 font-sans"
+            />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5 pointer-events-none" />
+          </div>
+
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredItems.map((item) => (
             <div
-              key={idx}
-              className={`bg-white rounded-lg border transition-all duration-200 p-6 sm:p-8 shadow-xs ${
-                item.isExternal 
-                  ? 'border-sky-200 hover:border-[#00D4FF] hover:shadow-md' 
-                  : 'border-slate-200 hover:border-slate-300'
+              key={item.id}
+              onClick={() => setSelectedItem(item)}
+              className={`group bg-white rounded-2xl border transition-all duration-300 p-6 flex flex-col justify-between hover:shadow-upstream-hover cursor-pointer relative overflow-hidden ${
+                item.isIndustrialpedia 
+                  ? 'border-amber-200 hover:border-amber-400 bg-gradient-to-b from-white to-amber-50/20' 
+                  : 'border-slate-200 hover:border-[#007362]'
               }`}
             >
-              {/* Top status bar */}
-              <div className="flex items-center justify-between font-mono text-xs pb-4 border-b border-slate-100">
-                <span className="uppercase tracking-widest text-slate-400 font-semibold">
-                  {item.label}
-                </span>
-                <span className={`inline-flex items-center gap-1.5 uppercase tracking-wider font-semibold ${
-                  item.isLive ? 'text-emerald-600' : 'text-[#0099CC]'
-                }`}>
-                  <span className={`w-2 h-2 rounded-full ${
-                    item.isLive ? 'bg-emerald-500' : 'bg-[#00D4FF]'
-                  }`}></span>
-                  <span>{item.status}</span>
-                </span>
-              </div>
-
-              {/* Title & subtitle */}
-              <div className="pt-4 space-y-2">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sans tracking-tight flex items-center justify-between">
-                  <span>{item.title}</span>
-                  {item.isExternal && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-mono text-[#0099CC] hover:underline flex items-center gap-1 font-semibold"
-                    >
-                      <span className="hidden sm:inline">Visitar web oficial</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  )}
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                  {item.subtitle}
-                </p>
-              </div>
-
-              {/* Tags and CTA */}
-              <div className="pt-5 flex flex-wrap items-center justify-between gap-3">
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag, tIdx) => (
-                    <span 
-                      key={tIdx} 
-                      className="px-2.5 py-1 bg-slate-50 text-slate-700 text-xs font-mono rounded border border-slate-200/80"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              {/* Top Meta & Status */}
+              <div>
+                <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+                  <span className="font-mono text-[11px] font-semibold text-slate-400">
+                    {item.id}
+                  </span>
+                  <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold border ${item.badgeColor}`}>
+                    ● {item.status}
+                  </span>
                 </div>
 
-                {item.isExternal ? (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-sky-50 border border-sky-200 text-xs font-mono uppercase font-semibold text-[#0099CC] hover:bg-[#00D4FF] hover:text-slate-950 transition-all"
-                  >
-                    <span>industrialpedia.com.mx</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                ) : item.isLive ? (
-                  <a
-                    href={item.link}
-                    className="inline-flex items-center gap-1 text-xs font-mono uppercase font-semibold text-slate-900 hover:text-[#0099CC] transition-colors"
-                  >
-                    <span>Cotizar</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                ) : (
-                  <span className="text-xs font-mono text-slate-400 uppercase">
-                    In development
-                  </span>
-                )}
+                {/* Title */}
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#007362] transition-colors font-sans tracking-tight mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs text-slate-600 font-sans leading-relaxed line-clamp-3 mb-4">
+                  {item.subtitle}
+                </p>
+
+                {/* Key deliverables pills */}
+                <div className="space-y-1.5">
+                  {item.deliverables.slice(0, 2).map((d, dIdx) => (
+                    <div key={dIdx} className="flex items-center gap-2 text-[11px] font-mono text-slate-600 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#007362]"></span>
+                      <span className="truncate">{d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom Action Footer */}
+              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-mono text-slate-500 flex items-center gap-1 group-hover:text-[#007362] transition-colors">
+                  <Info className="w-3.5 h-3.5" />
+                  <span>Ver Ficha Técnica</span>
+                </span>
+
+                <div className="w-7 h-7 rounded-full bg-slate-50 group-hover:bg-[#007362] group-hover:text-white text-slate-500 flex items-center justify-center transition-colors">
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </div>
               </div>
 
             </div>
           ))}
         </div>
+
+        {/* Modal when an item is selected */}
+        <ProjectDetailModal 
+          item={selectedItem} 
+          onClose={() => setSelectedItem(null)} 
+        />
 
       </div>
     </section>
