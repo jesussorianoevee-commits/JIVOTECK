@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { X, ExternalLink, CheckCircle2, Cpu, Code2, Compass, TrendingUp, Layers, ArrowRight } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2, Cpu, Code2, Compass, TrendingUp, Layers, ArrowRight, Database } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export interface ServiceDetail {
   id: string;
   title: string;
   subtitle: string;
-  category: 'Automatización' | 'Software' | 'Consultoría' | 'Marketing' | 'Industrialpedia';
-  status: 'Activo' | 'En desarrollo' | 'Disponible';
+  category: 'Datos Industriales' | 'Software' | 'Automatización' | 'Consultoría' | 'Marketing' | 'Industrialpedia';
+  status: string;
   badgeColor: string;
   description: string;
   overview: string;
@@ -28,8 +28,9 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Automatización': return Cpu;
+      case 'Datos Industriales': return Database;
       case 'Software': return Code2;
+      case 'Automatización': return Cpu;
       case 'Consultoría': return Compass;
       case 'Marketing': return TrendingUp;
       default: return Layers;
@@ -41,7 +42,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-[#EAE5DC] overflow-hidden flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header Banner with Brand Pine & Sage aesthetic */}
@@ -60,7 +61,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
           </button>
 
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00D4FF] mb-3">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#8FA89B] mb-3">
             <span>JIVOTECK</span>
             <span>/</span>
             <span>SOLUCIONES</span>
@@ -78,30 +79,30 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             </span>
           </div>
 
-          <p className="text-sm text-emerald-100 max-w-xl font-sans">
+          <p className="text-sm text-[#E2DDD4] max-w-xl font-sans">
             {item.subtitle}
           </p>
 
           {/* Category Tag & Meta */}
           <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-mono">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/10 text-emerald-200 backdrop-blur-xs">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/10 text-[#E2DDD4] backdrop-blur-xs">
               <IconComponent className="w-3.5 h-3.5" />
               <span>{item.category}</span>
             </span>
-            <span className="text-slate-300">
+            <span className="text-[#8FA89B]">
               ID: {item.id}
             </span>
           </div>
         </div>
 
-        {/* Tab Navigation (Inspired directly by Image 2: Overview, Documents, Events) */}
-        <div className="flex border-b border-slate-200 px-6 sm:px-8 bg-slate-50 gap-4">
+        {/* Tab Navigation */}
+        <div className="flex border-b border-[#EAE5DC] px-6 sm:px-8 bg-[#FAF8F5] gap-4">
           <button
             onClick={() => setActiveTab('overview')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'overview'
-                ? 'border-[#0284C7] text-[#0284C7]'
-                : 'border-transparent text-slate-500 hover:text-slate-900'
+                ? 'border-[#2E4846] text-[#13262F]'
+                : 'border-transparent text-[#638379] hover:text-[#13262F]'
             }`}
           >
             Visión General
@@ -110,8 +111,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             onClick={() => setActiveTab('deliverables')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'deliverables'
-                ? 'border-[#0284C7] text-[#0284C7]'
-                : 'border-transparent text-slate-500 hover:text-slate-900'
+                ? 'border-[#2E4846] text-[#13262F]'
+                : 'border-transparent text-[#638379] hover:text-[#13262F]'
             }`}
           >
             Alcance & Entregables
@@ -120,11 +121,11 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
             onClick={() => setActiveTab('specs')}
             className={`py-3 text-xs font-bold uppercase tracking-wider border-b-2 transition-all font-mono ${
               activeTab === 'specs'
-                ? 'border-[#0284C7] text-[#0284C7]'
-                : 'border-transparent text-slate-500 hover:text-slate-900'
+                ? 'border-[#2E4846] text-[#13262F]'
+                : 'border-transparent text-[#638379] hover:text-[#13262F]'
             }`}
           >
-            Especificaciones Técnicas
+            Parámetros de Trabajo
           </button>
         </div>
 
@@ -133,34 +134,37 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
           
           {activeTab === 'overview' && (
             <div className="space-y-4">
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                <h4 className="text-xs font-mono font-bold uppercase text-slate-500 mb-1">
+              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC]">
+                <h4 className="text-xs font-mono font-bold uppercase text-[#638379] mb-1">
                   Resumen Ejecutivo
                 </h4>
-                <p className="text-sm text-slate-700 leading-relaxed">
+                <p className="text-sm text-[#3E5C54] leading-relaxed">
                   {item.overview}
                 </p>
               </div>
 
               {item.isIndustrialpedia && (
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-amber-50 via-emerald-50 to-white border border-amber-200/80 space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-800 uppercase">
-                    <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                    <span>PROYECTO PROPIEDAD DE JIVOTECK</span>
+                <div className="p-5 rounded-2xl bg-[#F4F1EA] border border-[#D8D2C6] space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#2E4846] uppercase">
+                    <span className="w-2 h-2 rounded-full bg-[#50756C]"></span>
+                    <span>PRODUCTO PROPIO DE JIVOTECK</span>
                   </div>
-                  <h4 className="text-base font-bold text-slate-900">
+                  <h4 className="text-base font-bold text-[#13262F]">
                     Industrialpedia: The Industrial Information Platform
                   </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Industrialpedia es una plataforma de software desarrollada 100% por el equipo de JIVOTECK orientada a la ingeniería de compras, mantenimiento y proyectos para comparar y seleccionar componentes de automatización industrial.
+                  <p className="text-xs text-[#3E5C54] leading-relaxed">
+                    Industrialpedia es una plataforma B2B desarrollada por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales. La experiencia tecnológica desarrollada para Industrialpedia sirve como base de conocimiento para crear soluciones privadas adaptadas a cada empresa.
+                  </p>
+                  <p className="text-xs text-[#638379] font-mono leading-relaxed">
+                    * Entornos separados: Los datos privados de nuestros clientes nunca alimentan Industrialpedia.
                   </p>
                   <a
                     href={siteConfig.industrialpedia.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4FF] hover:bg-[#38BDF8] text-slate-950 text-xs font-mono font-bold rounded-xl transition-all shadow-md shadow-cyan-500/20"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-all shadow-xs"
                   >
-                    <span>Abrir industrialpedia.com.mx</span>
+                    <span>Explorar industrialpedia.com.mx</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -170,14 +174,14 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
 
           {activeTab === 'deliverables' && (
             <div className="space-y-3">
-              <h4 className="text-xs font-mono font-bold uppercase text-slate-500 mb-2">
-                Entregables de Ingeniería Incluidos
+              <h4 className="text-xs font-mono font-bold uppercase text-[#638379] mb-2">
+                Alcance y Capacidades Incluidas
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {item.deliverables.map((d, index) => (
-                  <div key={index} className="p-3 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
-                    <span className="text-xs text-slate-700 font-medium">{d}</span>
+                  <div key={index} className="p-3 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#2E4846] shrink-0 mt-0.5" />
+                    <span className="text-xs text-[#3E5C54] font-medium">{d}</span>
                   </div>
                 ))}
               </div>
@@ -186,14 +190,14 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
 
           {activeTab === 'specs' && (
             <div className="space-y-3">
-              <h4 className="text-xs font-mono font-bold uppercase text-slate-500 mb-2">
-                Ficha Técnica & Parámetros
+              <h4 className="text-xs font-mono font-bold uppercase text-[#638379] mb-2">
+                Especificaciones & Parámetros
               </h4>
-              <div className="divide-y divide-slate-100 border border-slate-200 rounded-2xl overflow-hidden bg-white">
+              <div className="divide-y divide-[#EAE5DC] border border-[#EAE5DC] rounded-2xl overflow-hidden bg-white">
                 {item.specs.map((s, idx) => (
                   <div key={idx} className="flex justify-between items-center p-3.5 text-xs">
-                    <span className="font-mono text-slate-500">{s.label}</span>
-                    <span className="font-semibold text-slate-900">{s.value}</span>
+                    <span className="font-mono text-[#638379]">{s.label}</span>
+                    <span className="font-semibold text-[#13262F]">{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -203,23 +207,23 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
         </div>
 
         {/* Modal Footer Actions */}
-        <div className="p-4 sm:p-6 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="text-xs font-mono text-slate-500 text-center sm:text-left">
-            ¿Requieres este desarrollo para tu planta o empresa?
+        <div className="p-4 sm:p-6 bg-[#FAF8F5] border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span className="text-xs font-mono text-[#638379] text-center sm:text-left">
+            ¿Deseas evaluar este requerimiento para tu empresa?
           </span>
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <button
               onClick={onClose}
-              className="flex-1 sm:flex-none px-4 py-2 text-xs font-mono font-semibold text-slate-700 hover:bg-slate-200/70 rounded-xl border border-slate-300 transition-colors"
+              className="flex-1 sm:flex-none px-4 py-2 text-xs font-mono font-semibold text-[#3E5C54] hover:bg-[#EAE5DC] rounded-xl border border-[#D8D2C6] transition-colors"
             >
               Cerrar
             </button>
             <a
               href="#contacto"
               onClick={onClose}
-              className="flex-1 sm:flex-none px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider text-white bg-[#13262F] hover:bg-[#1D3845] rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm"
+              className="flex-1 sm:flex-none px-5 py-2 text-xs font-mono font-bold uppercase tracking-wider text-white bg-[#13262F] hover:bg-[#1D3845] rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs"
             >
-              <span>Cotizar con JIVOTECK</span>
+              <span>Platicar sobre mi proyecto</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

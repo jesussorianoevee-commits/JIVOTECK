@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { 
   ArrowUpRight, 
   Search, 
-  Info
+  Info,
+  Database
 } from 'lucide-react';
 import { ProjectDetailModal, ServiceDetail } from './ProjectDetailModal';
 
@@ -13,112 +14,137 @@ export const Services: React.FC = () => {
 
   const capabilities: ServiceDetail[] = [
     {
-      id: 'JVT-AUT-01',
-      title: 'Automatización & Control de Procesos',
-      subtitle: 'Ingeniería de control industrial, integración de sensórica, robótica y sistemas SCADA.',
-      category: 'Automatización',
-      status: 'Activo',
-      badgeColor: 'bg-[#F4F1EA] text-[#2E4846] border-[#D8D2C6]',
-      description: 'Soluciones integrales de hardware y control para líneas de ensamble, celdas robotizadas y plantas de manufactura.',
-      overview: 'Diseñamos e implementamos arquitecturas de automatización completas desde Aguascalientes para clientes en México e internacionalmente. Nos enfocamos en reducción de tiempos muertos, seguridad operativa y trazabilidad total.',
+      id: 'JVT-DAT-01',
+      title: 'Estructuración de Datos Industriales',
+      subtitle: 'Diseñamos soluciones para convertir catálogos de refacciones, información MRO y documentación técnica dispersa en estructuras organizadas, normalizadas y consultables.',
+      category: 'Datos Industriales',
+      status: 'Servicio Principal',
+      badgeColor: 'bg-[#13262F] text-white border-[#13262F]',
+      description: 'Convertimos inventarios desorganizados, hojas de cálculo dispersas y catálogos en bases de datos técnicas normalizadas con búsqueda interna.',
+      overview: 'Ayudamos a los departamentos de mantenimiento, ingeniería y compras a tomar el control de su información técnica. Desarrollamos soluciones para depurar registros duplicados, clasificar componentes por familias y atributos técnicos, normalizar marcas y códigos de parte, y vincular planos y hojas de especificaciones.',
       deliverables: [
-        'Lógica de control de procesos industriales e interconexión',
-        'Diseño de interfaces HMI y sistemas SCADA de supervisión',
-        'Diagramas unifilares y esquemáticos eléctricos normalizados',
-        'Puesta en marcha y capacitación técnica del personal'
+        'Normalización de fabricantes, marcas y números de parte',
+        'Clasificación técnica y organización de atributos de ingeniería',
+        'Identificación y depuración de registros duplicados o inconsistentes',
+        'Vinculación de manuales, fichas técnicas y esquemáticos',
+        'Sistemas internos de búsqueda, consulta y filtrado',
+        'Estructuración técnica compatible para futuras integraciones con ERP / CMMS'
       ],
       specs: [
-        { label: 'Controladores soportados', value: 'Siemens, Rockwell Automation, Omron' },
-        { label: 'Protocolos de red', value: 'Profinet, Ethernet/IP, Modbus TCP, IO-Link' },
-        { label: 'Ubicación de atención', value: 'Presencial en Bajío/México y soporte remoto' },
-        { label: 'Entrega de código', value: 'Código fuente abierto y documentado al cliente' }
+        { label: 'Formatos de origen', value: 'Hojas de Excel, CSV, exportaciones de ERP/CMMS, archivos PDF' },
+        { label: 'Modelo de almacenamiento', value: 'Bases de datos privadas, 100% aisladas e independientes' },
+        { label: 'Trazabilidad', value: 'Historial de modificaciones y control de cambios de catálogo' },
+        { label: 'Confidencialidad', value: 'Acuerdo NDA estricto previo a cualquier análisis de datos' }
       ]
     },
     {
       id: 'JVT-SFT-02',
-      title: 'Desarrollo de Software a la Medida',
-      subtitle: 'Plataformas web empresariales, dashboards operativos, microservicios cloud y APIs seguras.',
+      title: 'Desarrollo de Software para Procesos de Información',
+      subtitle: 'Desarrollamos sistemas internos a la medida cuando el problema de información de una empresa requiere una herramienta propia.',
       category: 'Software',
-      status: 'Activo',
+      status: 'A la Medida',
       badgeColor: 'bg-[#FAF8F5] text-[#13262F] border-[#D8D2C6]',
-      description: 'Ingeniería de software moderna para digitalizar operaciones de planta, logística, inventarios y analítica técnica.',
-      overview: 'Construimos software con tecnologías de última generación (React, TypeScript, Node.js, Python, PostgreSQL, Cloud). Cada sistema es escalable, seguro y optimizado para funcionar en entornos industriales exigentes.',
+      description: 'Herramientas privadas adaptadas al flujo de trabajo real de tu equipo: catálogos técnicos internos, portales de consulta y dashboards.',
+      overview: 'Cuando las plataformas comerciales genéricas no encajan con los procesos internos de planta, diseñamos y construimos software propio adaptado exactamente a las necesidades de tu organización. No vendemos un SaaS rígido; entregamos herramientas privadas con propiedad total de la solución.',
       deliverables: [
-        'Aplicaciones web y portales de clientes de alto rendimiento',
-        'Integración con bases de datos SQL y almacenes en la nube',
-        'APIs REST / GraphQL para conectar ERPs y sistemas de piso',
-        'Despliegue automatizado CI/CD y monitoreo 24/7'
+        'Catálogos técnicos internos y portales privados de consulta',
+        'Buscadores internos por parámetros técnicos y familias de refacciones',
+        'Dashboards operativos para supervisión de inventario crítico y compras',
+        'Flujos de validación técnica y autorización de nuevos registros',
+        'Módulos de administración y actualización continua de información industrial'
       ],
       specs: [
-        { label: 'Stack frontend', value: 'React, TypeScript, Tailwind CSS, Next.js' },
-        { label: 'Stack backend', value: 'Node.js, Express, Python FastAPI, PostgreSQL' },
-        { label: 'Seguridad', value: 'Autenticación JWT, RBAC, cifrado TLS 1.3' },
-        { label: 'Propiedad', value: '100% código propiedad del cliente' }
+        { label: 'Entorno de despliegue', value: 'Nube dedicada o servidor interno / intranet de la empresa' },
+        { label: 'Propiedad del sistema', value: 'Código fuente y base de datos 100% propiedad del cliente' },
+        { label: 'Seguridad y control', value: 'Gestión de usuarios por roles y permisos de acceso' },
+        { label: 'Adaptabilidad', value: 'Diseño modular según el proceso específico de tu planta' }
       ]
     },
     {
-      id: 'JVT-CON-03',
-      title: 'Orientación & Consultoría Técnica',
-      subtitle: 'Diagnóstico de sistemas en planta, auditoría de viabilidad tecnológica y modernización de equipos obsoletos.',
+      id: 'JVT-AUT-03',
+      title: 'Automatización Industrial & Control de Procesos',
+      subtitle: 'Soluciones para procesos industriales, integración de controladores, sensórica y supervisión operativa.',
+      category: 'Automatización',
+      status: 'Activo',
+      badgeColor: 'bg-[#F4F1EA] text-[#2E4846] border-[#D8D2C6]',
+      description: 'Ingeniería aplicada para líneas de producción, monitoreo de variables de proceso y modernización de control.',
+      overview: 'Diseñamos e implementamos soluciones de automatización orientadas a la confiabilidad y continuidad operativa. Integramos controladores y sistemas de monitoreo para asegurar la trazabilidad y la eficiencia de los procesos de manufactura.',
+      deliverables: [
+        'Lógica de control para maquinaria y procesos continuos',
+        'Diseño de interfaces HMI y sistemas SCADA de supervisión',
+        'Diagramas eléctricos y documentación de ingeniería normalizada',
+        'Acompañamiento en puesta en marcha y capacitación técnica'
+      ],
+      specs: [
+        { label: 'Controladores', value: 'Marcas estándar de la industria (Siemens, Rockwell, Omron)' },
+        { label: 'Protocolos de comunicación', value: 'Ethernet/IP, Profinet, Modbus TCP, IO-Link' },
+        { label: 'Cobertura', value: 'Presencial en región Bajío/México y soporte técnico' },
+        { label: 'Documentación', value: 'Planos y manuales de operación entregados al cliente' }
+      ]
+    },
+    {
+      id: 'JVT-CON-04',
+      title: 'Consultoría Técnica & Diagnóstico',
+      subtitle: 'Análisis y definición de soluciones para evaluar calidad de datos, viabilidad de software y modernización de sistemas.',
       category: 'Consultoría',
       status: 'Disponible',
       badgeColor: 'bg-[#FAF8F5] text-[#50756C] border-[#D8D2C6]',
-      description: 'Asesoría especializada para empresas que requieren definir inversiones en tecnología, modernizar maquinaria o auditar código industrial.',
-      overview: 'Analizamos a fondo los cuellos de botella en procesos de manufactura o software interno. Entregamos un diagnóstico imparcial con estimaciones de costos, riesgos y retorno de inversión claro.',
+      description: 'Evaluación técnica imparcial para identificar inconsistencias en catálogos o definir la arquitectura de software necesaria.',
+      overview: 'Previo a cualquier desarrollo, realizamos un diagnóstico estructurado de tus fuentes de información actuales. Analizamos la calidad de los registros, identificamos cuellos de botella en la consulta técnica y entregamos una propuesta clara de alcance.',
       deliverables: [
-        'Informe exhaustivo de diagnóstico de infraestructura en planta',
-        'Matriz de riesgos técnicos y alternativas de sustitución',
-        'Hoja de ruta por fases con cronograma y presupuesto',
-        'Acompañamiento en licitaciones o selección de proveedores'
+        'Diagnóstico de consistencia y duplicidad de catálogos técnicos',
+        'Evaluación de viabilidad para desarrollo de sistemas propios',
+        'Definición de requerimientos para mantenimiento e ingeniería',
+        'Hoja de ruta por etapas con tiempos y prioridades claras'
       ],
       specs: [
-        { label: 'Metodología', value: 'Auditoría en sitio + Levantamiento de señales' },
-        { label: 'Tiempo de diagnóstico', value: 'Reporte ejecutivo en 5 a 10 días hábiles' },
-        { label: 'Modalidad', value: 'Presencial o híbrida (Remota)' },
-        { label: 'Confidencialidad', value: 'NDA firmado previo a cualquier levantamiento' }
+        { label: 'Modalidad de trabajo', value: 'Remota o presencial según el alcance acordado' },
+        { label: 'Tiempo de diagnóstico', value: 'Entrega de reporte ejecutivo en 5 a 10 días hábiles' },
+        { label: 'Entregable', value: 'Reporte técnico con hallazgos y alternativas de solución' },
+        { label: 'Confidencialidad', value: 'Acuerdo NDA previo al levantamiento de datos' }
       ]
     },
     {
-      id: 'JVT-MKT-04',
-      title: 'Marketing Tecnológico & B2B',
-      subtitle: 'Posicionamiento estratégico para productos y servicios del sector industrial y tecnológico.',
+      id: 'JVT-MKT-05',
+      title: 'Marketing Tecnológico & Comunicación B2B',
+      subtitle: 'Estrategias de comunicación y presencia técnica para empresas del sector industrial y de ingeniería.',
       category: 'Marketing',
-      status: 'Activo',
+      status: 'Especialidad B2B',
       badgeColor: 'bg-[#F4F1EA] text-[#3E5C54] border-[#D8D2C6]',
-      description: 'Estrategias de comunicación orientadas a ingenieros, directores de compras y tomadores de decisiones industriales.',
-      overview: 'El marketing industrial requiere lenguaje técnico riguroso y credibilidad. Diseñamos la presencia digital, la narrativa de ventas y la generación de oportunidades para empresas que venden tecnología a otras empresas.',
+      description: 'Estructuración de información comercial y técnica para presentar capacidades de ingeniería ante tomadores de decisión.',
+      overview: 'Ayudamos a empresas técnicas y de manufactura a comunicar con claridad sus soluciones industriales mediante fichas de producto rigurosas, catálogos estructurados y presencia digital profesional orientada a tomadores de decisión B2B.',
       deliverables: [
-        'Estrategia de posicionamiento de marca y catálogo digital',
-        'Narrativa técnica para fichas de producto y whitepapers',
-        'Campañas dirigidas a tomadores de decisión B2B',
-        'Optimización de embudos y captura de prospectos calificados'
+        'Estructuración técnica de catálogos y hojas de especificación',
+        'Narrativa de ingeniería para propuestas comerciales y técnicas',
+        'Diseño de presencia web orientada al sector industrial',
+        'Contenidos claros para directores de mantenimiento y compras'
       ],
       specs: [
-        { label: 'Enfoque', value: 'B2B Técnico, Ingeniería y Manufactura' },
-        { label: 'Canales', value: 'LinkedIn B2B, Búsqueda Técnica, Email Outreach' },
-        { label: 'Materiales', value: 'Hojas técnicas, decks comerciales, landing pages' }
+        { label: 'Enfoque', value: 'Sector industrial, manufactura e ingeniería B2B' },
+        { label: 'Lenguaje', value: 'Técnico, riguroso y libre de clichés comerciales' },
+        { label: 'Entregables', value: 'Fichas técnicas, catálogos digitales y sitios web' }
       ]
     },
     {
-      id: 'JVT-PRD-05',
+      id: 'JVT-PRD-06',
       title: 'Industrialpedia Platform',
-      subtitle: 'The Industrial Information Platform. Plataforma inteligente de comparación y homologación de componentes industriales.',
+      subtitle: 'The Industrial Information Platform. Plataforma B2B para estructurar, consultar y comparar información técnica de componentes.',
       category: 'Industrialpedia',
-      status: 'En desarrollo',
+      status: 'Plataforma funcional · evolución continua',
       badgeColor: 'bg-[#E2DDD4] text-[#13262F] border-[#D8D2C6] font-bold',
-      description: 'Proyecto insignia de JIVOTECK en desarrollo activo para transformar la forma en que los ingenieros eligen componentes de automatización.',
-      overview: 'Industrialpedia es una plataforma de software creada y desarrollada exclusivamente por JIVOTECK. Permite cruzar especificaciones técnicas entre marcas líderes mundiales, encontrar reemplazos directos y acceder a fichas técnicas estandarizadas.',
+      description: 'Producto propio desarrollado por JIVOTECK que demuestra nuestra experiencia en estructuración de información industrial a gran escala.',
+      overview: 'Industrialpedia es una plataforma B2B desarrollada 100% por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales multi-fabricante. La experiencia técnica acumulada en su creación es la base de conocimiento que nos permite desarrollar sistemas privados adaptados a las empresas.',
       deliverables: [
-        'Motor de búsqueda y comparación de actuadores y válvulas',
-        'Directorio unificado de fabricantes industriales',
-        'Fichas técnicas normalizadas descargables',
-        'Módulo de telemetría y gemelos digitales en fase de desarrollo'
+        'Estructuración de componentes técnicos multi-fabricante',
+        'Motor de búsqueda y cruce de números de parte industriales',
+        'Fichas técnicas con atributos estandarizados de ingeniería',
+        'Demostración práctica de arquitectura de datos aplicada'
       ],
       specs: [
-        { label: 'Estado', value: 'En desarrollo activo (Coming Soon)' },
-        { label: 'Web Oficial', value: 'https://industrialpedia.com.mx' },
-        { label: 'Propiedad', value: '100% Creada y Desarrollada por JIVOTECK' },
-        { label: 'Lanzamiento previsto', value: 'Fase Beta 2026' }
+        { label: 'Tipo de solución', value: 'Producto tecnológico propio de JIVOTECK' },
+        { label: 'Estado', value: 'Plataforma funcional · evolución continua' },
+        { label: 'Web oficial', value: 'https://industrialpedia.com.mx' },
+        { label: 'Aislamiento', value: 'Entorno 100% separado de las bases privadas de clientes' }
       ],
       isIndustrialpedia: true
     }
@@ -126,10 +152,11 @@ export const Services: React.FC = () => {
 
   const categories = [
     { id: 'todos', label: 'Todos' },
+    { id: 'Datos Industriales', label: 'Información y Datos' },
+    { id: 'Software', label: 'Software Privado' },
     { id: 'Automatización', label: 'Automatización' },
-    { id: 'Software', label: 'Software' },
     { id: 'Consultoría', label: 'Consultoría' },
-    { id: 'Marketing', label: 'Marketing' },
+    { id: 'Marketing', label: 'Marketing B2B' },
     { id: 'Industrialpedia', label: 'Industrialpedia' },
   ];
 
@@ -151,14 +178,15 @@ export const Services: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#EAE5DC] pb-6">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#2E4846] block mb-1">
-              CATÁLOGO DE SOLUCIONES & PRODUCTOS
-            </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6] mb-2 shadow-2xs">
+              <Database className="w-3.5 h-3.5 text-[#50756C]" />
+              <span>CATÁLOGO DE SOLUCIONES</span>
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#13262F] tracking-tight font-serif">
-              Servicios e Innovación
+              Capacidades & Servicios
             </h2>
             <p className="text-sm text-[#4A635B] mt-1 max-w-xl font-sans">
-              Explora las especialidades de ingeniería que ofrecemos para transformar tu planta y optimizar tus operaciones.
+              Soluciones diseñadas para estructurar datos industriales, desarrollar software interno adaptado y brindar soporte técnico a la operación.
             </p>
           </div>
 
@@ -193,7 +221,7 @@ export const Services: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Filtrar por palabra clave..."
+              placeholder="Buscar por palabra clave..."
               className="w-full pl-9 pr-4 py-1.5 text-xs bg-white rounded-xl border border-[#D8D2C6] focus:border-[#2E4846] focus:outline-none focus:ring-1 focus:ring-[#2E4846] text-[#13262F] placeholder-[#8FA89B] font-sans"
             />
             <Search className="w-3.5 h-3.5 text-[#8FA89B] absolute left-3 top-2.5 pointer-events-none" />
@@ -208,9 +236,11 @@ export const Services: React.FC = () => {
               key={item.id}
               onClick={() => setSelectedItem(item)}
               className={`group bg-white rounded-2xl border transition-all duration-300 p-6 flex flex-col justify-between hover:shadow-md cursor-pointer relative overflow-hidden ${
-                item.isIndustrialpedia 
-                  ? 'border-[#D8D2C6] hover:border-[#13262F] bg-gradient-to-b from-white to-[#F4F1EA]/30' 
-                  : 'border-[#EAE5DC] hover:border-[#2E4846]'
+                item.category === 'Datos Industriales'
+                  ? 'border-[#2E4846] bg-gradient-to-b from-white to-[#FAF8F5] shadow-xs'
+                  : item.isIndustrialpedia 
+                    ? 'border-[#D8D2C6] hover:border-[#13262F] bg-gradient-to-b from-white to-[#F4F1EA]/30' 
+                    : 'border-[#EAE5DC] hover:border-[#2E4846]'
               }`}
             >
               {/* Top Meta & Status */}
@@ -248,7 +278,9 @@ export const Services: React.FC = () => {
               <div className="mt-5 pt-3 border-t border-[#EAE5DC] flex items-center justify-between">
                 <span className="text-xs font-mono text-[#638379] flex items-center gap-1 group-hover:text-[#13262F] transition-colors">
                   <Info className="w-3.5 h-3.5" />
-                  <span>Ver Ficha Técnica</span>
+                  <span>
+                    {item.category === 'Datos Industriales' ? 'Solicitar Diagnóstico' : 'Ver Ficha Técnica'}
+                  </span>
                 </span>
 
                 <div className="w-7 h-7 rounded-full bg-[#F4F1EA] group-hover:bg-[#13262F] group-hover:text-white text-[#2E4846] flex items-center justify-center transition-colors">

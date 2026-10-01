@@ -12,20 +12,28 @@ export const FAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: "¿Quiénes son los dueños y desarrolladores de Industrialpedia?",
-      answer: "Los dueños, fundadores y desarrolladores directos de Industrialpedia somos nosotros en JIVOTECK. Es un producto tecnológico propio de nuestra startup, concebido para revolucionar la búsqueda y homologación técnica de componentes industriales. Actualmente se encuentra en fase de desarrollo activo ('Coming Soon') y su sitio oficial es industrialpedia.com.mx."
+      question: "¿Qué relación tiene JIVOTECK con Industrialpedia?",
+      answer: "Industrialpedia es un producto propio desarrollado por JIVOTECK y actualmente es una plataforma funcional en evolución continua. Es una plataforma B2B para estructurar, consultar y comparar información técnica de componentes y refacciones industriales multi-fabricante. Además de operar como plataforma pública, demuestra nuestra capacidad técnica en arquitectura de datos industriales. Su sitio web es industrialpedia.com.mx."
     },
     {
-      question: "¿Qué servicios y áreas cubre JIVOTECK como startup?",
-      answer: "Nuestras capacidades abarcan 4 pilares: Automatización Industrial (control de procesos, sensórica avanzada, robótica y sistemas SCADA), Desarrollo de Software a la Medida (plataformas web, cloud y APIs seguras), Orientación & Consultoría Técnica (auditoría en planta y dirección de proyectos), y Marketing Tecnológico B2B (narrativa y posicionamiento para soluciones de ingeniería)."
+      question: "¿JIVOTECK puede trabajar con información interna de mi empresa?",
+      answer: "Sí. JIVOTECK puede desarrollar soluciones privadas para estructurar y consultar catálogos técnicos, información MRO, refacciones y documentación industrial de acuerdo con las necesidades del proyecto. El alcance se define después de analizar la estructura y calidad de los datos disponibles, siempre bajo un acuerdo de confidencialidad (NDA)."
     },
     {
-      question: "¿Dónde están ubicados y cuál es su alcance de trabajo?",
-      answer: "Nuestra sede principal se encuentra en Aguascalientes, México. Atendemos proyectos de manera presencial en la región y de forma remota/en línea para clientes y empresas en todo México e internacionalmente."
+      question: "¿Tengo que utilizar Industrialpedia para contratar un proyecto?",
+      answer: "No. Los sistemas empresariales desarrollados por JIVOTECK pueden funcionar de forma privada e independiente. Industrialpedia es un producto propio que puede utilizarse como fuente complementaria cuando el proyecto lo requiera, pero la información interna de tu empresa jamás alimenta dicha plataforma."
     },
     {
-      question: "¿Cómo puedo solicitar una cotización o hablar con el equipo?",
-      answer: `Puedes enviarnos un mensaje mediante el formulario de contacto en esta página o escribirnos directamente a ${siteConfig.contact.primaryEmail}. Te responderemos a la brevedad para entender tus requerimientos y diseñar una propuesta sin costo inicial.`
+      question: "¿Qué tipo de soluciones ofrece JIVOTECK?",
+      answer: "Nos enfocamos en estructuración de datos industriales y catálogos MRO, desarrollo de software privado adaptado a procesos de información (portales de consulta, buscadores y dashboards), automatización industrial y control de procesos en planta, consultoría técnica para diagnóstico de sistemas y marketing tecnológico B2B."
+    },
+    {
+      question: "¿Dónde están ubicados y cuál es el alcance de sus proyectos?",
+      answer: "Nuestra sede principal se encuentra en Aguascalientes, México. Brindamos atención técnica presencial en la región y trabajamos de manera remota para empresas en todo México y el extranjero."
+    },
+    {
+      question: "¿Cómo puedo solicitar un diagnóstico o platicar sobre mi catálogo?",
+      answer: `Puedes enviarnos un mensaje mediante el formulario de contacto en esta página o escribirnos directamente a ${siteConfig.contact.primaryEmail}. Analizaremos tus requerimientos técnicos para orientarte sobre la mejor alternativa de solución.`
     }
   ];
 
@@ -43,7 +51,7 @@ export const FAQ: React.FC = () => {
             Preguntas Frecuentes
           </h2>
           <p className="text-sm text-[#4A635B] font-sans">
-            Claridad sobre nuestro modelo de trabajo, propiedad de proyectos y alcance tecnológico.
+            Claridad sobre nuestro modelo de trabajo, privacidad de datos y alcance de los proyectos.
           </p>
         </div>
 

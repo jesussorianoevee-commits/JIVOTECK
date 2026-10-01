@@ -1,27 +1,27 @@
 import React from 'react';
-import { ShieldCheck, MapPin, Code2, Users, HeartHandshake } from 'lucide-react';
+import { Database, MapPin, Code2, Users, Layers } from 'lucide-react';
 
 export const About: React.FC = () => {
   const highlights = [
     {
       icon: MapPin,
       title: 'Sede en Aguascalientes, México',
-      description: 'Ubicados en el corazón del corredor industrial del Bajío, con capacidad de despliegue en planta local y proyectos remotos a nivel nacional e internacional.'
+      description: 'Empresa tecnológica emergente con sede en Aguascalientes, con atención presencial en la región y capacidad de trabajo remoto a nivel nacional.'
+    },
+    {
+      icon: Database,
+      title: 'Estructuración de Información Industrial',
+      description: 'Transformamos catálogos dispersos, registros MRO y documentación técnica en bases de datos organizadas y útiles para mantenimiento, ingeniería y compras.'
     },
     {
       icon: Code2,
-      title: 'Desarrollo e Innovación Propia',
-      description: 'No somos solo integradores; creamos tecnología propia y productos de software como Industrialpedia, la plataforma de homologación industrial.'
+      title: 'Software Privado a la Medida',
+      description: 'Construimos herramientas internas adaptadas a los procesos de cada empresa, con propiedad total de la base de datos y del código desarrollado.'
     },
     {
-      icon: ShieldCheck,
-      title: 'Propiedad Intelectual y Código Abierto',
-      description: 'Todo el código fuente desarrollado para tu empresa, los esquemáticos y la documentación técnica son 100% propiedad de tu organización.'
-    },
-    {
-      icon: HeartHandshake,
-      title: 'Conexión Directa con el Cliente',
-      description: 'Comunicación fluida entre ingenieros, sin intermediarios ni burocracia, con entregas estructuradas por hitos verificables.'
+      icon: Layers,
+      title: 'Industrialpedia: Demostración Real',
+      description: 'Concebimos, desarrollamos y operamos Industrialpedia como producto propio, demostrando en la práctica nuestra capacidad en datos multi-fabricante.'
     }
   ];
 
@@ -30,16 +30,19 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header */}
-        <div className="max-w-3xl space-y-3">
+        <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
             <Users className="w-3.5 h-3.5 text-[#50756C]" />
             <span>SOBRE NOSOTROS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            Ingeniería que conecta con tus metas productivas.
+            Ingeniería de información para la realidad industrial.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            <strong>JIVOTECK</strong> es una startup mexicana de base tecnológica fundada con la convicción de que los sistemas de automatización industrial y el software moderno deben operar con propósito y cercanía.
+            <strong>JIVOTECK</strong> es una empresa tecnológica emergente de Aguascalientes enfocada en desarrollar soluciones integrales para la gestión, estructuración y aprovechamiento de información industrial.
+          </p>
+          <p className="text-sm sm:text-base text-[#4A635B] leading-relaxed font-sans font-normal">
+            Combinamos conocimiento industrial, arquitectura de datos y desarrollo de software para construir herramientas adaptadas a problemas reales de las empresas, manteniendo siempre una filosofía de tecnología con propósito y contacto directo de especialista a especialista.
           </p>
         </div>
 

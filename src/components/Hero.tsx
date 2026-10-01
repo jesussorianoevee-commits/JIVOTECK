@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans max-w-3xl font-normal">
-            En <strong>JIVOTECK</strong> convergen la ingeniería de control, la automatización de procesos industriales y el desarrollo de software a la medida con una sola premisa: <em>Tecnología con propósito. Siempre contigo.</em>
+            <strong>JIVOTECK</strong> desarrolla soluciones tecnológicas para transformar información industrial dispersa en sistemas estructurados, consultables y útiles para mantenimiento, ingeniería y compras. Diseñamos software y herramientas adaptadas a las necesidades reales de cada empresa.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -101,14 +101,14 @@ export const Hero: React.FC = () => {
               href="#contacto"
               className="px-6 py-3 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
             >
-              <span>Hablemos de tu Proyecto</span>
+              <span>Hablemos de tu proyecto</span>
               <ArrowRight className="w-4 h-4 text-white" />
             </a>
             <a
               href="#servicios"
               className="px-6 py-3 rounded-xl bg-white hover:bg-[#F4F1EA] text-[#13262F] font-mono text-xs font-semibold uppercase tracking-wider transition-all border border-[#D5DDD8] shadow-2xs"
             >
-              <span>Ver Soluciones</span>
+              <span>Conoce nuestras soluciones</span>
             </a>
           </div>
         </div>
@@ -210,11 +210,11 @@ export const Hero: React.FC = () => {
 
             <div className="relative z-10 space-y-5">
               
-              {/* Kicker & Coming Soon Pill */}
+              {/* Kicker & Functional Platform Pill */}
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#F4F1EA] text-[#2E4846] border border-[#D8D2C6]">
-                  <span className="w-2 h-2 rounded-full bg-[#50756C] animate-pulse"></span>
-                  <span>EN DESARROLLO ACTIVO • COMING SOON</span>
+                  <span className="w-2 h-2 rounded-full bg-[#50756C]"></span>
+                  <span>PRODUCTO PROPIO DE JIVOTECK • PLATAFORMA FUNCIONAL</span>
                 </div>
 
                 <span className="text-[11px] font-mono text-[#2E4846] font-bold">
@@ -233,37 +233,41 @@ export const Hero: React.FC = () => {
               </div>
 
               <p className="text-sm text-[#3E5C54] leading-relaxed font-sans font-normal">
-                Plataforma de comparación técnica, homologación y consulta inteligente de componentes industriales, neumáticos y eléctricos.
+                Industrialpedia es una plataforma B2B desarrollada por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales.
               </p>
 
-              {/* Percentage / Spec Pills */}
+              <p className="text-xs text-[#638379] leading-relaxed font-sans font-normal">
+                La experiencia tecnológica desarrollada para Industrialpedia también sirve como base de conocimiento para crear soluciones privadas adaptadas a las necesidades de empresas industriales.
+              </p>
+
+              {/* Qualitative Capability Pills (No invented metrics) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-2xs flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] font-mono text-[#638379] block">Módulo de Homologación</span>
-                    <span className="text-xs font-bold text-[#13262F] font-sans">Cruce Multi-marca</span>
+                    <span className="text-[10px] font-mono text-[#638379] block">Homologación Multi-marca</span>
+                    <span className="text-xs font-bold text-[#13262F] font-sans">Cruce de Referencias Técnicas</span>
                   </div>
                   <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-[#2E4846] border border-[#D8D2C6]">
-                    +100% Preciso
+                    Multi-fabricante
                   </span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-2xs flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] font-mono text-[#638379] block">Arquitectura de Datos</span>
-                    <span className="text-xs font-bold text-[#13262F] font-sans">Estandarización 4.0</span>
+                    <span className="text-[10px] font-mono text-[#638379] block">Privacidad de Clientes</span>
+                    <span className="text-xs font-bold text-[#13262F] font-sans">Entornos Separados</span>
                   </div>
                   <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-[#2E4846] border border-[#D8D2C6]">
-                    Propiedad JVT
+                    100% Aislado
                   </span>
                 </div>
               </div>
 
-              {/* Official Ownership Note */}
+              {/* Ownership & Separation Note */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-xs text-[#2E4846] flex items-center gap-2 shadow-2xs">
                 <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
                 <span>
-                  <strong>Propiedad Intelectual:</strong> Proyecto concebido, desarrollado y respaldado al 100% por <strong>JIVOTECK</strong>.
+                  <strong>Demostración tecnológica:</strong> Plataforma propia en evolución continua. Los datos privados de clientes no alimentan Industrialpedia.
                 </span>
               </div>
 
@@ -275,7 +279,7 @@ export const Hero: React.FC = () => {
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
                 >
-                  <span>Ir a Industrialpedia.com.mx</span>
+                  <span>Explorar Industrialpedia</span>
                   <ExternalLink className="w-4 h-4 text-white" />
                 </a>
 
@@ -284,7 +288,7 @@ export const Hero: React.FC = () => {
                   {subscribed ? (
                     <div className="p-3 bg-[#F4F1EA] border border-[#D8D2C6] text-[#2E4846] text-xs font-mono rounded-xl flex items-center gap-2">
                       <Check className="w-4 h-4 text-[#50756C]" />
-                      <span>¡Suscrito para el lanzamiento beta!</span>
+                      <span>¡Registrado para novedades de Industrialpedia!</span>
                     </div>
                   ) : (
                     <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -301,7 +305,7 @@ export const Hero: React.FC = () => {
                         className="px-3.5 py-2 bg-[#2E4846] hover:bg-[#13262F] text-white text-xs font-mono font-bold rounded-xl transition-colors whitespace-nowrap flex items-center gap-1.5 shadow-xs"
                       >
                         <Bell className="w-3.5 h-3.5" />
-                        <span>Avisarme</span>
+                        <span>Novedades</span>
                       </button>
                     </form>
                   )}

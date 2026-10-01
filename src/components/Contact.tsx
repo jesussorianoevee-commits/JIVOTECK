@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
     email: '',
     phone: '',
     company: '',
-    service: 'automatizacion',
+    service: 'datos',
     message: ''
   });
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -21,9 +21,19 @@ export const Contact: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
+  const serviceLabels: Record<string, string> = {
+    datos: 'Estructuración de datos industriales',
+    software: 'Desarrollo de software privado',
+    mro: 'Catálogo MRO / Refacciones',
+    automatizacion: 'Automatización industrial',
+    consultoria: 'Consultoría técnica',
+    industrialpedia: 'Industrialpedia — Información y colaboración',
+    otro: 'Otro proyecto'
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const randomFolio = `JVT-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+    const randomFolio = `JVT-${Math.floor(1000 + Math.random() * 9000)}`;
     setTicketFolio(randomFolio);
     setSubmitted(true);
   };
@@ -42,7 +52,7 @@ export const Contact: React.FC = () => {
             Iniciemos una conversación sobre tu proyecto.
           </h2>
           <p className="text-base text-[#4A635B] leading-relaxed font-sans">
-            Comunícate directamente con nuestro equipo de ingeniería para cotizar un desarrollo, agendar una sesión de consultoría técnica o conocer alianzas en torno a Industrialpedia.
+            Comunícate directamente con nuestro equipo de ingeniería para platicar sobre tu catálogo de refacciones, estructuración de datos industriales, desarrollo de software privado o información sobre Industrialpedia.
           </p>
         </div>
 
@@ -103,12 +113,15 @@ export const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Response Time */}
-            <div className="p-4 rounded-2xl bg-[#F4F1EA] border border-[#D8D2C6] flex items-center gap-3 text-xs text-[#2E4846] font-medium font-sans">
-              <ShieldCheck className="w-5 h-5 text-[#50756C] shrink-0" />
-              <span>
-                Atención técnica en menos de 24 horas hábiles con asesoría de un ingeniero especializado.
-              </span>
+            {/* Response Time & Privacy */}
+            <div className="p-4 rounded-2xl bg-[#F4F1EA] border border-[#D8D2C6] space-y-2 text-xs text-[#2E4846] font-sans">
+              <div className="flex items-center gap-2 font-semibold">
+                <ShieldCheck className="w-4 h-4 text-[#50756C] shrink-0" />
+                <span>Confidencialidad & Atención Directa</span>
+              </div>
+              <p className="text-[#4A635B] leading-relaxed">
+                Atención técnica en menos de 24 horas hábiles. Firmamos acuerdos de confidencialidad (NDA) antes de revisar catálogos o bases de datos de clientes.
+              </p>
             </div>
 
           </div>
@@ -127,16 +140,16 @@ export const Contact: React.FC = () => {
                       FOLIO: {ticketFolio}
                     </span>
                     <h3 className="text-2xl font-bold text-[#13262F] font-serif mt-3">
-                      ¡Consulta Registrada Exitosamente!
+                      ¡Consulta Recibida!
                     </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-[#4A635B] max-w-md mx-auto leading-relaxed font-sans">
-                    Muchas gracias, <strong>{formData.name}</strong>. Hemos recibido tu solicitud para el área de <strong>{formData.service}</strong>. Un especialista de JIVOTECK te responderá a tu correo <strong>{formData.email}</strong>.
+                    Muchas gracias, <strong>{formData.name}</strong>. Hemos recibido tu solicitud para el área de <strong>{serviceLabels[formData.service] || formData.service}</strong>. Un especialista de JIVOTECK se pondrá en contacto a tu correo <strong>{formData.email}</strong>.
                   </p>
                   <button
                     onClick={() => {
                       setSubmitted(false);
-                      setFormData({ name: '', email: '', phone: '', company: '', service: 'automatizacion', message: '' });
+                      setFormData({ name: '', email: '', phone: '', company: '', service: 'datos', message: '' });
                     }}
                     className="mt-4 px-5 py-2.5 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm"
                   >
@@ -154,7 +167,7 @@ export const Contact: React.FC = () => {
                       <input
                         type="text"
                         required
-                        placeholder="Ej. Ing. Roberto Mendoza"
+                        placeholder="Ej. Roberto Mendoza"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
@@ -179,7 +192,7 @@ export const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                        Teléfono / WhatsApp
+                        Teléfono / Contacto
                       </label>
                       <input
                         type="tel"
@@ -196,7 +209,7 @@ export const Contact: React.FC = () => {
                       </label>
                       <input
                         type="text"
-                        placeholder="Ej. Manufactura Bajío"
+                        placeholder="Ej. Planta Manufactura"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
@@ -206,33 +219,34 @@ export const Contact: React.FC = () => {
 
                   <div className="space-y-1.5">
                     <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Área o Servicio de Interés *
+                      Tipo de Requerimiento *
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
+                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all font-sans"
                     >
-                      <option value="automatizacion">Automatización & Control de Procesos (SCADA, Robótica, Sensórica)</option>
-                      <option value="software">Desarrollo de Software a la Medida (Cloud, APIs, Dashboards)</option>
-                      <option value="consultoria">Orientación & Consultoría Técnica (Auditoría y Diagnóstico)</option>
-                      <option value="marketing">Marketing Tecnológico B2B (Estrategia y Posicionamiento Industrial)</option>
-                      <option value="industrialpedia">Proyecto Industrialpedia (Alianzas y Acceso Beta)</option>
-                      <option value="cotizacion">Cotización General de Proyecto</option>
+                      <option value="datos">Estructuración de datos industriales</option>
+                      <option value="software">Desarrollo de software privado</option>
+                      <option value="mro">Catálogo MRO / Refacciones</option>
+                      <option value="automatizacion">Automatización industrial</option>
+                      <option value="consultoria">Consultoría técnica</option>
+                      <option value="industrialpedia">Industrialpedia — Información y colaboración</option>
+                      <option value="otro">Otro proyecto</option>
                     </select>
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Descripción del Requerimiento *
+                      Descripción del Proyecto o Catálogo *
                     </label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Describe las metas de tu proyecto, maquinaria a integrar o dudas técnicas..."
+                      placeholder="Platícanos sobre tus fuentes de datos actuales (Excel, ERP/CMMS), volumen aproximado de refacciones o requerimientos de software..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all resize-none font-sans"
                     ></textarea>
                   </div>
 

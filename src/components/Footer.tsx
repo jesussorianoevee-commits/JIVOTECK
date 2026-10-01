@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-2">
             <JivoteckLogo size="lg" darkText={true} showSubtitle={true} />
             <p className="text-sm text-[#4A635B] max-w-md font-sans">
-              Ingeniería en automatización de procesos, desarrollo de software a la medida y creadores de Industrialpedia.
+              Soluciones tecnológicas para estructurar, organizar y aprovechar información industrial, adaptando software y sistemas de datos a las necesidades de cada empresa.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               href="#contacto"
               className="px-5 py-2.5 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
             >
-              Iniciar Proyecto
+              Iniciar Conversación
             </a>
             <button
               onClick={scrollToTop}
@@ -54,17 +54,17 @@ export const Footer: React.FC = () => {
               SOLUCIONES
             </h4>
             <div className="flex flex-col space-y-2 text-xs font-mono text-[#3E5C54]">
+              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Estructuración de Datos</a>
+              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Software Privado Adaptado</a>
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Automatización Industrial</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Software a la Medida</a>
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Consultoría Técnica</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Marketing B2B Tech</a>
             </div>
           </div>
 
-          {/* Col 2: INDUSTRIALPEDIA */}
+          {/* Col 2: PRODUCTO PROPIO */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              INNOVACIÓN & I+D
+              PRODUCTO PROPIO
             </h4>
             <div className="space-y-2 text-xs font-mono text-[#3E5C54]">
               <a 
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                 <ExternalLink className="w-3 h-3 text-[#2E4846]" />
               </a>
               <p className="text-[11px] text-[#638379] font-sans leading-relaxed">
-                Plataforma de comparación técnica de componentes industriales desarrollada 100% por JIVOTECK.
+                Plataforma B2B para estructurar, consultar y comparar información técnica de refacciones y componentes industriales.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
             <div className="flex flex-col space-y-2 text-xs font-mono text-[#3E5C54]">
               <a href="#nosotros" className="hover:text-[#13262F] hover:underline transition-colors">Sobre JIVOTECK</a>
               <a href="#faq" className="hover:text-[#13262F] hover:underline transition-colors">Preguntas Frecuentes</a>
-              <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors">Contacto Oficial</a>
+              <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors">Contacto Directo</a>
               <span className="text-[#8FA89B]">Aguascalientes, México</span>
             </div>
           </div>
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: CANALES & CONTACTO */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              ATENCIÓN OFICIAL
+              ATENCIÓN DIRECTA
             </h4>
             <div className="space-y-2.5 text-xs font-mono text-[#3E5C54]">
               <a 
@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
               </a>
               <div className="flex items-center gap-1.5 text-[#4A635B] font-sans text-xs">
                 <MapPin className="w-3.5 h-3.5 text-[#2E4846] shrink-0" />
-                <span>Aguascalientes, Ags. México</span>
+                <span>Aguascalientes, México</span>
               </div>
               <div className="flex items-center gap-2 pt-2">
                 {socialLinks.map((s) => {
@@ -151,7 +151,7 @@ export const Footer: React.FC = () => {
             &copy; 2026 JIVOTECK — Todos los derechos reservados.
           </div>
           <div className="text-[11px]">
-            JIVOTECK STARTUP • AGUASCALIENTES, MÉXICO
+            INFORMACIÓN INDUSTRIAL & SOFTWARE PRIVADO • AGUASCALIENTES, MÉXICO
           </div>
         </div>
 

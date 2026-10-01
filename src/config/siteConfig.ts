@@ -28,8 +28,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "JIVOTECK",
-  tagline: "Startup de Soluciones en Software, Automatización & Marketing",
-  description: "Convergencia de alta ingeniería de automatización, desarrollo de software a medida, consultoría técnica y marketing estratégico. Creadores y propietarios oficiales de Industrialpedia.",
+  tagline: "Soluciones Tecnológicas para Información Industrial & Software a la Medida",
+  description: "Estructuración, normalización y aprovechamiento de información técnica y catálogos MRO, con desarrollo de software privado adaptado a las necesidades de cada empresa. Creadores de Industrialpedia.",
   contact: {
     primaryEmail: "contacto@jivoteck.com",
     supportEmail: "contacto@jivoteck.com",
@@ -44,17 +44,17 @@ export const siteConfig: SiteConfig = {
   },
   industrialpedia: {
     websiteUrl: "https://industrialpedia.com.mx",
-    status: "En desarrollo activo",
-    badge: "Coming Soon",
+    status: "Plataforma funcional · evolución continua",
+    badge: "Producto propio de JIVOTECK",
     title: "Industrialpedia",
     subtitle: "The Industrial Information Platform",
-    description: "Plataforma de información y comparación técnica inteligente para componentes de automatización industrial.",
-    ownershipNote: "Proyecto de desarrollo original concebido, desarrollado y respaldado al 100% por JIVOTECK.",
+    description: "Plataforma B2B desarrollada por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales.",
+    ownershipNote: "Producto tecnológico propio concebido, desarrollado y respaldado al 100% por JIVOTECK como demostración de nuestras capacidades en estructuración técnica multi-fabricante.",
     teaserFeatures: [
-      "Homologador Inteligente de Componentes Neumáticos y Electrónicos",
-      "Simulador de Gemelos Digitales y Curvas de Rendimiento",
-      "Matriz de Comparativa Técnica en Tiempo Real",
-      "Directorio Unificado de Fabricantes y Especificaciones de Automatización"
+      "Normalización y homologación técnica multi-fabricante",
+      "Cruce de especificaciones y números de parte industriales",
+      "Búsqueda y consulta técnica estructurada",
+      "Directorio de fabricantes y parámetros de ingeniería"
     ]
   }
 };

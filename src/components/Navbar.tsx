@@ -76,7 +76,7 @@ export const Navbar: React.FC = () => {
               {link.isHighlight && (
                 <>
                   <span className="px-1.5 py-0.2 text-[9px] font-mono font-bold bg-[#E2DDD4] text-[#2E4846] rounded">
-                    BETA
+                    PROPIO
                   </span>
                   <ExternalLink className="w-3 h-3 text-[#2E4846]" />
                 </>
@@ -109,7 +109,7 @@ export const Navbar: React.FC = () => {
             href="#contacto"
             className="px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-[#13262F] hover:bg-[#1D3845] rounded-lg transition-all flex items-center gap-1.5 shadow-sm hover:shadow"
           >
-            <span>{lang === 'ES' ? 'Cotizar' : 'Contact'}</span>
+            <span>{lang === 'ES' ? 'Contacto' : 'Contact'}</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
@@ -178,7 +178,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-[#13262F] rounded-lg shadow"
             >
-              Cotizar con JIVOTECK
+              Hablemos de tu proyecto
             </a>
           </div>
         </div>
