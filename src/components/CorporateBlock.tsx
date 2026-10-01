@@ -1,58 +1,42 @@
 import React from 'react';
 import { 
   Database, 
-  Layers, 
   Code2, 
-  FileText, 
-  FolderGit2, 
-  Search, 
   Cpu, 
+  TrendingUp,
+  Compass,
   ArrowRight,
   CheckCircle2,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Search
 } from 'lucide-react';
 
 export const CorporateBlock: React.FC = () => {
-  const capabilities = [
+  const corePillars = [
     {
       icon: Database,
-      title: 'Estructuración de datos industriales',
-      desc: 'Organización metódica de información técnica, atributos de ingeniería y fichas de producto.'
-    },
-    {
-      icon: Layers,
-      title: 'Normalización de catálogos MRO',
-      desc: 'Estandarización de fabricantes, números de parte y especificaciones de refacciones.'
+      title: 'Información Industrial',
+      desc: 'Estructuración, normalización y aprovechamiento de datos técnicos.'
     },
     {
       icon: Code2,
-      title: 'Desarrollo de software privado',
-      desc: 'Herramientas internas a la medida cuando el problema de información requiere una solución propia.'
-    },
-    {
-      icon: FileText,
-      title: 'Gestión de información técnica',
-      desc: 'Centralización de manuales, diagramas, hojas de datos y parámetros críticos de operación.'
-    },
-    {
-      icon: FolderGit2,
-      title: 'Integración de fuentes y documentación',
-      desc: 'Consolidación de registros dispersos en hojas de cálculo, archivos PDF y bases existentes.'
-    },
-    {
-      icon: Search,
-      title: 'Sistemas internos de búsqueda y consulta',
-      desc: 'Buscadores privados y filtros avanzados para mantenimiento, compras e ingeniería.'
-    },
-    {
-      icon: Layers,
-      title: 'Preparación para ERP / CMMS / APIs',
-      desc: 'Estructuración compatible para facilitar futuras conexiones con sistemas de gestión empresarial mediante desarrollo a medida.'
+      title: 'Software',
+      desc: 'Herramientas privadas adaptadas a procesos reales.'
     },
     {
       icon: Cpu,
-      title: 'Automatización de procesos de información',
-      desc: 'Flujos de validación, detección de inconsistencias y actualización controlada de información técnica.'
+      title: 'Automatización Industrial',
+      desc: 'Soluciones de control, supervisión e integración técnica.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Marketing B2B Industrial',
+      desc: 'Comunicación, posicionamiento y estrategia comercial para empresas que venden dentro del mercado industrial.'
+    },
+    {
+      icon: Compass,
+      title: 'Consultoría Técnica',
+      desc: 'Análisis de problemas y definición de soluciones viables.'
     }
   ];
 
@@ -64,20 +48,20 @@ export const CorporateBlock: React.FC = () => {
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
             <Database className="w-3.5 h-3.5 text-[#50756C]" />
-            <span>POSICIONAMIENTO & CAPACIDADES</span>
+            <span>POSICIONAMIENTO & CAPACIDADES RAÍZ</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight font-serif text-[#13262F] leading-tight">
-            Soluciones tecnológicas para información industrial.
+            Soluciones tecnológicas y estratégicas para la industria.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            Convertimos información dispersa en herramientas útiles para operación, mantenimiento, ingeniería y compras. Desarrollamos sistemas privados adaptados a la realidad operativa y a la información de cada empresa.
+            Combinamos estructuración de información, desarrollo de software, automatización y estrategia comercial B2B para resolver problemas reales de las empresas con herramientas adaptadas a su operación.
           </p>
         </div>
 
-        {/* 8 Core Capabilities Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {capabilities.map((cap, idx) => {
-            const Icon = cap.icon;
+        {/* 5 Core Pillars Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {corePillars.map((pilar, idx) => {
+            const Icon = pilar.icon;
             return (
               <div
                 key={idx}
@@ -88,10 +72,10 @@ export const CorporateBlock: React.FC = () => {
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-sm font-bold text-[#13262F] font-sans tracking-tight mb-2">
-                    {cap.title}
+                    {pilar.title}
                   </h3>
                   <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
-                    {cap.desc}
+                    {pilar.desc}
                   </p>
                 </div>
               </div>

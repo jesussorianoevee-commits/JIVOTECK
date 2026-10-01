@@ -4,6 +4,7 @@ import {
   Code2, 
   Cpu, 
   Compass, 
+  TrendingUp,
   CheckCircle2, 
   ArrowUpRight, 
   ExternalLink,
@@ -43,6 +44,15 @@ export const EcosystemDashboard: React.FC = () => {
       lightColor: '#FAF8F5',
       icon: Cpu,
       desc: 'Control de procesos industriales, monitoreo operativo, sensórica y acompañamiento técnico en planta.'
+    },
+    {
+      name: 'Marketing B2B Industrial',
+      sub: 'Posicionamiento y comunicación técnica',
+      badge: 'Estrategia Comercial',
+      color: '#3E5C54',
+      lightColor: '#FAF8F5',
+      icon: TrendingUp,
+      desc: 'Estrategias de comunicación, materiales comerciales y posicionamiento para fabricantes, proveedores y empresas tecnológicas que venden a otras empresas dentro del sector industrial.'
     },
     {
       name: 'Consultoría Técnica',
@@ -115,7 +125,7 @@ export const EcosystemDashboard: React.FC = () => {
               Especialidades & Modelo de Trabajo
             </h2>
             <p className="text-sm text-[#4A635B] mt-1 max-w-xl font-sans">
-              Capacidades técnicas complementarias para estructurar información, crear herramientas privadas y dar soporte a la operación industrial.
+              Capacidades complementarias para estructurar información, crear herramientas privadas, automatizar procesos y posicionar empresas en el sector industrial.
             </p>
           </div>
 
@@ -141,55 +151,66 @@ export const EcosystemDashboard: React.FC = () => {
                   <p className="text-xs text-[#638379]">Especialidades de ingeniería</p>
                 </div>
                 <span className="px-2 py-0.5 text-[10px] font-mono font-bold bg-[#F4F1EA] text-[#2E4846] rounded border border-[#D8D2C6]">
-                  4 ÁREAS
+                  5 ÁREAS
                 </span>
               </div>
 
               {/* Qualitative Quadrant Graphic (Replacing arbitrary percentages) */}
               <div className="flex items-center justify-center py-4 relative">
                 <svg className="w-36 h-36 transform -rotate-90" viewBox="0 0 120 120">
-                  {/* Quadrant 1: Información Industrial */}
+                  {/* Segment 1: Información Industrial */}
                   <circle
                     cx="60"
                     cy="60"
                     r="48"
                     stroke="#13262F"
                     strokeWidth="12"
-                    strokeDasharray="72 301.6"
+                    strokeDasharray="56 301.6"
                     strokeDashoffset="0"
                     fill="transparent"
                   />
-                  {/* Quadrant 2: Software Privado */}
+                  {/* Segment 2: Software Privado */}
                   <circle
                     cx="60"
                     cy="60"
                     r="48"
                     stroke="#2E4846"
                     strokeWidth="12"
-                    strokeDasharray="72 301.6"
-                    strokeDashoffset="-75.4"
+                    strokeDasharray="56 301.6"
+                    strokeDashoffset="-60.3"
                     fill="transparent"
                   />
-                  {/* Quadrant 3: Automatización */}
+                  {/* Segment 3: Automatización */}
                   <circle
                     cx="60"
                     cy="60"
                     r="48"
                     stroke="#50756C"
                     strokeWidth="12"
-                    strokeDasharray="72 301.6"
-                    strokeDashoffset="-150.8"
+                    strokeDasharray="56 301.6"
+                    strokeDashoffset="-120.6"
                     fill="transparent"
                   />
-                  {/* Quadrant 4: Consultoría Técnica */}
+                  {/* Segment 4: Marketing B2B Industrial */}
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="48"
+                    stroke="#3E5C54"
+                    strokeWidth="12"
+                    strokeDasharray="56 301.6"
+                    strokeDashoffset="-181.0"
+                    fill="transparent"
+                  />
+                  {/* Segment 5: Consultoría Técnica */}
                   <circle
                     cx="60"
                     cy="60"
                     r="48"
                     stroke="#8FA89B"
                     strokeWidth="12"
-                    strokeDasharray="72 301.6"
-                    strokeDashoffset="-226.2"
+                    strokeDasharray="56 301.6"
+                    strokeDashoffset="-241.3"
                     fill="transparent"
                   />
                 </svg>

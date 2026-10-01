@@ -87,7 +87,33 @@ export const Services: React.FC = () => {
       ]
     },
     {
-      id: 'JVT-CON-04',
+      id: 'JVT-MKT-04',
+      title: 'Marketing B2B Industrial',
+      subtitle: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
+      category: 'Marketing',
+      status: 'Servicio Contratable',
+      badgeColor: 'bg-[#F4F1EA] text-[#3E5C54] border-[#D8D2C6]',
+      description: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
+      overview: 'Combinamos conocimiento del entorno B2B con comunicación técnica y comercial para ayudar a fabricantes, proveedores y empresas tecnológicas a presentar con claridad qué hacen, qué problema resuelven y por qué su propuesta es relevante para otras empresas.',
+      deliverables: [
+        'Posicionamiento B2B industrial',
+        'Comunicación técnica y comercial',
+        'Catálogos y materiales comerciales',
+        'Presentaciones para compradores industriales',
+        'Estrategia de presencia digital B2B',
+        'Comunicación de productos y servicios técnicos',
+        'Apoyo para ferias y encuentros de negocio',
+        'Identidad y narrativa comercial industrial'
+      ],
+      specs: [
+        { label: 'Enfoque', value: 'Sector industrial, manufactura, proveedores y empresas tecnológicas B2B' },
+        { label: 'Lenguaje', value: 'Técnico y comercial orientado a compradores y tomadores de decisión industriales' },
+        { label: 'Capacidad del equipo', value: 'Equipo multidisciplinario de JIVOTECK en tecnología y comunicación comercial' },
+        { label: 'Entregables', value: 'Estrategias de posicionamiento, catálogos estructurados, materiales comerciales y presencia digital' }
+      ]
+    },
+    {
+      id: 'JVT-CON-05',
       title: 'Consultoría Técnica & Diagnóstico',
       subtitle: 'Análisis y definición de soluciones para evaluar calidad de datos, viabilidad de software y modernización de sistemas.',
       category: 'Consultoría',
@@ -106,32 +132,6 @@ export const Services: React.FC = () => {
         { label: 'Tiempo de diagnóstico', value: 'Definido en función de la complejidad y volumen de la información' },
         { label: 'Entregable', value: 'Reporte técnico con hallazgos y alternativas de solución' },
         { label: 'Confidencialidad', value: 'Opción de trabajo bajo acuerdo de confidencialidad (NDA)' }
-      ]
-    },
-    {
-      id: 'JVT-MKT-05',
-      title: 'Marketing B2B Industrial',
-      subtitle: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
-      category: 'Marketing',
-      status: 'Servicio Contratable',
-      badgeColor: 'bg-[#F4F1EA] text-[#3E5C54] border-[#D8D2C6]',
-      description: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
-      overview: 'Combinamos conocimiento del entorno B2B con comunicación técnica y comercial para ayudar a fabricantes, proveedores y empresas tecnológicas a presentar con claridad qué hacen, qué problema resuelven y por qué su propuesta es relevante para otras empresas.',
-      deliverables: [
-        'Posicionamiento B2B para empresas industriales',
-        'Comunicación técnica y comercial',
-        'Desarrollo y estructuración de catálogos comerciales',
-        'Presentaciones y materiales para compradores industriales',
-        'Estrategia de presencia digital B2B',
-        'Comunicación de productos y servicios técnicos',
-        'Apoyo para ferias y encuentros de negocio industriales',
-        'Identidad y narrativa comercial orientada al mercado industrial'
-      ],
-      specs: [
-        { label: 'Enfoque', value: 'Sector industrial, manufactura, proveedores y empresas tecnológicas B2B' },
-        { label: 'Lenguaje', value: 'Técnico y comercial orientado a compradores y tomadores de decisión industriales' },
-        { label: 'Capacidad del equipo', value: 'Equipo multidisciplinario de JIVOTECK en tecnología y comunicación comercial' },
-        { label: 'Entregables', value: 'Estrategias de posicionamiento, catálogos estructurados, materiales comerciales y presencia digital' }
       ]
     },
     {
@@ -164,8 +164,8 @@ export const Services: React.FC = () => {
     { id: 'Datos Industriales', label: 'Datos Industriales' },
     { id: 'Software', label: 'Software Privado' },
     { id: 'Automatización', label: 'Automatización' },
-    { id: 'Consultoría', label: 'Consultoría' },
     { id: 'Marketing', label: 'Marketing B2B' },
+    { id: 'Consultoría', label: 'Consultoría' },
     { id: 'Industrialpedia', label: 'Industrialpedia (Producto Propio)' },
   ];
 

@@ -39,10 +39,10 @@ export const About: React.FC = () => {
             Ingeniería de información para la realidad industrial.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            <strong>JIVOTECK</strong> es una empresa tecnológica emergente de Aguascalientes enfocada en desarrollar soluciones integrales para la gestión, estructuración y aprovechamiento de información industrial.
+            <strong>JIVOTECK</strong> es una empresa tecnológica emergente de Aguascalientes que desarrolla soluciones integrales para la industria combinando información, tecnología, automatización y estrategia comercial B2B.
           </p>
           <p className="text-sm sm:text-base text-[#4A635B] leading-relaxed font-sans font-normal">
-            Combinamos conocimiento industrial, arquitectura de datos, desarrollo de software y estrategia comercial B2B para construir soluciones adaptadas a problemas reales de las empresas. Nuestro equipo integra distintas especialidades, permitiendo abordar tanto la estructura tecnológica de un proyecto como la manera en que una empresa organiza, presenta y comunica sus soluciones dentro del mercado industrial.
+            Nuestro equipo integra distintas especialidades en conocimiento industrial, arquitectura de datos, desarrollo de software, automatización y comunicación B2B, permitiéndonos abordar tanto la parte tecnológica de un problema como la forma en que una empresa organiza y comunica sus soluciones al mercado.
           </p>
         </div>
 

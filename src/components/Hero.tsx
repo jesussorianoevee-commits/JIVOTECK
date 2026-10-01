@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans max-w-3xl font-normal">
-            <strong>JIVOTECK</strong> desarrolla soluciones tecnológicas para transformar información industrial dispersa en sistemas estructurados, consultables y útiles para mantenimiento, ingeniería y compras. Diseñamos software y herramientas adaptadas a las necesidades reales de cada empresa.
+            <strong>JIVOTECK</strong> desarrolla soluciones integrales para la industria combinando estructuración de información, desarrollo de software, automatización y estrategia comercial B2B. Construimos herramientas y soluciones adaptadas a las necesidades reales de cada empresa.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
