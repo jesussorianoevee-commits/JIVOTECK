@@ -58,11 +58,11 @@ export const EcosystemDashboard: React.FC = () => {
   const milestones = [
     {
       phase: 'PRODUCTO PROPIO',
-      title: 'Industrialpedia: Plataforma B2B',
-      category: 'Información Industrial',
-      status: 'Funcional · Evolución',
+      title: 'Industrialpedia',
+      category: 'Demostración Tecnológica',
+      status: 'Plataforma Activa',
       statusColor: 'bg-[#F4F1EA] text-[#2E4846] border-[#D8D2C6]',
-      desc: 'Estructuración, consulta y comparación técnica de componentes y refacciones industriales multi-fabricante.'
+      desc: 'Plataforma propia que sirve como prueba tangible de nuestra arquitectura de datos industriales.'
     },
     {
       phase: 'SOLUCIONES PRIVADAS',
@@ -377,7 +377,7 @@ export const EcosystemDashboard: React.FC = () => {
                   Privado & Adaptado
                 </div>
                 <p className="text-xs text-[#4A635B] font-sans">
-                  Herramientas creadas para resolver tu flujo particular, sin ataduras a SaaS genéricos.
+                  Herramientas creadas para adaptarse a los procesos y requerimientos específicos de tu empresa.
                 </p>
               </div>
 
@@ -395,12 +395,12 @@ export const EcosystemDashboard: React.FC = () => {
 
                 <div className="p-2.5 rounded-xl border border-[#EAE5DC] bg-white">
                   <div className="flex justify-between items-center text-xs mb-1">
-                    <span className="text-[#3E5C54] font-medium">Propiedad Intelectual</span>
+                    <span className="text-[#3E5C54] font-medium">Datos del Cliente</span>
                     <span className="font-mono text-[10px] font-bold text-[#2E4846] bg-[#F4F1EA] px-1.5 py-0.5 rounded">
-                      100% Cliente
+                      Bajo su control
                     </span>
                   </div>
-                  <p className="text-[11px] text-[#638379]">Código y datos bajo control total de tu empresa.</p>
+                  <p className="text-[11px] text-[#638379]">La información proporcionada permanece bajo su control. Las condiciones de propiedad y licencia del software se definen según el alcance del proyecto.</p>
                 </div>
 
                 <div className="p-2.5 rounded-xl border border-[#EAE5DC] bg-white">

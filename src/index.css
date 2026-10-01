@@ -21,7 +21,6 @@
   background: #94A3B8;
 }
 
-/* Soft sky-blue card background from Base44 reference */
 .bg-sky-gradient-card {
   background: linear-gradient(180deg, #CDE7FE 0%, #E8F3FE 45%, #FFFFFF 100%);
 }

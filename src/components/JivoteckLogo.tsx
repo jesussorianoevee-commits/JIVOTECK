@@ -175,14 +175,19 @@ export const JivoteckLogo: React.FC<LogoProps> = ({
   const ruleColor = darkText ? 'bg-[#8FA89B]' : 'bg-white/40';
 
   return (
-    <div className="flex items-center gap-3 group cursor-pointer select-none">
+    <div 
+      className="flex items-center gap-3 group cursor-pointer select-none"
+      role="img" 
+      aria-label="JIVOTECK — Soluciones Tecnológicas Industriales"
+    >
+      <span className="sr-only">JIVOTECK</span>
       {/* Official Architectural & Botanical Emblem */}
-      <div className="shrink-0 transition-transform duration-200 group-hover:scale-105">
+      <div className="shrink-0 transition-transform duration-200 group-hover:scale-105" aria-hidden="true">
         <JivoteckIcon className={iconSizes[size]} inverted={!darkText} />
       </div>
       
       {!iconOnly && (
-        <div className="flex flex-col">
+        <div className="flex flex-col" aria-hidden="true">
           {/* Wordmark: J I V O T E C K with 4-point star in the O */}
           <div className={`flex items-center ${textSizes[size]} font-serif ${textColor} uppercase`}>
             <span>J</span>

@@ -52,7 +52,7 @@ export const CorporateBlock: React.FC = () => {
     {
       icon: Cpu,
       title: 'Automatización de procesos de información',
-      desc: 'Flujos automáticos de validación, detección de inconsistencias y actualización de inventarios técnicos.'
+      desc: 'Flujos de validación, detección de inconsistencias y actualización controlada de información técnica.'
     }
   ];
 
@@ -70,7 +70,7 @@ export const CorporateBlock: React.FC = () => {
             Soluciones tecnológicas para información industrial.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            Convertimos información dispersa en herramientas útiles para operación, mantenimiento, ingeniería y compras. No imponemos un producto SaaS genérico; desarrollamos sistemas privados adaptados a la realidad operativa de tu empresa.
+            Convertimos información dispersa en herramientas útiles para operación, mantenimiento, ingeniería y compras. Desarrollamos sistemas privados adaptados a la realidad operativa y a la información de cada empresa.
           </p>
         </div>
 

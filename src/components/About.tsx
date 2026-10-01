@@ -16,7 +16,7 @@ export const About: React.FC = () => {
     {
       icon: Code2,
       title: 'Software Privado a la Medida',
-      description: 'Construimos herramientas internas adaptadas a los procesos de cada empresa, con propiedad total de la base de datos y del código desarrollado.'
+      description: 'Construimos herramientas internas adaptadas a los procesos de cada empresa, con esquemas de propiedad, licencia y entrega definidos según las necesidades y alcance de cada proyecto.'
     },
     {
       icon: Layers,
