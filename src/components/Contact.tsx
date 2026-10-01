@@ -26,6 +26,7 @@ export const Contact: React.FC = () => {
     software: 'Desarrollo de software privado',
     mro: 'Catálogo MRO / Refacciones',
     automatizacion: 'Automatización industrial',
+    marketing: 'Marketing B2B Industrial',
     consultoria: 'Consultoría técnica',
     industrialpedia: 'Industrialpedia — Información y colaboración',
     otro: 'Otro proyecto'
@@ -52,7 +53,7 @@ export const Contact: React.FC = () => {
             Iniciemos una conversación sobre tu proyecto.
           </h2>
           <p className="text-base text-[#4A635B] leading-relaxed font-sans">
-            Comunícate directamente con nuestro equipo de ingeniería para platicar sobre tu catálogo de refacciones, estructuración de datos industriales, desarrollo de software privado o información sobre Industrialpedia.
+            Comunícate directamente con nuestro equipo para platicar sobre estructuración de información industrial, desarrollo de software, automatización, marketing B2B industrial o proyectos relacionados con Industrialpedia.
           </p>
         </div>
 
@@ -230,6 +231,7 @@ export const Contact: React.FC = () => {
                       <option value="software">Desarrollo de software privado</option>
                       <option value="mro">Catálogo MRO / Refacciones</option>
                       <option value="automatizacion">Automatización industrial</option>
+                      <option value="marketing">Marketing B2B Industrial</option>
                       <option value="consultoria">Consultoría técnica</option>
                       <option value="industrialpedia">Industrialpedia — Información y colaboración</option>
                       <option value="otro">Otro proyecto</option>

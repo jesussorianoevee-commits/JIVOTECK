@@ -28,8 +28,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "JIVOTECK",
-  tagline: "Soluciones Tecnológicas para Información Industrial & Software a la Medida",
-  description: "Estructuración, normalización y aprovechamiento de información técnica y catálogos MRO, con desarrollo de software privado adaptado a las necesidades de cada empresa. Creadores de Industrialpedia.",
+  tagline: "Tecnología y Soluciones B2B para la Industria",
+  description: "JIVOTECK desarrolla soluciones para la industria en estructuración de información, software, automatización y estrategia comercial B2B. Creadores de Industrialpedia.",
   contact: {
     primaryEmail: "contacto@jivoteck.com",
     supportEmail: "contacto@jivoteck.com",

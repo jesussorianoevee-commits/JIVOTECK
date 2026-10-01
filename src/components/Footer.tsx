@@ -57,6 +57,7 @@ export const Footer: React.FC = () => {
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Estructuración de Datos</a>
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Software Privado Adaptado</a>
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Automatización Industrial</a>
+              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Marketing B2B Industrial</a>
               <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Consultoría Técnica</a>
             </div>
           </div>
@@ -151,7 +152,7 @@ export const Footer: React.FC = () => {
             &copy; 2026 JIVOTECK — Todos los derechos reservados.
           </div>
           <div className="text-[11px]">
-            INFORMACIÓN INDUSTRIAL & SOFTWARE PRIVADO • AGUASCALIENTES, MÉXICO
+            TECNOLOGÍA • INFORMACIÓN • AUTOMATIZACIÓN • ESTRATEGIA B2B
           </div>
         </div>
 

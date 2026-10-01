@@ -25,7 +25,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué tipo de soluciones ofrece JIVOTECK?",
-      answer: "Nos enfocamos en estructuración de datos industriales y catálogos MRO, desarrollo de software privado adaptado a procesos de información (portales de consulta, buscadores y dashboards), automatización industrial y control de procesos en planta, consultoría técnica para diagnóstico de sistemas y marketing tecnológico B2B."
+      answer: "Nos enfocamos en estructuración de datos industriales y catálogos MRO, desarrollo de software privado adaptado a procesos de información (portales de consulta, buscadores y dashboards), automatización industrial y control de procesos en planta, marketing B2B industrial y consultoría técnica para diagnóstico de sistemas."
     },
     {
       question: "¿Dónde están ubicados y cuál es el alcance de sus proyectos?",
