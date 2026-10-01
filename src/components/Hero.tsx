@@ -255,19 +255,19 @@ export const Hero: React.FC = () => {
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-2xs flex items-center justify-between">
                   <div>
                     <span className="text-[10px] font-mono text-[#638379] block">Privacidad de Clientes</span>
-                    <span className="text-xs font-bold text-[#13262F] font-sans">Entornos Separados</span>
+                    <span className="text-xs font-bold text-[#13262F] font-sans">Entornos Independientes</span>
                   </div>
                   <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-[#2E4846] border border-[#D8D2C6]">
-                    100% Aislado
+                    Separados
                   </span>
                 </div>
               </div>
 
-              {/* Ownership & Separation Note */}
+              {/* Ownership & Architectural Principle Note */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-xs text-[#2E4846] flex items-center gap-2 shadow-2xs">
                 <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
                 <span>
-                  <strong>Demostración tecnológica:</strong> Plataforma propia en evolución continua. Los datos privados de clientes no alimentan Industrialpedia.
+                  <strong>Principio de arquitectura:</strong> Las soluciones privadas para clientes se diseñan como entornos independientes. La información privada de una empresa no se incorpora automáticamente a Industrialpedia.
                 </span>
               </div>
 

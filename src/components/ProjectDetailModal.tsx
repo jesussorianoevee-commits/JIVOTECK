@@ -156,7 +156,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ item, on
                     Industrialpedia es una plataforma B2B desarrollada por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales. La experiencia tecnológica desarrollada para Industrialpedia sirve como base de conocimiento para crear soluciones privadas adaptadas a cada empresa.
                   </p>
                   <p className="text-xs text-[#638379] font-mono leading-relaxed">
-                    * Entornos separados: Los datos privados de nuestros clientes nunca alimentan Industrialpedia.
+                    * Principio de arquitectura: Las soluciones privadas para clientes se diseñan como entornos independientes. La información privada de una empresa no se incorpora automáticamente a Industrialpedia.
                   </p>
                   <a
                     href={siteConfig.industrialpedia.websiteUrl}

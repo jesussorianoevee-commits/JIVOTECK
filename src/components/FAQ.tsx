@@ -17,11 +17,11 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "¿JIVOTECK puede trabajar con información interna de mi empresa?",
-      answer: "Sí. JIVOTECK puede desarrollar soluciones privadas para estructurar y consultar catálogos técnicos, información MRO, refacciones y documentación industrial de acuerdo con las necesidades del proyecto. El alcance se define después de analizar la estructura y calidad de los datos disponibles, siempre bajo un acuerdo de confidencialidad (NDA)."
+      answer: "Sí. JIVOTECK puede desarrollar soluciones privadas para estructurar y consultar catálogos técnicos, información MRO, refacciones y documentación industrial de acuerdo con las necesidades del proyecto. El alcance se define después de analizar la estructura y calidad de los datos disponibles. Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA)."
     },
     {
       question: "¿Tengo que utilizar Industrialpedia para contratar un proyecto?",
-      answer: "No. Los sistemas empresariales desarrollados por JIVOTECK pueden funcionar de forma privada e independiente. Industrialpedia es un producto propio que puede utilizarse como fuente complementaria cuando el proyecto lo requiera, pero la información interna de tu empresa jamás alimenta dicha plataforma."
+      answer: "No. Las soluciones privadas para clientes se diseñan como entornos independientes. Industrialpedia es un producto propio desarrollado por JIVOTECK que puede utilizarse como fuente complementaria de consulta técnica cuando el proyecto lo requiera. La información privada de una empresa no se incorpora automáticamente a Industrialpedia."
     },
     {
       question: "¿Qué tipo de soluciones ofrece JIVOTECK?",

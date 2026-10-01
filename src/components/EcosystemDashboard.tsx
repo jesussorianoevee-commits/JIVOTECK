@@ -89,9 +89,9 @@ export const EcosystemDashboard: React.FC = () => {
       desc: 'Revisión preliminar de consistencia, campos duplicados y atributos faltantes antes del desarrollo.'
     },
     {
-      label: 'Confidencialidad y Entornos Seguros',
-      status: 'Acuerdo NDA',
-      desc: 'Bases de datos privadas y aisladas. La información técnica de los clientes nunca alimenta entornos públicos.'
+      label: 'Privacidad & Entornos Independientes',
+      status: 'Principio de Diseño',
+      desc: 'Las soluciones privadas para clientes se diseñan como entornos independientes. La información privada de una empresa no se incorpora automáticamente a Industrialpedia. Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA).'
     },
     {
       label: 'Arquitectura Preparada para ERP/CMMS',

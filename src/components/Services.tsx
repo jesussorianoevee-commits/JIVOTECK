@@ -32,9 +32,9 @@ export const Services: React.FC = () => {
       ],
       specs: [
         { label: 'Formatos de origen', value: 'Hojas de Excel, CSV, exportaciones de ERP/CMMS, archivos PDF' },
-        { label: 'Modelo de almacenamiento', value: 'Bases de datos privadas, 100% aisladas e independientes' },
+        { label: 'Diseño de arquitectura', value: 'Sistemas y bases de datos diseñados como entornos independientes' },
         { label: 'Trazabilidad', value: 'Historial de modificaciones y control de cambios de catálogo' },
-        { label: 'Confidencialidad', value: 'Acuerdo NDA estricto previo a cualquier análisis de datos' }
+        { label: 'Confidencialidad', value: 'Disponible bajo acuerdo de confidencialidad (NDA) cuando el proyecto lo requiera' }
       ]
     },
     {
@@ -99,9 +99,9 @@ export const Services: React.FC = () => {
       ],
       specs: [
         { label: 'Modalidad de trabajo', value: 'Remota o presencial según el alcance acordado' },
-        { label: 'Tiempo de diagnóstico', value: 'Entrega de reporte ejecutivo en 5 a 10 días hábiles' },
+        { label: 'Tiempo de diagnóstico', value: 'Definido en función de la complejidad y volumen de la información' },
         { label: 'Entregable', value: 'Reporte técnico con hallazgos y alternativas de solución' },
-        { label: 'Confidencialidad', value: 'Acuerdo NDA previo al levantamiento de datos' }
+        { label: 'Confidencialidad', value: 'Opción de trabajo bajo acuerdo de confidencialidad (NDA)' }
       ]
     },
     {

@@ -157,7 +157,7 @@ export const CorporateBlock: React.FC = () => {
                   <ArrowRight className="w-4 h-4 text-white" />
                 </a>
                 <span className="text-xs font-mono text-[#638379]">
-                  Evaluación inicial confidencial con acuerdo NDA
+                  Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA).
                 </span>
               </div>
             </div>

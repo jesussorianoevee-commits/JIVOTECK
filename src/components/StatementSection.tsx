@@ -84,7 +84,7 @@ export const StatementSection: React.FC = () => {
           <div className="pt-2 flex items-center gap-2 text-xs text-[#638379]">
             <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
             <span>
-              <strong>Privacidad y aislamiento por arquitectura:</strong> Tus datos privados nunca alimentan Industrialpedia. Ambos sistemas operan en entornos completamente separados e independientes.
+              <strong>Principio de arquitectura:</strong> Las soluciones privadas para clientes se diseñan como entornos independientes. La información privada de una empresa no se incorpora automáticamente a Industrialpedia.
             </span>
           </div>
         </div>

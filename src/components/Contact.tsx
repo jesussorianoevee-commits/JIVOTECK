@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
                 <span>Confidencialidad & Atención Directa</span>
               </div>
               <p className="text-[#4A635B] leading-relaxed">
-                Atención técnica en menos de 24 horas hábiles. Firmamos acuerdos de confidencialidad (NDA) antes de revisar catálogos o bases de datos de clientes.
+                Atención técnica directa de especialista a especialista. Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA).
               </p>
             </div>
 
