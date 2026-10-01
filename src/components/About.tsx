@@ -42,7 +42,7 @@ export const About: React.FC = () => {
             <strong>JIVOTECK</strong> es una empresa tecnológica emergente de Aguascalientes enfocada en desarrollar soluciones integrales para la gestión, estructuración y aprovechamiento de información industrial.
           </p>
           <p className="text-sm sm:text-base text-[#4A635B] leading-relaxed font-sans font-normal">
-            Combinamos conocimiento industrial, arquitectura de datos y desarrollo de software para construir herramientas adaptadas a problemas reales de las empresas, manteniendo siempre una filosofía de tecnología con propósito y contacto directo de especialista a especialista.
+            Combinamos conocimiento industrial, arquitectura de datos, desarrollo de software y estrategia comercial B2B para construir soluciones adaptadas a problemas reales de las empresas. Nuestro equipo integra distintas especialidades, permitiendo abordar tanto la estructura tecnológica de un proyecto como la manera en que una empresa organiza, presenta y comunica sus soluciones dentro del mercado industrial.
           </p>
         </div>
 

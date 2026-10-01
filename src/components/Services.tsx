@@ -110,23 +110,28 @@ export const Services: React.FC = () => {
     },
     {
       id: 'JVT-MKT-05',
-      title: 'Marketing Tecnológico & Comunicación B2B',
-      subtitle: 'Estrategias de comunicación y presencia técnica para empresas del sector industrial y de ingeniería.',
+      title: 'Marketing B2B Industrial',
+      subtitle: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
       category: 'Marketing',
       status: 'Servicio Contratable',
       badgeColor: 'bg-[#F4F1EA] text-[#3E5C54] border-[#D8D2C6]',
-      description: 'Estructuración de información comercial y técnica para presentar capacidades de ingeniería ante tomadores de decisión.',
-      overview: 'Ayudamos a empresas técnicas y de manufactura a comunicar con claridad sus soluciones industriales mediante fichas de producto rigurosas, catálogos estructurados y presencia digital profesional orientada a tomadores de decisión B2B.',
+      description: 'Desarrollamos estrategias de comunicación y posicionamiento para empresas que venden productos, servicios o soluciones dentro del sector industrial.',
+      overview: 'Combinamos conocimiento del entorno B2B con comunicación técnica y comercial para ayudar a fabricantes, proveedores y empresas tecnológicas a presentar con claridad qué hacen, qué problema resuelven y por qué su propuesta es relevante para otras empresas.',
       deliverables: [
-        'Estructuración técnica de catálogos y hojas de especificación',
-        'Narrativa de ingeniería para propuestas comerciales y técnicas',
-        'Diseño de presencia web orientada al sector industrial',
-        'Contenidos claros para directores de mantenimiento y compras'
+        'Posicionamiento B2B para empresas industriales',
+        'Comunicación técnica y comercial',
+        'Desarrollo y estructuración de catálogos comerciales',
+        'Presentaciones y materiales para compradores industriales',
+        'Estrategia de presencia digital B2B',
+        'Comunicación de productos y servicios técnicos',
+        'Apoyo para ferias y encuentros de negocio industriales',
+        'Identidad y narrativa comercial orientada al mercado industrial'
       ],
       specs: [
-        { label: 'Enfoque', value: 'Sector industrial, manufactura e ingeniería B2B' },
-        { label: 'Lenguaje', value: 'Técnico, riguroso y libre de clichés comerciales' },
-        { label: 'Entregables', value: 'Fichas técnicas, catálogos digitales y sitios web' }
+        { label: 'Enfoque', value: 'Sector industrial, manufactura, proveedores y empresas tecnológicas B2B' },
+        { label: 'Lenguaje', value: 'Técnico y comercial orientado a compradores y tomadores de decisión industriales' },
+        { label: 'Capacidad del equipo', value: 'Equipo multidisciplinario de JIVOTECK en tecnología y comunicación comercial' },
+        { label: 'Entregables', value: 'Estrategias de posicionamiento, catálogos estructurados, materiales comerciales y presencia digital' }
       ]
     },
     {
