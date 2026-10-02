@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { CorporateBlock } from './components/CorporateBlock';
-import { Services } from './components/Services';
-import { StatementSection } from './components/StatementSection';
+import { Ecosystem } from './components/Ecosystem';
+import { HowWeBuild } from './components/HowWeBuild';
 import { About } from './components/About';
-import { FAQ } from './components/FAQ';
+import { CorporateOperations } from './components/CorporateOperations';
+import { PressRelations } from './components/PressRelations';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -15,11 +15,11 @@ export const App: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <CorporateBlock />
-        <Services />
-        <StatementSection />
+        <Ecosystem />
+        <HowWeBuild />
         <About />
-        <FAQ />
+        <CorporateOperations />
+        <PressRelations />
         <Contact />
       </main>
       <Footer />

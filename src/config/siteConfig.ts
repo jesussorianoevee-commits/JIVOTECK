@@ -4,57 +4,37 @@ export interface SiteConfig {
   description: string;
   contact: {
     primaryEmail: string;
-    supportEmail: string;
     location: string;
-    schedule: string;
   };
   social: {
-    github: string;
-    linkedin: string;
-    twitter: string;
-    instagram: string;
+    github?: string;
+    linkedin?: string;
+    twitter?: string;
+    instagram?: string;
   };
   industrialpedia: {
     websiteUrl: string;
-    status: string;
-    badge: string;
     title: string;
     subtitle: string;
     description: string;
-    ownershipNote: string;
-    teaserFeatures: string[];
   };
 }
 
 export const siteConfig: SiteConfig = {
   name: "JIVOTECK",
   tagline: "Corporativo Tecnológico",
-  description: "JIVOTECK es un corporativo mexicano que crea, desarrolla y opera proyectos tecnológicos con propósito. Casa de Industrialpedia y futuras iniciativas.",
+  description: "JIVOTECK es un corporativo tecnológico mexicano que crea y da estructura a proyectos tecnológicos con visión de largo plazo.",
   contact: {
     primaryEmail: "contacto@jivoteck.com",
-    supportEmail: "contacto@jivoteck.com",
-    location: "Aguascalientes, México",
-    schedule: "Lunes a Viernes de 9:00 a 18:00 (Hora Centro de México)"
+    location: "Aguascalientes, México"
   },
   social: {
-    github: "https://github.com/jesussorianoevee-commits/JIVOTECK",
-    linkedin: "#",
-    twitter: "#",
-    instagram: "#"
+    // Redes sociales sin URL corporativa verificada permanecen inactivas
   },
   industrialpedia: {
-    websiteUrl: "https://industrialpedia.com.mx",
-    status: "Producto activo · evolución continua",
-    badge: "Proyecto Tecnológico",
+    websiteUrl: "https://industrialpedia.com.mx/",
     title: "Industrialpedia",
     subtitle: "Tecnología e información para la industria",
-    description: "Plataforma tecnológica desarrollada dentro de JIVOTECK para estructurar, consultar y aprovechar información técnica industrial.",
-    ownershipNote: "Marca y proyecto tecnológico desarrollado y operado dentro del corporativo JIVOTECK.",
-    teaserFeatures: [
-      "Normalización y homologación técnica multi-fabricante",
-      "Cruce de especificaciones y números de parte industriales",
-      "Búsqueda y consulta técnica estructurada",
-      "Directorio de fabricantes y parámetros de ingeniería"
-    ]
+    description: "Industrialpedia es la iniciativa tecnológica activa del ecosistema JIVOTECK. Opera con identidad propia y concentra el desarrollo de software e información orientados al entorno industrial."
   }
 };

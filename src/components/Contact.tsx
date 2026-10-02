@@ -1,70 +1,61 @@
-import React, { useState } from 'react';
-import { Mail, Copy, Check, MapPin, Send, Building2, MessageSquare } from 'lucide-react';
+﻿import React, { useState } from 'react';
+import { Mail, Copy, Check, MapPin, Send, MessageSquare, ShieldCheck, X } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    subject: 'informacion',
-    message: ''
-  });
-  const [copiedEmail, setCopiedEmail] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [ticketFolio, setTicketFolio] = useState('');
+  const [selectedSubject, setSelectedSubject] = useState<string>('Alianzas y colaboraciones');
+  const [copiedEmail, setCopiedEmail] = useState<boolean>(false);
+  const [privacyModalOpen, setPrivacyModalOpen] = useState<boolean>(false);
 
-  const copyEmail = () => {
+  const contactCategories = [
+    'Alianzas y colaboraciones',
+    'Relaciones institucionales',
+    'Prensa y comunicaciÃ³n',
+    'AdministraciÃ³n / facturaciÃ³n',
+    'Proveedores',
+    'Industrialpedia',
+    'Talento',
+    'Otro motivo'
+  ];
+
+  const handleCopyEmail = () => {
     navigator.clipboard.writeText(siteConfig.contact.primaryEmail);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const subjectLabels: Record<string, string> = {
-    informacion: 'Información sobre JIVOTECK',
-    industrialpedia: 'Industrialpedia',
-    propuesta: 'Propuesta empresarial',
-    colaboracion: 'Colaboración',
-    proveedores: 'Proveedores',
-    prensa: 'Prensa / comunicación',
-    otro: 'Otro'
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const randomFolio = `JVT-${Math.floor(1000 + Math.random() * 9000)}`;
-    setTicketFolio(randomFolio);
-    setSubmitted(true);
-  };
+  const mailtoHref = `mailto:${siteConfig.contact.primaryEmail}?subject=${encodeURIComponent(`[JIVOTECK] ${selectedSubject}`)}`;
 
   return (
     <section id="contacto" className="py-16 sm:py-24 bg-white border-t border-[#EAE5DC] text-[#13262F]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
         {/* Header */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
-            <MessageSquare className="w-3.5 h-3.5 text-[#50756C]" />
-            <span>VINCULACIÓN CORPORATIVA</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6]">
+            <MessageSquare className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
+            <span>VINCULACIÃ“N</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            Hablemos
+            Contacto corporativo
           </h2>
           <p className="text-base sm:text-lg text-[#4A635B] leading-relaxed font-sans">
-            Si quieres conocer más sobre JIVOTECK, alguno de nuestros proyectos o explorar una posible colaboración, puedes comunicarte directamente con nuestro equipo.
+            Para alianzas, relaciones institucionales, prensa, proveedores, documentaciÃ³n corporativa o informaciÃ³n sobre el ecosistema JIVOTECK, utiliza este canal.
+          </p>
+          <p className="text-xs sm:text-sm text-[#638379] leading-relaxed font-sans">
+            Si tu consulta estÃ¡ relacionada directamente con la plataforma o las funcionalidades de Industrialpedia, te orientaremos al canal correspondiente.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Direct channels left (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
-            
+
             {/* Email Card */}
             <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-4 shadow-xs">
               <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#638379] font-bold block">
-                Canal Oficial de Atención
+                Canal Oficial de AtenciÃ³n
               </span>
 
               <div className="flex items-center justify-between gap-2 p-3 bg-white rounded-xl border border-[#D8D2C6] shadow-2xs">
@@ -72,18 +63,20 @@ export const Contact: React.FC = () => {
                   {siteConfig.contact.primaryEmail}
                 </span>
                 <button
-                  onClick={copyEmail}
-                  className="px-3 py-1.5 bg-[#F4F1EA] hover:bg-[#EAE5DC] text-[#2E4846] rounded-lg text-xs font-mono font-semibold flex items-center gap-1 transition-colors shrink-0 border border-[#D8D2C6]"
-                  title="Copiar correo"
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className="min-h-[44px] px-3.5 py-2 bg-[#F4F1EA] hover:bg-[#EAE5DC] text-[#2E4846] rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors shrink-0 border border-[#D8D2C6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                  title="Copiar correo corporativo"
+                  aria-label="Copiar correo corporativo al portapapeles"
                 >
                   {copiedEmail ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-[#2E4846]" />
+                      <Check className="w-3.5 h-3.5 text-[#2E4846]" aria-hidden="true" />
                       <span className="text-[#2E4846]">Copiado</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5 text-[#638379]" />
+                      <Copy className="w-3.5 h-3.5 text-[#638379]" aria-hidden="true" />
                       <span>Copiar</span>
                     </>
                   )}
@@ -91,175 +84,101 @@ export const Contact: React.FC = () => {
               </div>
 
               <a
-                href={`mailto:${siteConfig.contact.primaryEmail}`}
-                className="w-full py-2.5 px-4 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
+                href={mailtoHref}
+                className="min-h-[44px] w-full py-3 px-4 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
               >
-                <Mail className="w-3.5 h-3.5 text-white" />
+                <Mail className="w-4 h-4 text-white" aria-hidden="true" />
                 <span>Escribir Correo Corporativo</span>
               </a>
             </div>
 
-            {/* Location & Sede Card */}
+            {/* Sede Card */}
             <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-2 shadow-xs">
               <div className="text-xs font-mono uppercase tracking-[0.2em] text-[#2E4846] font-bold flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#50756C]" />
+                <MapPin className="w-4 h-4 text-[#50756C]" aria-hidden="true" />
                 <span>Sede Corporativa</span>
               </div>
               <div className="text-base font-bold text-[#13262F] font-serif">
-                Aguascalientes, México
+                Aguascalientes, MÃ©xico
               </div>
               <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
-                Entidad legal, corporativa y centro de operaciones para todas las marcas e iniciativas del ecosistema.
-              </p>
-            </div>
-
-            {/* Corporate Entity Notice */}
-            <div className="p-4 rounded-2xl bg-[#F4F1EA] border border-[#D8D2C6] space-y-2 text-xs text-[#2E4846] font-sans">
-              <div className="flex items-center gap-2 font-semibold">
-                <Building2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                <span>Entidad de Facturación & Legal</span>
-              </div>
-              <p className="text-[#4A635B] leading-relaxed">
-                JIVOTECK es la persona moral y entidad jurídica facultada para celebración de contratos, facturación y convenios institucionales de cada iniciativa.
+                AtenciÃ³n y vinculaciÃ³n corporativa para alianzas, iniciativas tecnolÃ³gicas e informaciÃ³n institucional.
               </p>
             </div>
 
           </div>
 
-          {/* Form right (7 cols) */}
+          {/* Interactive Routing Right (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#EAE5DC] shadow-xs">
-              
-              {submitted ? (
-                <div className="py-8 text-center space-y-4">
-                  <div className="w-14 h-14 rounded-full bg-[#F4F1EA] text-[#2E4846] mx-auto flex items-center justify-center border border-[#D8D2C6]">
-                    <Check className="w-7 h-7 text-[#2E4846]" />
-                  </div>
-                  <div>
-                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#F4F1EA] text-[#2E4846] border border-[#D8D2C6]">
-                      FOLIO: {ticketFolio}
-                    </span>
-                    <h3 className="text-2xl font-bold text-[#13262F] font-serif mt-3">
-                      Mensaje Recibido
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm text-[#4A635B] max-w-md mx-auto leading-relaxed font-sans">
-                    Muchas gracias, <strong>{formData.name}</strong>. Hemos recibido tu mensaje con motivo: <strong>{subjectLabels[formData.subject] || formData.subject}</strong>. El equipo directivo de JIVOTECK se pondrá en contacto a tu correo <strong>{formData.email}</strong>.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: '', email: '', phone: '', company: '', subject: 'informacion', message: '' });
-                    }}
-                    className="mt-4 px-5 py-2.5 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm"
-                  >
-                    Enviar otro mensaje
-                  </button>
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-xs space-y-6">
+
+              <div>
+                <h3 className="text-lg font-bold font-serif text-[#13262F]">
+                  Selecciona el motivo de tu consulta
+                </h3>
+                <p className="text-xs text-[#4A635B] font-sans mt-1">
+                  Tu cliente de correo se abrirÃ¡ con el asunto preconfigurado para canalizar tu mensaje al Ã¡rea adecuada.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="contact-category-select"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#13262F] font-semibold"
+                >
+                  Motivo de contacto:
+                </label>
+                <select
+                  id="contact-category-select"
+                  name="contactCategory"
+                  value={selectedSubject}
+                  onChange={(e) => setSelectedSubject(e.target.value)}
+                  className="w-full min-h-[44px] px-3.5 py-2.5 text-xs bg-white border border-[#D8D2C6] rounded-xl text-[#13262F] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] transition-all font-sans"
+                >
+                  {contactCategories.map((cat) => (
+                    <option key={cat} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Pre-formatted mail preview */}
+              <div className="p-4 rounded-xl bg-white border border-[#D8D2C6] space-y-2 text-xs">
+                <div className="flex items-center justify-between text-[#638379] font-mono text-[11px]">
+                  <span>Destinatario:</span>
+                  <span className="font-bold text-[#13262F]">{siteConfig.contact.primaryEmail}</span>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                        Nombre Completo *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Ej. Roberto Mendoza"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
-                      />
-                    </div>
+                <div className="flex items-center justify-between text-[#638379] font-mono text-[11px]">
+                  <span>Asunto configurado:</span>
+                  <span className="font-bold text-[#2E4846] truncate max-w-[260px] sm:max-w-none">
+                    [JIVOTECK] {selectedSubject}
+                  </span>
+                </div>
+              </div>
 
-                    <div className="space-y-1.5">
-                      <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                        Correo Electrónico *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="tu-correo@empresa.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
-                      />
-                    </div>
-                  </div>
+              <div className="space-y-3 pt-2">
+                <a
+                  href={mailtoHref}
+                  className="min-h-[44px] w-full py-3.5 px-6 bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                >
+                  <Send className="w-3.5 h-3.5 text-white" aria-hidden="true" />
+                  <span>Redactar correo para: {selectedSubject}</span>
+                </a>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                        Teléfono / Contacto
-                      </label>
-                      <input
-                        type="tel"
-                        placeholder="Ej. +52 449 123 4567"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
-                      />
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                        Empresa / Organización
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Ej. Organización o Empresa"
-                        value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Motivo de Contacto *
-                    </label>
-                    <select
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all font-sans"
-                    >
-                      <option value="informacion">Información sobre JIVOTECK</option>
-                      <option value="industrialpedia">Industrialpedia</option>
-                      <option value="propuesta">Propuesta empresarial</option>
-                      <option value="colaboracion">Colaboración</option>
-                      <option value="proveedores">Proveedores</option>
-                      <option value="prensa">Prensa / comunicación</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Mensaje *
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Escribe tu mensaje, propuesta o inquietud para nuestro equipo corporativo..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all resize-none font-sans"
-                    ></textarea>
-                  </div>
-
+                {/* Privacy agreement notice */}
+                <p className="text-[11px] text-[#638379] font-sans text-center leading-relaxed">
+                  Al enviar una comunicaciÃ³n a travÃ©s de este canal, confirmas que has leÃ­do el{' '}
                   <button
-                    type="submit"
-                    className="w-full py-3.5 px-6 bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow"
+                    type="button"
+                    onClick={() => setPrivacyModalOpen(true)}
+                    className="underline text-[#2E4846] hover:text-[#13262F] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] rounded p-0.5"
                   >
-                    <Send className="w-3.5 h-3.5 text-white" />
-                    <span>Enviar Mensaje</span>
-                  </button>
-
-                </form>
-              )}
+                    Aviso de Privacidad
+                  </button>{' '}
+                  de JIVOTECK.
+                </p>
+              </div>
 
             </div>
           </div>
@@ -267,6 +186,57 @@ export const Contact: React.FC = () => {
         </div>
 
       </div>
+
+      {/* Accessible Privacy Notice Modal */}
+      {privacyModalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="privacy-modal-title"
+        >
+          <div className="bg-white rounded-3xl border border-[#EAE5DC] max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-xl">
+            <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#50756C]" aria-hidden="true" />
+                <h3 id="privacy-modal-title" className="text-base font-bold font-serif text-[#13262F]">
+                  Aviso de Privacidad
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPrivacyModalOpen(false)}
+                className="min-h-[40px] min-w-[40px] p-2 rounded-xl text-[#638379] hover:text-[#13262F] hover:bg-[#FAF8F5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] flex items-center justify-center"
+                aria-label="Cerrar modal"
+              >
+                <X className="w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="space-y-3 text-xs text-[#4A635B] font-sans leading-relaxed">
+              <p>
+                <strong>JIVOTECK</strong> (Aguascalientes, MÃ©xico) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicaciÃ³n por correo electrÃ³nico oficial.
+              </p>
+              <p>
+                Los datos recabados serÃ¡n utilizados exclusivamente para atender y dar seguimiento a tu solicitud de informaciÃ³n, vinculaciÃ³n, prensa, alianzas o asuntos corporativos. No se cederÃ¡n a terceros ni se emplearÃ¡n con fines comerciales no solicitados.
+              </p>
+              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-[11px] text-[#638379]">
+                <strong>Nota institucional:</strong> La formalizaciÃ³n registral completa y datos fiscales especÃ­ficos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-[#EAE5DC] flex justify-end">
+              <button
+                type="button"
+                onClick={() => setPrivacyModalOpen(false)}
+                className="min-h-[40px] px-4 py-2 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

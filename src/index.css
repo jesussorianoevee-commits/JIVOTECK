@@ -3,51 +3,30 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
-/* Minimalist scrollbar */
+/* Warm minimalist scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #D8D2C6;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #8FA89B;
 }
 
-.bg-sky-gradient-card {
-  background: linear-gradient(180deg, #CDE7FE 0%, #E8F3FE 45%, #FFFFFF 100%);
-}
-
-.pill-coming-soon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  border: 1px solid #00D4FF;
-  color: #0099CC;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.dark-pill-coming-soon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  color: #00D4FF;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  font-weight: 600;
-  text-transform: uppercase;
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

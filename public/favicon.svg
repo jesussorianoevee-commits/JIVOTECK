@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <defs>
+    <linearGradient id="jvt-stem" x1="30" y1="10" x2="70" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#13262F" />
+      <stop offset="100%" stopColor="#0A171D" />
+    </linearGradient>
+    <linearGradient id="jvt-leaf" x1="15" y1="40" x2="45" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#50756C" />
+      <stop offset="100%" stopColor="#2E4846" />
+    </linearGradient>
+  </defs>
+
+  <!-- 3 Botanical Leaves on the Left Curve -->
+  <!-- 1. Outer Leaf -->
+  <path d="M 30 83 C 23 76 13 63 15 48 C 16 43 19 39 23 44 C 28 50 31 66 34 81 Z" fill="url(#jvt-leaf)" />
+  <path d="M 18 47 Q 24 63 31 82" stroke="#50756C" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- 2. Middle Leaf -->
+  <path d="M 34 81 C 28 68 25 50 29 35 C 31 29 35 27 37 33 C 39 42 40 60 42 83 Z" fill="url(#jvt-leaf)" />
+  <path d="M 33 33 Q 35 55 38 82" stroke="#50756C" stroke-width="0.9" stroke-linecap="round" fill="none" opacity="0.8" />
+
+  <!-- 3. Inner Leaf -->
+  <path d="M 40 82 C 38 72 39 56 43 46 C 45 42 48 43 48 48 C 48 56 47 68 47 84 Z" fill="url(#jvt-leaf)" />
+  <path d="M 46 45 Q 45 64 44 83" stroke="#50756C" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- Architectural "J" Body with Chiseled Apex & Gothic Barb -->
+  <path d="M 68 8 L 53 21 C 52 22 50.5 23.5 52 25 C 53.5 26 53.5 27.5 53.5 30 L 53.5 70 C 53.5 82 45 92 32 92 C 24 92 20 87 20 87 C 20 87 23 98 36 98 C 52 98 64 87 64 71 L 64 57 L 68 57 Z" fill="url(#jvt-stem)" />
+
+  <!-- Portal / Arched Doorway in Lower Stem -->
+  <path d="M 57.5 57 L 57.5 45 C 57.5 39 64.5 39 64.5 45 L 64.5 57 Z" fill="#FAF8F5" />
+
+  <!-- 4-point Star inside Doorway -->
+  <path d="M 61 41.5 Q 61 45.5 63.5 45.5 Q 61 45.5 61 49.5 Q 61 45.5 58.5 45.5 Q 61 45.5 61 41.5 Z" fill="#13262F" />
+
+  <!-- Serpentine Pathway -->
+  <path d="M 58.5 57 C 58.5 62 63.5 66 63.5 71 C 63.5 76 57.5 80 56.5 86 C 55.5 90 58.5 94 63.5 98 C 65.5 98 67 96.5 66 93.5 C 64.5 89 65.5 85 67.5 80 C 68.5 74 65 68 63 57 Z" fill="#FAF8F5" />
+</svg>
