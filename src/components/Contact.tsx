@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Mail, Copy, Check, MapPin, Send, MessageSquare, ShieldCheck, X } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
@@ -10,8 +10,8 @@ export const Contact: React.FC = () => {
   const contactCategories = [
     'Alianzas y colaboraciones',
     'Relaciones institucionales',
-    'Prensa y comunicaciÃ³n',
-    'AdministraciÃ³n / facturaciÃ³n',
+    'Prensa y comunicación',
+    'Administración / facturación',
     'Proveedores',
     'Industrialpedia',
     'Talento',
@@ -34,16 +34,16 @@ export const Contact: React.FC = () => {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6]">
             <MessageSquare className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
-            <span>VINCULACIÃ“N</span>
+            <span>VINCULACIÓN</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
             Contacto corporativo
           </h2>
           <p className="text-base sm:text-lg text-[#4A635B] leading-relaxed font-sans">
-            Para alianzas, relaciones institucionales, prensa, proveedores, documentaciÃ³n corporativa o informaciÃ³n sobre el ecosistema JIVOTECK, utiliza este canal.
+            Para alianzas, relaciones institucionales, prensa, proveedores, documentación corporativa o información sobre el ecosistema JIVOTECK, utiliza este canal.
           </p>
           <p className="text-xs sm:text-sm text-[#638379] leading-relaxed font-sans">
-            Si tu consulta estÃ¡ relacionada directamente con la plataforma o las funcionalidades de Industrialpedia, te orientaremos al canal correspondiente.
+            Si tu consulta está relacionada directamente con la plataforma o las funcionalidades de Industrialpedia, te orientaremos al canal correspondiente.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export const Contact: React.FC = () => {
             {/* Email Card */}
             <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-4 shadow-xs">
               <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#638379] font-bold block">
-                Canal Oficial de AtenciÃ³n
+                Canal Oficial de Atención
               </span>
 
               <div className="flex items-center justify-between gap-2 p-3 bg-white rounded-xl border border-[#D8D2C6] shadow-2xs">
@@ -99,10 +99,10 @@ export const Contact: React.FC = () => {
                 <span>Sede Corporativa</span>
               </div>
               <div className="text-base font-bold text-[#13262F] font-serif">
-                Aguascalientes, MÃ©xico
+                Aguascalientes, México
               </div>
               <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
-                AtenciÃ³n y vinculaciÃ³n corporativa para alianzas, iniciativas tecnolÃ³gicas e informaciÃ³n institucional.
+                Atención y vinculación corporativa para alianzas, iniciativas tecnológicas e información institucional.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export const Contact: React.FC = () => {
                   Selecciona el motivo de tu consulta
                 </h3>
                 <p className="text-xs text-[#4A635B] font-sans mt-1">
-                  Tu cliente de correo se abrirÃ¡ con el asunto preconfigurado para canalizar tu mensaje al Ã¡rea adecuada.
+                  Tu cliente de correo se abrirá con el asunto preconfigurado para canalizar tu mensaje al área adecuada.
                 </p>
               </div>
 
@@ -168,7 +168,7 @@ export const Contact: React.FC = () => {
 
                 {/* Privacy agreement notice */}
                 <p className="text-[11px] text-[#638379] font-sans text-center leading-relaxed">
-                  Al enviar una comunicaciÃ³n a travÃ©s de este canal, confirmas que has leÃ­do el{' '}
+                  Al enviar una comunicación a través de este canal, confirmas que has leído el{' '}
                   <button
                     type="button"
                     onClick={() => setPrivacyModalOpen(true)}
@@ -215,13 +215,13 @@ export const Contact: React.FC = () => {
 
             <div className="space-y-3 text-xs text-[#4A635B] font-sans leading-relaxed">
               <p>
-                <strong>JIVOTECK</strong> (Aguascalientes, MÃ©xico) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicaciÃ³n por correo electrÃ³nico oficial.
+                <strong>JIVOTECK</strong> (Aguascalientes, México) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicación por correo electrónico oficial.
               </p>
               <p>
-                Los datos recabados serÃ¡n utilizados exclusivamente para atender y dar seguimiento a tu solicitud de informaciÃ³n, vinculaciÃ³n, prensa, alianzas o asuntos corporativos. No se cederÃ¡n a terceros ni se emplearÃ¡n con fines comerciales no solicitados.
+                Los datos recabados serán utilizados exclusivamente para atender y dar seguimiento a tu solicitud de información, vinculación, prensa, alianzas o asuntos corporativos. No se cederán a terceros ni se emplearán con fines comerciales no solicitados.
               </p>
               <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-[11px] text-[#638379]">
-                <strong>Nota institucional:</strong> La formalizaciÃ³n registral completa y datos fiscales especÃ­ficos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
+                <strong>Nota institucional:</strong> La formalización registral completa y datos fiscales específicos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
               </div>
             </div>
 

@@ -1,11 +1,11 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Newspaper, Copy, Check, ArrowUpRight, FileText } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const PressRelations: React.FC = () => {
   const [copiedBoilerplate, setCopiedBoilerplate] = useState(false);
 
-  const boilerplateText = "JIVOTECK es un corporativo tecnolÃ³gico mexicano con sede en Aguascalientes enfocado en crear, desarrollar y dar estructura a proyectos tecnolÃ³gicos con identidad propia. Su ecosistema incluye Industrialpedia, una iniciativa de tecnologÃ­a e informaciÃ³n para la industria. JIVOTECK integra direcciÃ³n estratÃ©gica, gestiÃ³n, tecnologÃ­a y desarrollo de marca bajo una visiÃ³n de largo plazo.";
+  const boilerplateText = "JIVOTECK es un corporativo tecnológico mexicano con sede en Aguascalientes enfocado en crear, desarrollar y dar estructura a proyectos tecnológicos con identidad propia. Su ecosistema incluye Industrialpedia, una iniciativa de tecnología e información para la industria. JIVOTECK integra dirección estratégica, gestión, tecnología y desarrollo de marca bajo una visión de largo plazo.";
 
   const handleCopyBoilerplate = () => {
     navigator.clipboard.writeText(boilerplateText);
@@ -16,17 +16,17 @@ export const PressRelations: React.FC = () => {
   const pressResources = [
     {
       title: 'Perfil corporativo',
-      desc: 'SÃ­ntesis institucional, visiÃ³n de largo plazo y datos de contacto oficial.',
-      badge: 'InformaciÃ³n institucional'
+      desc: 'Síntesis institucional, visión de largo plazo y datos de contacto oficial.',
+      badge: 'Información institucional'
     },
     {
       title: 'Identidad de marca',
-      desc: 'Directrices del emblema autÃ©ntico, colores corporativos y tipografÃ­a institucional.',
-      badge: 'GuÃ­a oficial'
+      desc: 'Directrices del emblema auténtico, colores corporativos y tipografía institucional.',
+      badge: 'Guía oficial'
     },
     {
-      title: 'InformaciÃ³n sobre Industrialpedia',
-      desc: 'Contexto de la iniciativa tecnolÃ³gica activa orientada al entorno industrial.',
+      title: 'Información sobre Industrialpedia',
+      desc: 'Contexto de la iniciativa tecnológica activa orientada al entorno industrial.',
       badge: 'Proyecto del ecosistema'
     }
   ];
@@ -40,13 +40,13 @@ export const PressRelations: React.FC = () => {
           <div className="max-w-3xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6]">
               <Newspaper className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
-              <span>COMUNICACIÃ“N & MEDIOS</span>
+              <span>COMUNICACIÓN & MEDIOS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
               Prensa y relaciones
             </h2>
             <p className="text-base sm:text-lg text-[#4A635B] font-sans leading-relaxed">
-              Para consultas de medios, entrevistas, informaciÃ³n institucional o recursos oficiales de marca, comunÃ­cate con el equipo de JIVOTECK.
+              Para consultas de medios, entrevistas, información institucional o recursos oficiales de marca, comunícate con el equipo de JIVOTECK.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export const PressRelations: React.FC = () => {
 
           <div className="pt-2 text-[11px] font-mono text-[#638379] flex items-center justify-between">
             <span>Canal institucional: {siteConfig.contact.primaryEmail}</span>
-            <span>Aguascalientes, MÃ©xico</span>
+            <span>Aguascalientes, México</span>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ExternalLink, Layers, ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
@@ -17,7 +17,7 @@ export const Ecosystem: React.FC = () => {
             Nuestro ecosistema
           </h2>
           <p className="text-base sm:text-lg text-[#4A635B] font-sans leading-relaxed">
-            Cada proyecto de JIVOTECK nace con una identidad y un propÃ³sito propios. El corporativo aporta direcciÃ³n, gestiÃ³n y continuidad para que cada iniciativa pueda desarrollarse de forma independiente.
+            Cada proyecto de JIVOTECK nace con una identidad y un propósito propios. El corporativo aporta dirección, gestión y continuidad para que cada iniciativa pueda desarrollarse de forma independiente.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export const Ecosystem: React.FC = () => {
               {/* Meta Tag */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#EAE5DC]">
                 <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#13262F] text-white border border-[#13262F]">
-                  INICIATIVA TECNOLÃ“GICA ACTIVA
+                  INICIATIVA TECNOLÓGICA ACTIVA
                 </span>
                 <span className="text-xs font-mono text-[#638379]">
                   industrialpedia.com.mx
@@ -48,13 +48,13 @@ export const Ecosystem: React.FC = () => {
                   Industrialpedia
                 </h3>
                 <p className="text-sm sm:text-base font-mono font-semibold text-[#50756C] mt-1">
-                  TecnologÃ­a e informaciÃ³n para la industria
+                  Tecnología e información para la industria
                 </p>
               </div>
 
               {/* Description */}
               <p className="text-sm sm:text-base text-[#4A635B] font-sans leading-relaxed">
-                Industrialpedia es la iniciativa tecnolÃ³gica activa del ecosistema JIVOTECK. Opera con identidad propia y concentra el desarrollo de software e informaciÃ³n orientados al entorno industrial.
+                Industrialpedia es la iniciativa tecnológica activa del ecosistema JIVOTECK. Opera con identidad propia y concentra el desarrollo de software e información orientados al entorno industrial.
               </p>
 
             </div>
@@ -87,10 +87,10 @@ export const Ecosystem: React.FC = () => {
                 Estructura para Nuevas Iniciativas
               </h4>
               <p className="text-xs sm:text-sm text-[#4A635B] font-sans leading-relaxed">
-                El modelo corporativo de JIVOTECK estÃ¡ concebido para albergar nuevas marcas y proyectos a medida que alcancen su etapa de maduraciÃ³n.
+                El modelo corporativo de JIVOTECK está concebido para albergar nuevas marcas y proyectos a medida que alcancen su etapa de maduración.
               </p>
               <p className="text-xs text-[#638379] font-sans leading-relaxed">
-                Cada desarrollo conserva su propia misiÃ³n y autonomÃ­a tÃ©cnica, compartiendo la base estratÃ©gica y operativa corporativa.
+                Cada desarrollo conserva su propia misión y autonomía técnica, compartiendo la base estratégica y operativa corporativa.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export const Ecosystem: React.FC = () => {
                 href="#como-construimos"
                 className="text-xs font-mono font-semibold text-[#2E4846] hover:text-[#13262F] inline-flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] rounded-md p-1"
               >
-                <span>Conoce cÃ³mo construimos</span>
+                <span>Conoce cómo construimos</span>
                 <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
               </a>
             </div>

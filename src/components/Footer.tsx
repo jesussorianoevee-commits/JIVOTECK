@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { ArrowUp, ExternalLink, Mail, MapPin, Sparkles, ShieldCheck, X } from 'lucide-react';
 import { JivoteckLogo } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-2">
             <JivoteckLogo size="lg" darkText={true} showSubtitle={true} />
             <p className="text-sm text-[#4A635B] max-w-md font-sans">
-              Corporativo tecnolÃ³gico mexicano. Casa corporativa de Industrialpedia y nuevas iniciativas tecnolÃ³gicas.
+              Corporativo tecnológico mexicano. Casa corporativa de Industrialpedia y nuevas iniciativas tecnológicas.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="flex flex-col space-y-2 text-xs font-mono text-[#3E5C54]">
               <a href="#nosotros" className="hover:text-[#13262F] hover:underline transition-colors py-0.5">Nosotros</a>
-              <a href="#como-construimos" className="hover:text-[#13262F] hover:underline transition-colors py-0.5">CÃ³mo construimos</a>
+              <a href="#como-construimos" className="hover:text-[#13262F] hover:underline transition-colors py-0.5">Cómo construimos</a>
               <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors py-0.5">Contacto</a>
             </div>
           </div>
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
                 <ExternalLink className="w-3.5 h-3.5 text-[#2E4846]" aria-hidden="true" />
               </a>
               <p className="text-[11px] text-[#638379] font-sans leading-relaxed">
-                TecnologÃ­a e informaciÃ³n para la industria.
+                Tecnología e información para la industria.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: LEGAL & CANAL OFICIAL */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              LEGAL & ATENCIÃ“N
+              LEGAL & ATENCIÓN
             </h4>
             <div className="space-y-2 text-xs font-mono text-[#3E5C54]">
               <button
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
               </a>
               <div className="flex items-center gap-1.5 text-[#4A635B] font-sans text-xs pt-1">
                 <MapPin className="w-3.5 h-3.5 text-[#2E4846] shrink-0" aria-hidden="true" />
-                <span>Aguascalientes, MÃ©xico</span>
+                <span>Aguascalientes, México</span>
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ export const Footer: React.FC = () => {
         <div className="pt-6 border-t border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#638379]">
           <div className="flex items-center gap-2 font-bold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
-            <span>IDEAS QUE TAMBIÃ‰N CONSTRUYEN MUNDOS</span>
+            <span>IDEAS QUE TAMBIÉN CONSTRUYEN MUNDOS</span>
           </div>
           <div className="text-[11px] uppercase tracking-wider text-[#4A635B]">
-            Aguascalientes, MÃ©xico.
+            Aguascalientes, México.
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export const Footer: React.FC = () => {
             &copy; 2026 JIVOTECK. Todos los derechos reservados.
           </div>
           <div className="text-[11px] text-[#638379]">
-            Corporativo tecnolÃ³gico
+            Corporativo tecnológico
           </div>
         </div>
 
@@ -170,13 +170,13 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-3 text-xs text-[#4A635B] font-sans leading-relaxed">
               <p>
-                <strong>JIVOTECK</strong> (Aguascalientes, MÃ©xico) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicaciÃ³n por correo electrÃ³nico oficial.
+                <strong>JIVOTECK</strong> (Aguascalientes, México) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicación por correo electrónico oficial.
               </p>
               <p>
-                Los datos recabados serÃ¡n utilizados exclusivamente para atender y dar seguimiento a tu solicitud de informaciÃ³n, vinculaciÃ³n, prensa, alianzas o asuntos corporativos. No se cederÃ¡n a terceros ni se emplearÃ¡n con fines comerciales no solicitados.
+                Los datos recabados serán utilizados exclusivamente para atender y dar seguimiento a tu solicitud de información, vinculación, prensa, alianzas o asuntos corporativos. No se cederán a terceros ni se emplearán con fines comerciales no solicitados.
               </p>
               <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-[11px] text-[#638379]">
-                <strong>Nota institucional:</strong> La formalizaciÃ³n registral completa y datos fiscales especÃ­ficos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
+                <strong>Nota institucional:</strong> La formalización registral completa y datos fiscales específicos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
               </div>
             </div>
 

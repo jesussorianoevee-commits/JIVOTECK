@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Users, MapPin, Compass, Layers } from 'lucide-react';
 
 export const About: React.FC = () => {
@@ -17,13 +17,13 @@ export const About: React.FC = () => {
           </h2>
           <div className="space-y-4 text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal pt-2">
             <p>
-              JIVOTECK es un corporativo tecnolÃ³gico mexicano con sede en Aguascalientes. Integramos estrategia, tecnologÃ­a, gestiÃ³n y desarrollo de marca para dar estructura y continuidad a proyectos propios.
+              JIVOTECK es un corporativo tecnológico mexicano con sede en Aguascalientes. Integramos estrategia, tecnología, gestión y desarrollo de marca para dar estructura y continuidad a proyectos propios.
             </p>
             <p className="text-sm sm:text-base text-[#4A635B]">
-              Cada iniciativa del ecosistema mantiene una identidad y una propuesta de valor independientes, mientras JIVOTECK aporta la visiÃ³n corporativa que las conecta y respalda.
+              Cada iniciativa del ecosistema mantiene una identidad y una propuesta de valor independientes, mientras JIVOTECK aporta la visión corporativa que las conecta y respalda.
             </p>
             <p className="text-sm sm:text-base text-[#4A635B]">
-              Industrialpedia es actualmente la iniciativa tecnolÃ³gica activa del ecosistema.
+              Industrialpedia es actualmente la iniciativa tecnológica activa del ecosistema.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export const About: React.FC = () => {
               Sede en Aguascalientes
             </h3>
             <p className="text-xs sm:text-sm text-[#4A635B] leading-relaxed font-sans">
-              Operamos y coordinamos nuestras iniciativas tecnolÃ³gicas desde Aguascalientes, MÃ©xico, con proyecciÃ³n y enfoque a largo plazo.
+              Operamos y coordinamos nuestras iniciativas tecnológicas desde Aguascalientes, México, con proyección y enfoque a largo plazo.
             </p>
           </div>
 
@@ -48,10 +48,10 @@ export const About: React.FC = () => {
               <Compass className="w-5 h-5 text-[#50756C]" />
             </div>
             <h3 className="text-base font-bold text-[#13262F] font-serif">
-              VisiÃ³n y Continuidad
+              Visión y Continuidad
             </h3>
             <p className="text-xs sm:text-sm text-[#4A635B] leading-relaxed font-sans">
-              Damos solidez a cada proyecto asegurando coherencia estratÃ©gica, procesos ordenados y visiÃ³n sostenible desde su concepciÃ³n.
+              Damos solidez a cada proyecto asegurando coherencia estratégica, procesos ordenados y visión sostenible desde su concepción.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
               Identidad Independiente
             </h3>
             <p className="text-xs sm:text-sm text-[#4A635B] leading-relaxed font-sans">
-              Cada marca del ecosistema cuenta con su propio espacio, nombre y propuesta de valor orientada a su sector especÃ­fico.
+              Cada marca del ecosistema cuenta con su propio espacio, nombre y propuesta de valor orientada a su sector específico.
             </p>
           </div>
 

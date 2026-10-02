@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Building2, ArrowUpRight } from 'lucide-react';
 
 export const CorporateOperations: React.FC = () => {
@@ -10,19 +10,19 @@ export const CorporateOperations: React.FC = () => {
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6]">
               <Building2 className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
-              <span>GESTIÃ“N INSTITUCIONAL</span>
+              <span>GESTIÓN INSTITUCIONAL</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#13262F] tracking-tight">
-              OperaciÃ³n corporativa
+              Operación corporativa
             </h3>
 
             <p className="text-sm text-[#4A635B] font-sans leading-relaxed">
-              JIVOTECK coordina la gestiÃ³n administrativa y la formalizaciÃ³n de los proyectos de su ecosistema.
+              JIVOTECK coordina la gestión administrativa y la formalización de los proyectos de su ecosistema.
             </p>
 
             <p className="text-xs sm:text-sm text-[#638379] font-sans leading-relaxed">
-              Las solicitudes relacionadas con documentaciÃ³n corporativa, convenios y facturaciÃ³n se atienden a travÃ©s de nuestro canal de contacto corporativo.
+              Las solicitudes relacionadas con documentación corporativa, convenios y facturación se atienden a través de nuestro canal de contacto corporativo.
             </p>
           </div>
 

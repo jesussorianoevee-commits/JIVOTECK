@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowDown, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { JivoteckIcon } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
@@ -16,17 +16,17 @@ export const Hero: React.FC = () => {
         {/* Kicker */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white border border-[#D8D2C6] text-[#2E4846] shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-[#50756C]" aria-hidden="true"></span>
-          <span>JIVOTECK Â· CORPORATIVO TECNOLÃ“GICO</span>
+          <span>JIVOTECK · CORPORATIVO TECNOLÓGICO</span>
         </div>
 
         {/* Hero Title & Description */}
         <div className="max-w-4xl space-y-6">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-serif text-[#13262F] leading-[1.15]">
-            Ideas que tambiÃ©n <span className="italic font-normal text-[#2E4846]">construyen mundos.</span>
+            Ideas que también <span className="italic font-normal text-[#2E4846]">construyen mundos.</span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans max-w-3xl font-normal">
-            Creamos y damos estructura a proyectos tecnolÃ³gicos con visiÃ³n de largo plazo. JIVOTECK es la casa corporativa desde la que se desarrolla Industrialpedia y desde la que pueden crecer nuevas iniciativas con identidad propia.
+            Creamos y damos estructura a proyectos tecnológicos con visión de largo plazo. JIVOTECK es la casa corporativa desde la que se desarrolla Industrialpedia y desde la que pueden crecer nuevas iniciativas con identidad propia.
           </p>
 
           {/* Max 2 CTAs */}
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-xs text-[#4A635B] font-sans">
-                  TecnologÃ­a e informaciÃ³n para la industria con identidad y desarrollo propios.
+                  Tecnología e información para la industria con identidad y desarrollo propios.
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="min-h-[44px] inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-[#FAF8F5] hover:bg-[#F4F1EA] text-[#13262F] text-xs font-mono font-bold transition-colors border border-[#D8D2C6] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
-              title="Abrir Industrialpedia en nueva pestaÃ±a"
+              title="Abrir Industrialpedia en nueva pestaña"
             >
               <span>industrialpedia.com.mx</span>
               <ExternalLink className="w-3.5 h-3.5 text-[#2E4846]" aria-hidden="true" />

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   Compass,
   Code2,
@@ -11,23 +11,23 @@ export const HowWeBuild: React.FC = () => {
   const capabilities = [
     {
       icon: Compass,
-      title: 'DirecciÃ³n estratÃ©gica',
-      desc: 'Definimos propÃ³sito, prioridades y rumbo para cada iniciativa.'
+      title: 'Dirección estratégica',
+      desc: 'Definimos propósito, prioridades y rumbo para cada iniciativa.'
     },
     {
       icon: Code2,
-      title: 'Producto y tecnologÃ­a',
-      desc: 'AcompaÃ±amos la construcciÃ³n y evoluciÃ³n de productos digitales desde una visiÃ³n integral.'
+      title: 'Producto y tecnología',
+      desc: 'Acompañamos la construcción y evolución de productos digitales desde una visión integral.'
     },
     {
       icon: FolderGit2,
-      title: 'GestiÃ³n corporativa',
-      desc: 'Coordinamos operaciÃ³n, recursos y procesos para que los proyectos puedan avanzar con orden.'
+      title: 'Gestión corporativa',
+      desc: 'Coordinamos operación, recursos y procesos para que los proyectos puedan avanzar con orden.'
     },
     {
       icon: TrendingUp,
       title: 'Marca y desarrollo',
-      desc: 'Construimos identidad, comunicaciÃ³n y relaciones que permitan a cada proyecto encontrar su lugar en el mercado.'
+      desc: 'Construimos identidad, comunicación y relaciones que permitan a cada proyecto encontrar su lugar en el mercado.'
     }
   ];
 
@@ -42,10 +42,10 @@ export const HowWeBuild: React.FC = () => {
             <span>CAPACIDADES INTERNAS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            CÃ³mo construimos
+            Cómo construimos
           </h2>
           <p className="text-base sm:text-lg text-[#4A635B] font-sans leading-relaxed">
-            JIVOTECK reÃºne las capacidades necesarias para dar estructura y continuidad a cada proyecto de su ecosistema.
+            JIVOTECK reúne las capacidades necesarias para dar estructura y continuidad a cada proyecto de su ecosistema.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink, ArrowUpRight } from 'lucide-react';
 import { JivoteckLogo } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Inicio', href: '#inicio', isExternal: false },
     { name: 'Ecosistema', href: '#ecosistema', isExternal: false },
-    { name: 'CÃ³mo construimos', href: '#como-construimos', isExternal: false },
+    { name: 'Cómo construimos', href: '#como-construimos', isExternal: false },
     { name: 'Nosotros', href: '#nosotros', isExternal: false },
     { name: 'Prensa', href: '#prensa', isExternal: false },
     {
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1" aria-label="NavegaciÃ³n principal">
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Navegación principal">
           {navLinks.map((link) => {
             if (link.isExternal) {
               return (
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
           className="lg:hidden min-w-[44px] min-h-[44px] p-2.5 rounded-xl text-[#13262F] hover:bg-[#F4F1EA] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] flex items-center justify-center"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-nav"
-          aria-label={mobileMenuOpen ? "Cerrar menÃº de navegaciÃ³n" : "Abrir menÃº de navegaciÃ³n"}
+          aria-label={mobileMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
         </button>
