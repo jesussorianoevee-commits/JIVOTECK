@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-2">
             <JivoteckLogo size="lg" darkText={true} showSubtitle={true} />
             <p className="text-sm text-[#4A635B] max-w-md font-sans">
-              Soluciones tecnológicas para estructurar, organizar y aprovechar información industrial, adaptando software y sistemas de datos a las necesidades de cada empresa.
+              Corporativo tecnológico mexicano enfocado en crear, desarrollar y operar proyectos y marcas empresariales con propósito.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               href="#contacto"
               className="px-5 py-2.5 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
             >
-              Iniciar Conversación
+              Hablemos
             </a>
             <button
               onClick={scrollToTop}
@@ -48,24 +48,23 @@ export const Footer: React.FC = () => {
         {/* Links Navigation Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           
-          {/* Col 1: SOLUCIONES */}
+          {/* Col 1: CORPORATIVO */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              SOLUCIONES
+              CORPORATIVO
             </h4>
             <div className="flex flex-col space-y-2 text-xs font-mono text-[#3E5C54]">
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Estructuración de Datos</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Software Privado Adaptado</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Automatización Industrial</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Marketing B2B Industrial</a>
-              <a href="#servicios" className="hover:text-[#13262F] hover:underline transition-colors">Consultoría Técnica</a>
+              <a href="#nosotros" className="hover:text-[#13262F] hover:underline transition-colors">Sobre JIVOTECK</a>
+              <a href="#inicio" className="hover:text-[#13262F] hover:underline transition-colors">Filosofía</a>
+              <a href="#ecosistema" className="hover:text-[#13262F] hover:underline transition-colors">Ecosistema</a>
+              <a href="#faq" className="hover:text-[#13262F] hover:underline transition-colors">Preguntas Frecuentes</a>
             </div>
           </div>
 
-          {/* Col 2: PRODUCTO PROPIO */}
+          {/* Col 2: PROYECTOS */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              PRODUCTO PROPIO
+              PROYECTOS
             </h4>
             <div className="space-y-2 text-xs font-mono text-[#3E5C54]">
               <a 
@@ -74,34 +73,26 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer" 
                 className="text-[#2E4846] hover:underline flex items-center gap-1 font-bold"
               >
-                <span>Industrialpedia.com.mx</span>
+                <span>Industrialpedia</span>
                 <ExternalLink className="w-3 h-3 text-[#2E4846]" />
               </a>
               <p className="text-[11px] text-[#638379] font-sans leading-relaxed">
-                Plataforma B2B para estructurar, consultar y comparar información técnica de refacciones y componentes industriales.
+                Plataforma de tecnología e información para la industria.
               </p>
+              <span className="text-[#8FA89B] block text-[11px] pt-1">
+                Nuevas iniciativas (I+D en curso)
+              </span>
             </div>
           </div>
 
-          {/* Col 3: EMPRESA */}
+          {/* Col 3: VINCULACIÓN */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              EMPRESA
+              VINCULACIÓN
             </h4>
             <div className="flex flex-col space-y-2 text-xs font-mono text-[#3E5C54]">
-              <a href="#nosotros" className="hover:text-[#13262F] hover:underline transition-colors">Sobre JIVOTECK</a>
-              <a href="#faq" className="hover:text-[#13262F] hover:underline transition-colors">Preguntas Frecuentes</a>
-              <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors">Contacto Directo</a>
-              <span className="text-[#8FA89B]">Aguascalientes, México</span>
-            </div>
-          </div>
-
-          {/* Col 4: CANALES & CONTACTO */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
-              ATENCIÓN DIRECTA
-            </h4>
-            <div className="space-y-2.5 text-xs font-mono text-[#3E5C54]">
+              <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors">Contacto Corporativo</a>
+              <a href="#contacto" className="hover:text-[#13262F] hover:underline transition-colors">Propuestas & Alianzas</a>
               <a 
                 href={`mailto:${siteConfig.contact.primaryEmail}`} 
                 className="text-[#2E4846] hover:underline flex items-center gap-1.5 font-bold break-all"
@@ -109,10 +100,22 @@ export const Footer: React.FC = () => {
                 <Mail className="w-3.5 h-3.5 shrink-0 text-[#2E4846]" />
                 <span>{siteConfig.contact.primaryEmail}</span>
               </a>
+            </div>
+          </div>
+
+          {/* Col 4: SEDE & REDES */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#13262F] font-bold">
+              SEDE & PRESENCIA
+            </h4>
+            <div className="space-y-2.5 text-xs font-mono text-[#3E5C54]">
               <div className="flex items-center gap-1.5 text-[#4A635B] font-sans text-xs">
                 <MapPin className="w-3.5 h-3.5 text-[#2E4846] shrink-0" />
                 <span>Aguascalientes, México</span>
               </div>
+              <p className="text-[11px] text-[#638379] font-sans leading-relaxed">
+                Entidad legal y matriz corporativa con alcance nacional e internacional.
+              </p>
               <div className="flex items-center gap-2 pt-2">
                 {socialLinks.map((s) => {
                   const Icon = s.icon;
@@ -142,7 +145,7 @@ export const Footer: React.FC = () => {
             <span>IDEAS QUE TAMBIÉN CONSTRUYEN MUNDOS</span>
           </div>
           <div className="text-[11px] uppercase tracking-wider text-[#4A635B]">
-            TECNOLOGÍA CON PROPÓSITO. SIEMPRE CONTIGO.
+            CORPORATIVO TECNOLÓGICO • PROYECTOS CON PROPÓSITO
           </div>
         </div>
 
@@ -151,8 +154,8 @@ export const Footer: React.FC = () => {
           <div>
             &copy; 2026 JIVOTECK — Todos los derechos reservados.
           </div>
-          <div className="text-[11px]">
-            TECNOLOGÍA • INFORMACIÓN • AUTOMATIZACIÓN • ESTRATEGIA B2B
+          <div className="text-[11px] font-bold text-[#638379]">
+            JIVOTECK • CORPORATIVO TECNOLÓGICO • AGUASCALIENTES, MÉXICO
           </div>
         </div>
 

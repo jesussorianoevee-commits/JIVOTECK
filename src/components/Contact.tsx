@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, MapPin, Send, ShieldCheck, MessageSquare } from 'lucide-react';
+import { Mail, Copy, Check, MapPin, Send, Building2, MessageSquare } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const Contact: React.FC = () => {
@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
     email: '',
     phone: '',
     company: '',
-    service: 'datos',
+    subject: 'informacion',
     message: ''
   });
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -21,15 +21,14 @@ export const Contact: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const serviceLabels: Record<string, string> = {
-    datos: 'Estructuración de datos industriales',
-    software: 'Desarrollo de software privado',
-    mro: 'Catálogo MRO / Refacciones',
-    automatizacion: 'Automatización industrial',
-    marketing: 'Marketing B2B Industrial',
-    consultoria: 'Consultoría técnica',
-    industrialpedia: 'Industrialpedia — Información y colaboración',
-    otro: 'Otro proyecto'
+  const subjectLabels: Record<string, string> = {
+    informacion: 'Información sobre JIVOTECK',
+    industrialpedia: 'Industrialpedia',
+    propuesta: 'Propuesta empresarial',
+    colaboracion: 'Colaboración',
+    proveedores: 'Proveedores',
+    prensa: 'Prensa / comunicación',
+    otro: 'Otro'
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -47,13 +46,13 @@ export const Contact: React.FC = () => {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
             <MessageSquare className="w-3.5 h-3.5 text-[#50756C]" />
-            <span>CONTACTO DIRECTO</span>
+            <span>VINCULACIÓN CORPORATIVA</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            Iniciemos una conversación sobre tu proyecto.
+            Hablemos
           </h2>
-          <p className="text-base text-[#4A635B] leading-relaxed font-sans">
-            Comunícate directamente con nuestro equipo para platicar sobre estructuración de información industrial, desarrollo de software, automatización, marketing B2B industrial o proyectos relacionados con Industrialpedia.
+          <p className="text-base sm:text-lg text-[#4A635B] leading-relaxed font-sans">
+            Si quieres conocer más sobre JIVOTECK, alguno de nuestros proyectos o explorar una posible colaboración, puedes comunicarte directamente con nuestro equipo.
           </p>
         </div>
 
@@ -96,7 +95,7 @@ export const Contact: React.FC = () => {
                 className="w-full py-2.5 px-4 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Mail className="w-3.5 h-3.5 text-white" />
-                <span>Escribir Mensaje Directo</span>
+                <span>Escribir Correo Corporativo</span>
               </a>
             </div>
 
@@ -104,24 +103,24 @@ export const Contact: React.FC = () => {
             <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-2 shadow-xs">
               <div className="text-xs font-mono uppercase tracking-[0.2em] text-[#2E4846] font-bold flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-[#50756C]" />
-                <span>Sede Principal</span>
+                <span>Sede Corporativa</span>
               </div>
               <div className="text-base font-bold text-[#13262F] font-serif">
                 Aguascalientes, México
               </div>
               <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
-                Atención presencial en plantas de la región Bajío y desarrollo remoto a nivel nacional e internacional.
+                Entidad legal, corporativa y centro de operaciones para todas las marcas e iniciativas del ecosistema.
               </p>
             </div>
 
-            {/* Response Time & Privacy */}
+            {/* Corporate Entity Notice */}
             <div className="p-4 rounded-2xl bg-[#F4F1EA] border border-[#D8D2C6] space-y-2 text-xs text-[#2E4846] font-sans">
               <div className="flex items-center gap-2 font-semibold">
-                <ShieldCheck className="w-4 h-4 text-[#50756C] shrink-0" />
-                <span>Confidencialidad & Atención Directa</span>
+                <Building2 className="w-4 h-4 text-[#50756C] shrink-0" />
+                <span>Entidad de Facturación & Legal</span>
               </div>
               <p className="text-[#4A635B] leading-relaxed">
-                Atención técnica directa de especialista a especialista. Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA).
+                JIVOTECK es la persona moral y entidad jurídica facultada para celebración de contratos, facturación y convenios institucionales de cada iniciativa.
               </p>
             </div>
 
@@ -141,20 +140,20 @@ export const Contact: React.FC = () => {
                       FOLIO: {ticketFolio}
                     </span>
                     <h3 className="text-2xl font-bold text-[#13262F] font-serif mt-3">
-                      ¡Consulta Recibida!
+                      Mensaje Recibido
                     </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-[#4A635B] max-w-md mx-auto leading-relaxed font-sans">
-                    Muchas gracias, <strong>{formData.name}</strong>. Hemos recibido tu solicitud para el área de <strong>{serviceLabels[formData.service] || formData.service}</strong>. Un especialista de JIVOTECK se pondrá en contacto a tu correo <strong>{formData.email}</strong>.
+                    Muchas gracias, <strong>{formData.name}</strong>. Hemos recibido tu mensaje con motivo: <strong>{subjectLabels[formData.subject] || formData.subject}</strong>. El equipo directivo de JIVOTECK se pondrá en contacto a tu correo <strong>{formData.email}</strong>.
                   </p>
                   <button
                     onClick={() => {
                       setSubmitted(false);
-                      setFormData({ name: '', email: '', phone: '', company: '', service: 'datos', message: '' });
+                      setFormData({ name: '', email: '', phone: '', company: '', subject: 'informacion', message: '' });
                     }}
                     className="mt-4 px-5 py-2.5 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm"
                   >
-                    Enviar otra consulta
+                    Enviar otro mensaje
                   </button>
                 </div>
               ) : (
@@ -210,7 +209,7 @@ export const Contact: React.FC = () => {
                       </label>
                       <input
                         type="text"
-                        placeholder="Ej. Planta Manufactura"
+                        placeholder="Ej. Organización o Empresa"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all"
@@ -220,32 +219,31 @@ export const Contact: React.FC = () => {
 
                   <div className="space-y-1.5">
                     <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Tipo de Requerimiento *
+                      Motivo de Contacto *
                     </label>
                     <select
-                      value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all font-sans"
                     >
-                      <option value="datos">Estructuración de datos industriales</option>
-                      <option value="software">Desarrollo de software privado</option>
-                      <option value="mro">Catálogo MRO / Refacciones</option>
-                      <option value="automatizacion">Automatización industrial</option>
-                      <option value="marketing">Marketing B2B Industrial</option>
-                      <option value="consultoria">Consultoría técnica</option>
-                      <option value="industrialpedia">Industrialpedia — Información y colaboración</option>
-                      <option value="otro">Otro proyecto</option>
+                      <option value="informacion">Información sobre JIVOTECK</option>
+                      <option value="industrialpedia">Industrialpedia</option>
+                      <option value="propuesta">Propuesta empresarial</option>
+                      <option value="colaboracion">Colaboración</option>
+                      <option value="proveedores">Proveedores</option>
+                      <option value="prensa">Prensa / comunicación</option>
+                      <option value="otro">Otro</option>
                     </select>
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="block text-xs font-mono uppercase text-[#13262F] font-semibold tracking-wider">
-                      Descripción del Proyecto o Catálogo *
+                      Mensaje *
                     </label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Platícanos sobre tus fuentes de datos actuales (Excel, ERP/CMMS), volumen aproximado de refacciones o requerimientos de software..."
+                      placeholder="Escribe tu mensaje, propuesta o inquietud para nuestro equipo corporativo..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-xs bg-[#FAF8F5] border border-[#D8D2C6] rounded-xl text-[#13262F] placeholder-[#8FA89B] focus:bg-white focus:outline-none focus:border-[#2E4846] focus:ring-1 focus:ring-[#2E4846] transition-all resize-none font-sans"
@@ -257,7 +255,7 @@ export const Contact: React.FC = () => {
                     className="w-full py-3.5 px-6 bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow"
                   >
                     <Send className="w-3.5 h-3.5 text-white" />
-                    <span>Enviar Consulta a JIVOTECK</span>
+                    <span>Enviar Mensaje</span>
                   </button>
 
                 </form>

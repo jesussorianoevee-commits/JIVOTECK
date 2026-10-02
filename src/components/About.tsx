@@ -1,27 +1,27 @@
 import React from 'react';
-import { Database, MapPin, Code2, Users, Layers } from 'lucide-react';
+import { MapPin, Users, Building2, Target, Sparkles, Layers } from 'lucide-react';
 
 export const About: React.FC = () => {
   const highlights = [
     {
-      icon: MapPin,
-      title: 'Sede en Aguascalientes, México',
-      description: 'Empresa tecnológica emergente con sede en Aguascalientes, con atención presencial en la región y capacidad de trabajo remoto a nivel nacional.'
+      icon: Building2,
+      title: 'Corporativo Tecnológico Mexicano',
+      description: 'Sede en Aguascalientes, México. Concebimos, estructuramos y respaldamos proyectos tecnológicos y empresariales con visión nacional y global.'
     },
     {
-      icon: Database,
-      title: 'Estructuración de Información Industrial',
-      description: 'Transformamos catálogos dispersos, registros MRO y documentación técnica en bases de datos organizadas y útiles para mantenimiento, ingeniería y compras.'
-    },
-    {
-      icon: Code2,
-      title: 'Software Privado a la Medida',
-      description: 'Construimos herramientas internas adaptadas a los procesos de cada empresa, con esquemas de propiedad, licencia y entrega definidos según las necesidades y alcance de cada proyecto.'
+      icon: Target,
+      title: 'Proyectos con Propósito & Sostenibilidad',
+      description: 'Desarrollamos soluciones enfocadas en resolver necesidades reales con visión de largo plazo, combinando rigor técnico y viabilidad empresarial.'
     },
     {
       icon: Layers,
-      title: 'Industrialpedia: Demostración Real',
-      description: 'Concebimos, desarrollamos y operamos Industrialpedia como producto propio, demostrando en la práctica nuestra capacidad en datos multi-fabricante.'
+      title: 'Ecosistema de Marcas Propias',
+      description: 'Industrialpedia es una muestra tangible de nuestro modelo. A ella se suman nuevas iniciativas en incubación e investigación continua.'
+    },
+    {
+      icon: Sparkles,
+      title: 'Construir Proyectos, No Solo Productos',
+      description: 'Integramos estrategia, tecnología, gestión y desarrollo comercial para que cada iniciativa cuente con fundamentos sólidos y vida propia.'
     }
   ];
 
@@ -33,16 +33,16 @@ export const About: React.FC = () => {
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-white text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
             <Users className="w-3.5 h-3.5 text-[#50756C]" />
-            <span>SOBRE NOSOTROS</span>
+            <span>SOBRE EL CORPORATIVO</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            Ingeniería de información para la realidad industrial.
+            Construimos proyectos, no solamente productos.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            <strong>JIVOTECK</strong> es una empresa tecnológica emergente de Aguascalientes que desarrolla soluciones integrales para la industria combinando información, tecnología, automatización y estrategia comercial B2B.
+            <strong>JIVOTECK</strong> es un corporativo tecnológico mexicano con sede en Aguascalientes. Nos enfocamos en crear, desarrollar y gestionar proyectos tecnológicos y empresariales con propósito, sostenibilidad y visión de largo plazo.
           </p>
           <p className="text-sm sm:text-base text-[#4A635B] leading-relaxed font-sans font-normal">
-            Nuestro equipo integra distintas especialidades en conocimiento industrial, arquitectura de datos, desarrollo de software, automatización y comunicación B2B, permitiéndonos abordar tanto la parte tecnológica de un problema como la forma en que una empresa organiza y comunica sus soluciones al mercado.
+            Creemos que la tecnología adquiere su verdadero valor cuando está respaldada por una dirección estratégica clara, una adecuada gestión de recursos y un desarrollo comercial orientado al impacto real. Dentro de nuestro ecosistema conviven iniciativas activas como Industrialpedia y nuevas marcas en proceso de desarrollo e incubación.
           </p>
         </div>
 
@@ -69,6 +69,17 @@ export const About: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Corporate Sede Sub-strip */}
+        <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#EAE5DC] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#638379]">
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-[#50756C]" />
+            <span>Sede corporativa: Aguascalientes, México</span>
+          </div>
+          <span className="text-[11px] text-[#4A635B] font-sans">
+            Entidad legal y de facturación oficial de los proyectos del ecosistema.
+          </span>
         </div>
 
       </div>

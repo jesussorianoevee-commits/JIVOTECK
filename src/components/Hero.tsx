@@ -71,10 +71,10 @@ export const Hero: React.FC = () => {
               ● AGUASCALIENTES, MÉXICO
             </span>
             <a 
-              href="#servicios" 
+              href="#ecosistema" 
               className="inline-flex items-center gap-1.5 font-mono text-xs tracking-wider uppercase font-semibold text-[#2E4846] hover:text-[#13262F] transition-colors"
             >
-              <span>EXPLORAR</span>
+              <span>ECOSISTEMA</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
         <div className="max-w-4xl space-y-5">
           <div className="flex items-center gap-2 text-xs font-mono tracking-[0.25em] uppercase text-[#638379] font-bold">
             <span className="w-5 h-[1.5px] bg-[#638379]"></span>
-            <span>JIVOTECK • FILOSOFÍA DE INGENIERÍA</span>
+            <span>JIVOTECK • CORPORATIVO TECNOLÓGICO</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-serif text-[#13262F] leading-[1.15]">
@@ -93,22 +93,22 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans max-w-3xl font-normal">
-            <strong>JIVOTECK</strong> desarrolla soluciones integrales para la industria combinando estructuración de información, desarrollo de software, automatización y estrategia comercial B2B. Construimos herramientas y soluciones adaptadas a las necesidades reales de cada empresa.
+            <strong>JIVOTECK</strong> es un corporativo mexicano dedicado a crear, desarrollar y operar proyectos tecnológicos con propósito. Construimos marcas y soluciones capaces de convertir ideas en productos reales y sostenibles.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
             <a
-              href="#contacto"
+              href="#ecosistema"
               className="px-6 py-3 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
             >
-              <span>Hablemos de tu proyecto</span>
+              <span>Conoce nuestro ecosistema</span>
               <ArrowRight className="w-4 h-4 text-white" />
             </a>
             <a
-              href="#servicios"
+              href="#nosotros"
               className="px-6 py-3 rounded-xl bg-white hover:bg-[#F4F1EA] text-[#13262F] font-mono text-xs font-semibold uppercase tracking-wider transition-all border border-[#D5DDD8] shadow-2xs"
             >
-              <span>Conoce nuestras soluciones</span>
+              <span>Sobre JIVOTECK</span>
             </a>
           </div>
         </div>

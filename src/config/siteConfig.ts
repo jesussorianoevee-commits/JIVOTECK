@@ -28,12 +28,12 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "JIVOTECK",
-  tagline: "Tecnología y Soluciones B2B para la Industria",
-  description: "JIVOTECK desarrolla soluciones para la industria en estructuración de información, software, automatización y estrategia comercial B2B. Creadores de Industrialpedia.",
+  tagline: "Corporativo Tecnológico",
+  description: "JIVOTECK es un corporativo mexicano que crea, desarrolla y opera proyectos tecnológicos con propósito. Casa de Industrialpedia y futuras iniciativas.",
   contact: {
     primaryEmail: "contacto@jivoteck.com",
     supportEmail: "contacto@jivoteck.com",
-    location: "Aguascalientes, México • Cobertura Nacional e Internacional",
+    location: "Aguascalientes, México",
     schedule: "Lunes a Viernes de 9:00 a 18:00 (Hora Centro de México)"
   },
   social: {
@@ -44,12 +44,12 @@ export const siteConfig: SiteConfig = {
   },
   industrialpedia: {
     websiteUrl: "https://industrialpedia.com.mx",
-    status: "Plataforma funcional · evolución continua",
-    badge: "Producto propio de JIVOTECK",
+    status: "Producto activo · evolución continua",
+    badge: "Proyecto Tecnológico",
     title: "Industrialpedia",
-    subtitle: "The Industrial Information Platform",
-    description: "Plataforma B2B desarrollada por JIVOTECK para estructurar, consultar y comparar información técnica de componentes y refacciones industriales.",
-    ownershipNote: "Producto tecnológico propio concebido, desarrollado y respaldado al 100% por JIVOTECK como demostración de nuestras capacidades en estructuración técnica multi-fabricante.",
+    subtitle: "Tecnología e información para la industria",
+    description: "Plataforma tecnológica desarrollada dentro de JIVOTECK para estructurar, consultar y aprovechar información técnica industrial.",
+    ownershipNote: "Marca y proyecto tecnológico desarrollado y operado dentro del corporativo JIVOTECK.",
     teaserFeatures: [
       "Normalización y homologación técnica multi-fabricante",
       "Cruce de especificaciones y números de parte industriales",

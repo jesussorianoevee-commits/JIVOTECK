@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: lang === 'ES' ? 'Inicio' : 'Home', href: '#inicio' },
-    { name: lang === 'ES' ? 'Servicios' : 'Services', href: '#servicios' },
+    { name: lang === 'ES' ? 'Ecosistema' : 'Ecosystem', href: '#ecosistema' },
     { 
       name: 'Industrialpedia', 
       href: siteConfig.industrialpedia.websiteUrl, 
@@ -27,7 +27,6 @@ export const Navbar: React.FC = () => {
       isExternal: true 
     },
     { name: lang === 'ES' ? 'Nosotros' : 'About', href: '#nosotros' },
-    { name: 'FAQ', href: '#faq' },
     { name: lang === 'ES' ? 'Contacto' : 'Contact', href: '#contacto' },
   ];
 
@@ -51,7 +50,7 @@ export const Navbar: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={lang === 'ES' ? 'Buscar servicio o desarrollo...' : 'Search service or project...'}
+              placeholder={lang === 'ES' ? 'Buscar en el ecosistema...' : 'Search ecosystem...'}
               className="w-full pl-9 pr-4 py-1.5 text-xs bg-white rounded-full border border-[#D8D2C6] focus:border-[#2E4846] focus:outline-none focus:ring-1 focus:ring-[#2E4846] transition-all text-[#13262F] placeholder-[#8FA89B]"
             />
             <Search className="w-3.5 h-3.5 text-[#8FA89B] absolute left-3 pointer-events-none" />
@@ -76,7 +75,7 @@ export const Navbar: React.FC = () => {
               {link.isHighlight && (
                 <>
                   <span className="px-1.5 py-0.2 text-[9px] font-mono font-bold bg-[#E2DDD4] text-[#2E4846] rounded">
-                    PROPIO
+                    PROYECTO
                   </span>
                   <ExternalLink className="w-3 h-3 text-[#2E4846]" />
                 </>
@@ -178,7 +177,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-[#13262F] rounded-lg shadow"
             >
-              Hablemos de tu proyecto
+              Hablemos
             </a>
           </div>
         </div>

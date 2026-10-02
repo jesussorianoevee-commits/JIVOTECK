@@ -1,42 +1,41 @@
 import React from 'react';
 import { 
-  Database, 
+  Compass, 
   Code2, 
-  Cpu, 
-  TrendingUp,
-  Compass,
-  ArrowRight,
-  CheckCircle2,
-  FileSpreadsheet,
-  Search
+  FolderGit2, 
+  TrendingUp, 
+  Sparkles,
+  Building2,
+  Layers,
+  ArrowRight
 } from 'lucide-react';
 
 export const CorporateBlock: React.FC = () => {
-  const corePillars = [
+  const corporateCapabilities = [
     {
-      icon: Database,
-      title: 'Información Industrial',
-      desc: 'Estructuración, normalización y aprovechamiento de datos técnicos.'
+      icon: Compass,
+      title: 'Estrategia',
+      desc: 'Definimos dirección, modelo y objetivos claros para cada iniciativa o marca del ecosistema.'
     },
     {
       icon: Code2,
-      title: 'Software',
-      desc: 'Herramientas privadas adaptadas a procesos reales.'
+      title: 'Tecnología',
+      desc: 'Convertimos conceptos en productos digitales funcionales, arquitecturas de datos e infraestructura digital sólida.'
     },
     {
-      icon: Cpu,
-      title: 'Automatización Industrial',
-      desc: 'Soluciones de control, supervisión e integración técnica.'
+      icon: FolderGit2,
+      title: 'Gestión',
+      desc: 'Coordinamos el desarrollo, administración operativa y evolución continua de cada proyecto.'
     },
     {
       icon: TrendingUp,
-      title: 'Marketing B2B Industrial',
-      desc: 'Comunicación, posicionamiento y estrategia comercial para empresas que venden dentro del mercado industrial.'
+      title: 'Marca & Desarrollo Comercial',
+      desc: 'Desarrollamos el posicionamiento, comunicación y estrategia comercial de los proyectos que forman parte del ecosistema JIVOTECK.'
     },
     {
-      icon: Compass,
-      title: 'Consultoría Técnica',
-      desc: 'Análisis de problemas y definición de soluciones viables.'
+      icon: Sparkles,
+      title: 'Desarrollo de Negocio',
+      desc: 'Exploramos necesidades reales y oportunidades de mercado para convertirlas en proyectos sostenibles.'
     }
   ];
 
@@ -47,21 +46,21 @@ export const CorporateBlock: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6] shadow-2xs">
-            <Database className="w-3.5 h-3.5 text-[#50756C]" />
-            <span>POSICIONAMIENTO & CAPACIDADES RAÍZ</span>
+            <Building2 className="w-3.5 h-3.5 text-[#50756C]" />
+            <span>CÓMO CONSTRUIMOS • CAPACIDADES DEL CORPORATIVO</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight font-serif text-[#13262F] leading-tight">
-            Soluciones tecnológicas y estratégicas para la industria.
+            De la idea a iniciativas sostenibles.
           </h2>
           <p className="text-base sm:text-lg text-[#3E5C54] leading-relaxed font-sans font-normal">
-            Combinamos estructuración de información, desarrollo de software, automatización y estrategia comercial B2B para resolver problemas reales de las empresas con herramientas adaptadas a su operación.
+            En JIVOTECK articulamos cada iniciativa desde la concepción estratégica hasta la operación y escalamiento, integrando tecnología, gestión y desarrollo comercial bajo una misma visión.
           </p>
         </div>
 
-        {/* 5 Core Pillars Grid */}
+        {/* 5 Corporate Capabilities Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {corePillars.map((pilar, idx) => {
-            const Icon = pilar.icon;
+          {corporateCapabilities.map((cap, idx) => {
+            const Icon = cap.icon;
             return (
               <div
                 key={idx}
@@ -72,10 +71,10 @@ export const CorporateBlock: React.FC = () => {
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-sm font-bold text-[#13262F] font-sans tracking-tight mb-2">
-                    {pilar.title}
+                    {cap.title}
                   </h3>
                   <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
-                    {pilar.desc}
+                    {cap.desc}
                   </p>
                 </div>
               </div>
@@ -83,66 +82,52 @@ export const CorporateBlock: React.FC = () => {
           })}
         </div>
 
-        {/* Typical Use Case Showcase Box */}
+        {/* Corporate Architecture / Holding Model Box */}
         <div className="rounded-3xl bg-[#FAF8F5] border border-[#EAE5DC] p-6 sm:p-10 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Narrative (7 cols) */}
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#638379] block">
-                CASO TÍPICO DE APLICACIÓN
+                ARQUITECTURA DE MARCA & GOBERNANZA
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#13262F] tracking-tight">
-                ¿Tu empresa tiene cientos o miles de registros dispersos?
+                Una casa matriz que conecta y respalda proyectos.
               </h3>
               <p className="text-sm text-[#3E5C54] leading-relaxed font-sans font-normal">
-                Es común que los catálogos de refacciones, componentes de maquinaria y documentación técnica se encuentren divididos entre hojas de Excel, exportaciones de ERP/CMMS o archivos PDF sin orden homogéneo.
+                JIVOTECK opera como la entidad corporativa y administrativa desde la cual nacen, se estructuran y se formalizan marcas y soluciones tecnológicas independientes.
               </p>
               
-              <div className="pt-2 space-y-2.5">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#13262F] block">
-                  JIVOTECK desarrolla un sistema privado para:
-                </span>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#3E5C54] font-sans">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Importar y estructurar datos</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-[#3E5C54]">
+                <div className="p-3 bg-white rounded-xl border border-[#EAE5DC] space-y-1">
+                  <div className="flex items-center gap-1.5 font-bold text-[#13262F] font-mono">
+                    <Building2 className="w-3.5 h-3.5 text-[#50756C]" />
+                    <span>Entidad Corporativa</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Normalizar fabricantes y números de parte</span>
+                  <p className="text-[11px] text-[#638379] font-sans">
+                    Administración, dirección estratégica y formalización jurídica centralizada.
+                  </p>
+                </div>
+
+                <div className="p-3 bg-white rounded-xl border border-[#EAE5DC] space-y-1">
+                  <div className="flex items-center gap-1.5 font-bold text-[#13262F] font-mono">
+                    <Layers className="w-3.5 h-3.5 text-[#50756C]" />
+                    <span>Marcas con Propósito</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Clasificar componentes técnicos</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Detectar registros duplicados</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Relacionar documentación técnica</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#50756C] shrink-0" />
-                    <span>Facilitar búsqueda y consulta interna</span>
-                  </div>
+                  <p className="text-[11px] text-[#638379] font-sans">
+                    Iniciativas tecnológicas creadas para resolver necesidades de mercado concretas.
+                  </p>
                 </div>
               </div>
 
-              <div className="pt-4 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex items-center gap-3">
                 <a
-                  href="#contacto"
-                  className="px-6 py-3 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center gap-2"
+                  href="#ecosistema"
+                  className="px-5 py-2.5 rounded-xl bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center gap-2"
                 >
-                  <span>Platicar sobre mi catálogo</span>
-                  <ArrowRight className="w-4 h-4 text-white" />
+                  <span>Explorar proyectos activos</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-white" />
                 </a>
-                <span className="text-xs font-mono text-[#638379]">
-                  Cuando un proyecto implique información confidencial, podemos trabajar bajo acuerdo de confidencialidad (NDA).
-                </span>
               </div>
             </div>
 
@@ -150,55 +135,69 @@ export const CorporateBlock: React.FC = () => {
             <div className="lg:col-span-5 bg-white p-6 rounded-2xl border border-[#EAE5DC] space-y-4 shadow-2xs">
               <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2E4846]">
-                  Flujo de Arquitectura
+                  Estructura del Ecosistema
                 </span>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#F4F1EA] text-[#4A635B]">
-                  Entorno Privado
+                  Esquema Matriz
                 </span>
               </div>
 
-              {/* Step Flow Diagram */}
+              {/* Hierarchy Tree */}
               <div className="space-y-3 font-mono text-xs">
                 
-                {/* Step 1 */}
-                <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <FileSpreadsheet className="w-4 h-4 text-[#638379]" />
-                    <span className="text-[#13262F] font-bold">1. Fuentes Dispersas</span>
-                  </div>
-                  <span className="text-[10px] text-[#4A635B]">Excel / PDF / ERP</span>
-                </div>
-
-                <div className="flex justify-center">
-                  <span className="text-[#8FA89B] text-xs">↓ Normalización & Depuración</span>
-                </div>
-
-                {/* Step 2 */}
-                <div className="p-3 rounded-xl bg-[#F4F1EA] border border-[#D8D2C6] flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <Database className="w-4 h-4 text-[#2E4846]" />
-                    <span className="text-[#13262F] font-bold">2. Estructura JIVOTECK</span>
-                  </div>
-                  <span className="text-[10px] text-[#2E4846] font-bold">Datos Claros</span>
-                </div>
-
-                <div className="flex justify-center">
-                  <span className="text-[#8FA89B] text-xs">↓ Software Privado Adaptado</span>
-                </div>
-
-                {/* Step 3 */}
+                {/* Level 1: JIVOTECK */}
                 <div className="p-3 rounded-xl bg-[#13262F] text-white flex items-center justify-between shadow-xs">
                   <div className="flex items-center gap-2.5">
-                    <Search className="w-4 h-4 text-[#E2DDD4]" />
-                    <span className="font-bold">3. Portal de Consulta Interna</span>
+                    <Building2 className="w-4 h-4 text-[#A3BFB5]" />
+                    <div>
+                      <span className="font-bold block text-sm">JIVOTECK</span>
+                      <span className="text-[10px] text-[#A3BFB5]">Corporativo / Empresa Matriz</span>
+                    </div>
                   </div>
-                  <span className="text-[10px] font-bold text-[#E2DDD4]">Uso en Planta</span>
+                  <span className="text-[9px] font-bold bg-white/10 px-2 py-0.5 rounded text-white">
+                    Gobernanza
+                  </span>
+                </div>
+
+                <div className="flex justify-center">
+                  <span className="text-[#8FA89B] text-xs">│ Desarrolla y opera</span>
+                </div>
+
+                {/* Level 2: Brands / Projects */}
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="p-3 rounded-xl bg-[#F4F1EA] border border-[#D8D2C6] flex flex-col justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-[#50756C] block uppercase tracking-wider">
+                        Proyecto Activo
+                      </span>
+                      <span className="text-xs font-bold text-[#13262F]">
+                        Industrialpedia
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-[#4A635B] mt-1">
+                      Tecnología Industrial
+                    </span>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] flex flex-col justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-[#8FA89B] block uppercase tracking-wider">
+                        I+D Interno
+                      </span>
+                      <span className="text-xs font-bold text-[#13262F]">
+                        Nuevos Proyectos
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-[#638379] mt-1">
+                      En Evaluación
+                    </span>
+                  </div>
                 </div>
 
               </div>
 
               <p className="text-[11px] text-[#638379] font-sans pt-2 border-t border-[#EAE5DC]">
-                * Compatible para futuras integraciones técnicas con ERP, CMMS o APIs empresariales mediante desarrollos a medida.
+                * Las marcas e iniciativas operan con respaldo corporativo, legal y administrativo centralizado.
               </p>
             </div>
 
