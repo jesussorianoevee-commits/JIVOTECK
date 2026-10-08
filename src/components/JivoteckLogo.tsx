@@ -1,222 +1,136 @@
-﻿import React from 'react';
+import React from 'react';
 
 interface LogoProps {
-  darkText?: boolean;
+  variant?: 'dark' | 'light' | 'white' | 'orange';
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  showSubtitle?: boolean;
   iconOnly?: boolean;
+  className?: string;
+  showSubtitle?: boolean;
 }
 
 /**
  * Authentic JIVOTECK Emblem matching the official brand identity:
- * - Architectural "J" with pointed chiseled apex and gothic notch
- * - Arched portal doorway with 4-point star inside
- * - Winding serpentine pathway flowing from the doorway
- * - Swooping "J" hook with 3 organic botanical leaves sprouting upward
+ * - Radical/check style "J" monogram with wavy flag terminal on the left
+ * - Slanted upward stem with top horizontal spur/serif pointing left
+ * - Dynamic flame/accent mark on the upper right in primary orange
  */
-export const JivoteckIcon: React.FC<{
+export const JivoteckEmblem: React.FC<{
   className?: string;
-  size?: number;
-  inverted?: boolean;
+  color?: string;
+  accentColor?: string;
+  showAccent?: boolean;
 }> = ({
   className = "w-8 h-8",
-  size = 40,
-  inverted = false
+  color = "#FFFFFF",
+  accentColor = "#FF6B35",
+  showAccent = true,
 }) => {
-  const pineColor = inverted ? "#FFFFFF" : "#13262F";
-  const leafDark = inverted ? "#A3BFB5" : "#2E4846";
-  const leafLight = inverted ? "#D0E0DA" : "#50756C";
-  const portalBg = inverted ? "#13262F" : "#FAF8F5";
-  const starColor = inverted ? "#FFFFFF" : "#13262F";
-
   return (
     <svg
-      viewBox="0 0 100 120"
+      viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width={size}
-      height={size * 1.2}
+      aria-hidden="true"
     >
-      <defs>
-        <linearGradient id={`jvt-stem-${inverted ? 'inv' : 'std'}`} x1="30" y1="10" x2="70" y2="100" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor={pineColor} />
-          <stop offset="100%" stopColor={inverted ? "#E5EBE8" : "#0A171D"} />
-        </linearGradient>
-        <linearGradient id={`jvt-leaf-${inverted ? 'inv' : 'std'}`} x1="15" y1="40" x2="45" y2="90" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor={leafLight} />
-          <stop offset="100%" stopColor={leafDark} />
-        </linearGradient>
-      </defs>
-
-      {/* 3 Botanical Leaves on the Left Curve */}
-      {/* 1. Outer Leaf (leftmost) */}
+      {/* Main Stylized "J" / Radical Emblem */}
       <path
-        d="M 30 83 C 23 76 13 63 15 48 C 16 43 19 39 23 44 C 28 50 31 66 34 81 Z"
-        fill={`url(#jvt-leaf-${inverted ? 'inv' : 'std'})`}
-      />
-      <path
-        d="M 18 47 Q 24 63 31 82"
-        stroke={leafLight}
-        strokeWidth="0.8"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.7"
+        d="M 38 88 
+           L 58 88 
+           L 90 22 
+           L 63 22 
+           L 58 28 
+           C 61 34 65 37 70 40 
+           L 51 70 
+           L 43 70 
+           L 43 42 
+           L 24 42 
+           L 24 58 
+           C 27 50 34 50 38 62 
+           L 38 88 
+           Z"
+        fill={color}
       />
 
-      {/* 2. Middle Leaf (tallest, graceful arch) */}
-      <path
-        d="M 34 81 C 28 68 25 50 29 35 C 31 29 35 27 37 33 C 39 42 40 60 42 83 Z"
-        fill={`url(#jvt-leaf-${inverted ? 'inv' : 'std'})`}
-      />
-      <path
-        d="M 33 33 Q 35 55 38 82"
-        stroke={leafLight}
-        strokeWidth="0.9"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.8"
-      />
-
-      {/* 3. Inner Leaf (between middle leaf & stem) */}
-      <path
-        d="M 40 82 C 38 72 39 56 43 46 C 45 42 48 43 48 48 C 48 56 47 68 47 84 Z"
-        fill={`url(#jvt-leaf-${inverted ? 'inv' : 'std'})`}
-      />
-      <path
-        d="M 46 45 Q 45 64 44 83"
-        stroke={leafLight}
-        strokeWidth="0.75"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.7"
-      />
-
-      {/* Architectural "J" Main Body with Chiseled Apex & Gothic Barb */}
-      <path
-        d="
-          M 68 8
-          L 53 21
-          C 52 22 50.5 23.5 52 25
-          C 53.5 26 53.5 27.5 53.5 30
-          L 53.5 70
-          C 53.5 82 45 92 32 92
-          C 24 92 20 87 20 87
-          C 20 87 23 98 36 98
-          C 52 98 64 87 64 71
-          L 64 57
-          L 68 57
-          Z"
-        fill={`url(#jvt-stem-${inverted ? 'inv' : 'std'})`}
-      />
-
-      {/* Portal / Arched Doorway in Lower Stem */}
-      <path
-        d="
-          M 57.5 57
-          L 57.5 45
-          C 57.5 39 64.5 39 64.5 45
-          L 64.5 57
-          Z"
-        fill={portalBg}
-      />
-
-      {/* 4-point Star inside Doorway */}
-      <path
-        d="
-          M 61 41.5
-          Q 61 45.5 63.5 45.5
-          Q 61 45.5 61 49.5
-          Q 61 45.5 58.5 45.5
-          Q 61 45.5 61 41.5
-          Z"
-        fill={starColor}
-      />
-
-      {/* Serpentine Pathway leading out of the Portal */}
-      <path
-        d="
-          M 58.5 57
-          C 58.5 62 63.5 66 63.5 71
-          C 63.5 76 57.5 80 56.5 86
-          C 55.5 90 58.5 94 63.5 98
-          C 65.5 98 67 96.5 66 93.5
-          C 64.5 89 65.5 85 67.5 80
-          C 68.5 74 65 68 63 57
-          Z"
-        fill={portalBg}
-      />
+      {/* Dynamic orange accent swoosh hugging the upper stem */}
+      {showAccent && (
+        <path
+          d="M 87 34 
+             C 90 28 92 23 93 18 
+             C 90 23 87 28 85 33 
+             Z"
+          fill={accentColor}
+        />
+      )}
     </svg>
   );
 };
 
 export const JivoteckLogo: React.FC<LogoProps> = ({
-  darkText = true,
+  variant = 'dark',
   size = 'md',
-  showSubtitle = true,
-  iconOnly = false
+  iconOnly = false,
+  className = '',
+  showSubtitle = false,
 }) => {
+  const emblemColor =
+    variant === 'dark'
+      ? '#FFFFFF'
+      : variant === 'light'
+      ? '#0E2433'
+      : variant === 'orange'
+      ? '#FF6B35'
+      : '#FFFFFF';
+
+  const textColor =
+    variant === 'white'
+      ? 'text-white'
+      : 'text-[#FF6B35]';
+
   const iconSizes = {
-    sm: 'w-6 h-7',
-    md: 'w-8 h-10',
-    lg: 'w-10 h-12',
-    xl: 'w-14 h-16'
+    sm: 'w-7 h-7',
+    md: 'w-9 h-9',
+    lg: 'w-11 h-11',
+    xl: 'w-14 h-14',
   };
 
   const textSizes = {
-    sm: 'text-sm font-bold tracking-[0.2em]',
-    md: 'text-base font-bold tracking-[0.22em]',
-    lg: 'text-xl font-bold tracking-[0.25em]',
-    xl: 'text-2xl font-bold tracking-[0.28em]'
+    sm: { jivo: 'text-[15px]', teck: 'text-[17px]', gap: '-space-y-1' },
+    md: { jivo: 'text-[18px]', teck: 'text-[20px]', gap: '-space-y-1' },
+    lg: { jivo: 'text-[22px]', teck: 'text-[25px]', gap: '-space-y-1.5' },
+    xl: { jivo: 'text-[28px]', teck: 'text-[32px]', gap: '-space-y-2' },
   };
-
-  const textColor = darkText ? 'text-[#13262F]' : 'text-white';
-  const subtitleColor = darkText ? 'text-[#3E5C54]' : 'text-[#A9C2B7]';
-  const ruleColor = darkText ? 'bg-[#8FA89B]' : 'bg-white/40';
 
   return (
     <div
-      className="flex items-center gap-3 group cursor-pointer select-none"
+      className={`inline-flex items-center gap-2.5 select-none ${className}`}
       role="img"
-      aria-label="JIVOTECK â€” Soluciones TecnolÃ³gicas Industriales"
+      aria-label="JIVOTECK — Corporativo tecnológico"
     >
       <span className="sr-only">JIVOTECK</span>
-      {/* Official Architectural & Botanical Emblem */}
-      <div className="shrink-0 transition-transform duration-200 group-hover:scale-105" aria-hidden="true">
-        <JivoteckIcon className={iconSizes[size]} inverted={!darkText} />
+
+      {/* Official Emblem */}
+      <div className="shrink-0 transition-transform duration-200 group-hover:scale-105">
+        <JivoteckEmblem
+          className={iconSizes[size]}
+          color={emblemColor}
+          accentColor="#FF6B35"
+          showAccent={true}
+        />
       </div>
 
       {!iconOnly && (
-        <div className="flex flex-col" aria-hidden="true">
-          {/* Wordmark: J I V O T E C K with 4-point star in the O */}
-          <div className={`flex items-center ${textSizes[size]} font-serif ${textColor} uppercase`}>
-            <span>J</span>
-            <span>I</span>
-            <span>V</span>
-            {/* The signature "O" with 4-point star in the counter */}
-            <span className="inline-flex items-center justify-center relative mx-[1px] w-4 h-4">
-              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                <ellipse cx="12" cy="12" rx="7.5" ry="9.5" stroke="currentColor" strokeWidth="2.2" />
-                {/* 4-point Star in center of O */}
-                <path
-                  d="M 12 6 Q 12 12 16 12 Q 12 12 12 18 Q 12 12 8 12 Q 12 12 12 6 Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <span>T</span>
-            <span>E</span>
-            <span>C</span>
-            <span>K</span>
-          </div>
-
-          {/* Official Slogan: â€” GESTIÃ“N QUE IMPULSA â€” */}
+        <div className={`flex flex-col ${textSizes[size].gap} font-sans leading-none tracking-tight font-black ${textColor}`}>
+          <span className={`${textSizes[size].jivo} tracking-wider uppercase font-black`}>
+            JIVO
+          </span>
+          <span className={`${textSizes[size].teck} lowercase font-black tracking-tight`}>
+            teck
+          </span>
           {showSubtitle && (
-            <div className={`flex items-center gap-1.5 text-[9px] font-mono tracking-[0.22em] font-semibold uppercase ${subtitleColor} mt-0.5`}>
-              <span className={`w-3.5 h-[1px] ${ruleColor}`}></span>
-              <span>GESTIÃ“N QUE IMPULSA</span>
-              <span className={`w-3.5 h-[1px] ${ruleColor}`}></span>
-            </div>
+            <span className="text-[9px] font-mono font-semibold tracking-widest text-[#0E2433]/70 uppercase pt-1">
+              Corporativo tecnológico
+            </span>
           )}
         </div>
       )}

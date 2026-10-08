@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, MapPin, Send, MessageSquare, ShieldCheck, X } from 'lucide-react';
+import { Mail, Copy, Check, MapPin, Send, ShieldCheck, X } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const Contact: React.FC = () => {
@@ -27,56 +27,57 @@ export const Contact: React.FC = () => {
   const mailtoHref = `mailto:${siteConfig.contact.primaryEmail}?subject=${encodeURIComponent(`[JIVOTECK] ${selectedSubject}`)}`;
 
   return (
-    <section id="contacto" className="py-16 sm:py-24 bg-white border-t border-[#EAE5DC] text-[#13262F]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="contacto" className="py-20 sm:py-28 bg-[#F8F6F1] border-t border-[#EAE5DC] text-[#0E2433]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
 
-        {/* Header */}
+        {/* Section Header */}
         <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-[0.2em] uppercase bg-[#FAF8F5] text-[#2E4846] border border-[#D8D2C6]">
-            <MessageSquare className="w-3.5 h-3.5 text-[#50756C]" aria-hidden="true" />
-            <span>VINCULACIÓN</span>
+          <div className="flex items-center gap-2.5">
+            <span className="w-5 h-0.5 bg-[#FF6B35] rounded-full" aria-hidden="true"></span>
+            <span className="text-xs font-mono font-bold tracking-[0.22em] text-[#0E2433]/70 uppercase">
+              VINCULACIÓN CORPORATIVA
+            </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13262F] tracking-tight font-serif">
-            Contacto corporativo
+
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0E2433] tracking-tight leading-[1.15]">
+            Contacto directo
           </h2>
-          <p className="text-base sm:text-lg text-[#4A635B] leading-relaxed font-sans">
-            Para alianzas, relaciones institucionales, prensa, proveedores, documentación corporativa o información sobre el ecosistema JIVOTECK, utiliza este canal.
-          </p>
-          <p className="text-xs sm:text-sm text-[#638379] leading-relaxed font-sans">
-            Si tu consulta está relacionada directamente con la plataforma o las funcionalidades de Industrialpedia, te orientaremos al canal correspondiente.
+
+          <p className="font-sans text-base sm:text-lg text-[#0E2433]/75 leading-relaxed">
+            Para alianzas estratégicas, relaciones institucionales, prensa, proveedores o vinculación con las iniciativas del ecosistema JIVOTECK.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-          {/* Direct channels left (5 cols) */}
+          {/* Left Cards: Official Email & Location */}
           <div className="lg:col-span-5 space-y-5">
 
             {/* Email Card */}
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-4 shadow-xs">
-              <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#638379] font-bold block">
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-[#E5E0D5] space-y-5 shadow-sm">
+              <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#0E2433]/60 font-bold block">
                 Canal Oficial de Atención
               </span>
 
-              <div className="flex items-center justify-between gap-2 p-3 bg-white rounded-xl border border-[#D8D2C6] shadow-2xs">
-                <span className="font-mono text-xs sm:text-sm font-bold text-[#13262F] truncate select-all">
+              <div className="flex items-center justify-between gap-2 p-3 bg-[#F8F6F1] rounded-2xl border border-[#D8D2C6]">
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#0E2433] truncate select-all pl-2">
                   {siteConfig.contact.primaryEmail}
                 </span>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="min-h-[44px] px-3.5 py-2 bg-[#F4F1EA] hover:bg-[#EAE5DC] text-[#2E4846] rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors shrink-0 border border-[#D8D2C6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                  className="min-h-[40px] px-3.5 py-1.5 bg-white hover:bg-neutral-100 text-[#0E2433] rounded-full text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors shrink-0 border border-[#D8D2C6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
                   title="Copiar correo corporativo"
                   aria-label="Copiar correo corporativo al portapapeles"
                 >
                   {copiedEmail ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-[#2E4846]" aria-hidden="true" />
-                      <span className="text-[#2E4846]">Copiado</span>
+                      <Check className="w-3.5 h-3.5 text-[#2F5F50]" aria-hidden="true" />
+                      <span className="text-[#2F5F50]">Copiado</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5 text-[#638379]" aria-hidden="true" />
+                      <Copy className="w-3.5 h-3.5 text-[#0E2433]/60" aria-hidden="true" />
                       <span>Copiar</span>
                     </>
                   )}
@@ -85,7 +86,7 @@ export const Contact: React.FC = () => {
 
               <a
                 href={mailtoHref}
-                className="min-h-[44px] w-full py-3 px-4 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                className="w-full py-3.5 px-6 bg-[#FF6B35] hover:bg-[#E85A24] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
               >
                 <Mail className="w-4 h-4 text-white" aria-hidden="true" />
                 <span>Escribir Correo Corporativo</span>
@@ -93,38 +94,38 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Sede Card */}
-            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-2 shadow-xs">
-              <div className="text-xs font-mono uppercase tracking-[0.2em] text-[#2E4846] font-bold flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#50756C]" aria-hidden="true" />
+            <div className="p-6 rounded-3xl bg-white border border-[#E5E0D5] space-y-2 shadow-sm">
+              <div className="text-xs font-mono uppercase tracking-[0.2em] text-[#2F5F50] font-bold flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#2F5F50]" aria-hidden="true" />
                 <span>Sede Corporativa</span>
               </div>
-              <div className="text-base font-bold text-[#13262F] font-serif">
+              <div className="text-base font-bold text-[#0E2433] font-serif">
                 Aguascalientes, México
               </div>
-              <p className="text-xs text-[#4A635B] leading-relaxed font-sans">
+              <p className="text-xs text-[#0E2433]/70 leading-relaxed font-sans">
                 Atención y vinculación corporativa para alianzas, iniciativas tecnológicas e información institucional.
               </p>
             </div>
 
           </div>
 
-          {/* Interactive Routing Right (7 cols) */}
+          {/* Right Interactive Email Assistant */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-xs space-y-6">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E5E0D5] shadow-sm space-y-6">
 
               <div>
-                <h3 className="text-lg font-bold font-serif text-[#13262F]">
-                  Selecciona el motivo de tu consulta
+                <h3 className="text-lg font-bold font-serif text-[#0E2433]">
+                  Selecciona el motivo de tu comunicación
                 </h3>
-                <p className="text-xs text-[#4A635B] font-sans mt-1">
-                  Tu cliente de correo se abrirá con el asunto preconfigurado para canalizar tu mensaje al área adecuada.
+                <p className="text-xs text-[#0E2433]/70 font-sans mt-1">
+                  Tu cliente de correo se abrirá con el asunto debidamente preconfigurado para canalizar tu mensaje.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <label
                   htmlFor="contact-category-select"
-                  className="block text-xs font-mono uppercase tracking-wider text-[#13262F] font-semibold"
+                  className="block text-xs font-mono uppercase tracking-wider text-[#0E2433] font-semibold"
                 >
                   Motivo de contacto:
                 </label>
@@ -133,7 +134,7 @@ export const Contact: React.FC = () => {
                   name="contactCategory"
                   value={selectedSubject}
                   onChange={(e) => setSelectedSubject(e.target.value)}
-                  className="w-full min-h-[44px] px-3.5 py-2.5 text-xs bg-white border border-[#D8D2C6] rounded-xl text-[#13262F] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] transition-all font-sans"
+                  className="w-full min-h-[44px] px-4 py-2.5 text-xs bg-[#F8F6F1] border border-[#D8D2C6] rounded-2xl text-[#0E2433] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35] transition-all font-sans"
                 >
                   {contactCategories.map((cat) => (
                     <option key={cat} value={cat}>
@@ -144,14 +145,14 @@ export const Contact: React.FC = () => {
               </div>
 
               {/* Pre-formatted mail preview */}
-              <div className="p-4 rounded-xl bg-white border border-[#D8D2C6] space-y-2 text-xs">
-                <div className="flex items-center justify-between text-[#638379] font-mono text-[11px]">
+              <div className="p-4 rounded-2xl bg-[#F8F6F1] border border-[#D8D2C6] space-y-2 text-xs">
+                <div className="flex items-center justify-between text-[#0E2433]/70 font-mono text-[11px]">
                   <span>Destinatario:</span>
-                  <span className="font-bold text-[#13262F]">{siteConfig.contact.primaryEmail}</span>
+                  <span className="font-bold text-[#0E2433]">{siteConfig.contact.primaryEmail}</span>
                 </div>
-                <div className="flex items-center justify-between text-[#638379] font-mono text-[11px]">
+                <div className="flex items-center justify-between text-[#0E2433]/70 font-mono text-[11px]">
                   <span>Asunto configurado:</span>
-                  <span className="font-bold text-[#2E4846] truncate max-w-[260px] sm:max-w-none">
+                  <span className="font-bold text-[#FF6B35] truncate max-w-[260px] sm:max-w-none">
                     [JIVOTECK] {selectedSubject}
                   </span>
                 </div>
@@ -160,19 +161,19 @@ export const Contact: React.FC = () => {
               <div className="space-y-3 pt-2">
                 <a
                   href={mailtoHref}
-                  className="min-h-[44px] w-full py-3.5 px-6 bg-[#13262F] hover:bg-[#1D3845] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                  className="w-full py-3.5 px-6 bg-[#0E2433] hover:bg-[#132E40] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
                 >
                   <Send className="w-3.5 h-3.5 text-white" aria-hidden="true" />
-                  <span>Redactar correo para: {selectedSubject}</span>
+                  <span>Redactar correo: {selectedSubject}</span>
                 </a>
 
                 {/* Privacy agreement notice */}
-                <p className="text-[11px] text-[#638379] font-sans text-center leading-relaxed">
+                <p className="text-[11px] text-[#0E2433]/65 font-sans text-center leading-relaxed">
                   Al enviar una comunicación a través de este canal, confirmas que has leído el{' '}
                   <button
                     type="button"
                     onClick={() => setPrivacyModalOpen(true)}
-                    className="underline text-[#2E4846] hover:text-[#13262F] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] rounded p-0.5"
+                    className="underline text-[#FF6B35] hover:text-[#E85A24] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35] rounded p-0.5"
                   >
                     Aviso de Privacidad
                   </button>{' '}
@@ -190,7 +191,7 @@ export const Contact: React.FC = () => {
       {/* Accessible Privacy Notice Modal */}
       {privacyModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-[#0E2433]/70 backdrop-blur-xs flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="privacy-modal-title"
@@ -198,29 +199,29 @@ export const Contact: React.FC = () => {
           <div className="bg-white rounded-3xl border border-[#EAE5DC] max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-xl">
             <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-3">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#50756C]" aria-hidden="true" />
-                <h3 id="privacy-modal-title" className="text-base font-bold font-serif text-[#13262F]">
+                <ShieldCheck className="w-4 h-4 text-[#2F5F50]" aria-hidden="true" />
+                <h3 id="privacy-modal-title" className="text-base font-bold font-serif text-[#0E2433]">
                   Aviso de Privacidad
                 </h3>
               </div>
               <button
                 type="button"
                 onClick={() => setPrivacyModalOpen(false)}
-                className="min-h-[40px] min-w-[40px] p-2 rounded-xl text-[#638379] hover:text-[#13262F] hover:bg-[#FAF8F5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846] flex items-center justify-center"
+                className="min-h-[40px] min-w-[40px] p-2 rounded-full text-[#0E2433]/60 hover:text-[#0E2433] hover:bg-[#F8F6F1] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35] flex items-center justify-center"
                 aria-label="Cerrar modal"
               >
                 <X className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
 
-            <div className="space-y-3 text-xs text-[#4A635B] font-sans leading-relaxed">
+            <div className="space-y-3 text-xs text-[#0E2433]/80 font-sans leading-relaxed">
               <p>
                 <strong>JIVOTECK</strong> (Aguascalientes, México) es responsable del tratamiento de los datos de contacto que proporciones voluntariamente mediante comunicación por correo electrónico oficial.
               </p>
               <p>
                 Los datos recabados serán utilizados exclusivamente para atender y dar seguimiento a tu solicitud de información, vinculación, prensa, alianzas o asuntos corporativos. No se cederán a terceros ni se emplearán con fines comerciales no solicitados.
               </p>
-              <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] text-[11px] text-[#638379]">
+              <div className="p-3 rounded-2xl bg-[#F8F6F1] border border-[#EAE5DC] text-[11px] text-[#0E2433]/70">
                 <strong>Nota institucional:</strong> La formalización registral completa y datos fiscales específicos se proporcionan de manera individual en los instrumentos contractuales correspondientes. Para ejercer tus derechos ARCO o dudas de privacidad, escribe a <code>contacto@jivoteck.com</code>.
               </div>
             </div>
@@ -229,7 +230,7 @@ export const Contact: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setPrivacyModalOpen(false)}
-                className="min-h-[40px] px-4 py-2 bg-[#13262F] hover:bg-[#1D3845] text-white text-xs font-mono font-bold rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E4846]"
+                className="px-5 py-2.5 bg-[#0E2433] hover:bg-[#132E40] text-white text-xs font-mono font-bold rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
               >
                 Entendido
               </button>
