@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Sparkles, Cpu, Layers } from 'lucide-react';
 import { JivoteckEmblem } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
 
@@ -14,12 +14,12 @@ export const Ecosystem: React.FC = () => {
           {/* Left Title Area */}
           <div className="lg:col-span-7 space-y-3">
             <div className="flex items-center gap-2.5">
-              <span className="w-5 h-0.5 bg-[#FF6B35] rounded-full" aria-hidden="true"></span>
+              <span className="w-5 h-0.5 bg-[#FF6B35] rounded-full" aria-hidden="true" />
               <span className="text-xs font-mono font-bold tracking-[0.22em] text-[#0E2433]/70 uppercase">
                 NUESTRAS INICIATIVAS
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0E2433] tracking-tight leading-[1.18]">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0E2433] tracking-tight leading-[1.20]">
               Un ecosistema de ideas con impacto real.
             </h2>
           </div>
@@ -40,11 +40,18 @@ export const Ecosystem: React.FC = () => {
 
         </div>
 
-        {/* Featured Card: Industrialpedia matching Mockup */}
-        <div className="bg-white rounded-3xl border border-[#E5E0D5] shadow-jivo-card overflow-hidden hover:shadow-jivo-hover transition-all duration-300">
+        {/* Featured Card: Industrialpedia matching Mockup with tech details */}
+        <div className="bg-white rounded-3xl border border-[#E5E0D5] shadow-jivo-card overflow-hidden hover:shadow-jivo-hover transition-all duration-300 relative group">
+          
+          {/* Tech corner markers (+) */}
+          <div className="absolute top-3 left-3 text-[10px] font-mono text-[#0E2433]/20 select-none" aria-hidden="true">+</div>
+          <div className="absolute top-3 right-3 text-[10px] font-mono text-[#0E2433]/20 select-none" aria-hidden="true">+</div>
+          <div className="absolute bottom-3 left-3 text-[10px] font-mono text-[#0E2433]/20 select-none" aria-hidden="true">+</div>
+          <div className="absolute bottom-3 right-3 text-[10px] font-mono text-[#0E2433]/20 select-none" aria-hidden="true">+</div>
+
           <div className="grid grid-cols-1 md:grid-cols-12 items-center p-6 sm:p-8 lg:p-10 gap-6 sm:gap-8">
 
-            {/* Left Navy Square Badge */}
+            {/* Left Navy Square Badge with emblem */}
             <div className="md:col-span-3 flex justify-start sm:justify-center">
               <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-[#0E2433] flex items-center justify-center overflow-hidden shadow-md shrink-0">
                 {/* Diagonal orange slashes in corners */}
@@ -66,11 +73,17 @@ export const Ecosystem: React.FC = () => {
             </div>
 
             {/* Middle Content */}
-            <div className="md:col-span-5 space-y-3">
-              {/* Active Initiative Tag */}
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] text-[#0E2433]/75 uppercase">
-                <span className="w-2 h-2 rounded-full bg-[#FF6B35]" aria-hidden="true" />
-                <span>INICIATIVA ACTIVA</span>
+            <div className="md:col-span-5 space-y-3.5">
+              
+              {/* Active Initiative Tag + Tech telemetry indicator */}
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF8F5] border border-[#D8D2C6] text-[10px] font-mono font-bold tracking-widest text-[#0E2433]/80 uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B35] animate-pulse" aria-hidden="true" />
+                  <span>INICIATIVA ACTIVA</span>
+                </div>
+                <span className="text-[10px] font-mono text-[#0E2433]/40 tracking-wider">
+                  RAMA INDUSTRIAL
+                </span>
               </div>
 
               <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#0E2433] tracking-tight">
@@ -80,6 +93,18 @@ export const Ecosystem: React.FC = () => {
               <p className="font-sans text-sm sm:text-base text-[#0E2433]/75 leading-relaxed">
                 Tecnología e información para la industria con identidad y desarrollo propios.
               </p>
+
+              {/* Innovative tech capabilities chips */}
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#F8F6F1] text-[10px] font-mono text-[#0E2433]/70 border border-[#E5E0D5]">
+                  <Cpu className="w-3 h-3 text-[#2F5F50]" aria-hidden="true" />
+                  <span>Datos MRO</span>
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#F8F6F1] text-[10px] font-mono text-[#0E2433]/70 border border-[#E5E0D5]">
+                  <Layers className="w-3 h-3 text-[#2F5F50]" aria-hidden="true" />
+                  <span>Software Privado</span>
+                </span>
+              </div>
 
               <div className="pt-2">
                 <a
@@ -119,14 +144,14 @@ export const Ecosystem: React.FC = () => {
         </div>
 
         {/* Future Initiatives Card: Incubation & Portfolio Architecture */}
-        <div className="bg-white/60 rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div className="bg-white/70 rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-2xl bg-[#0E2433]/5 border border-[#0E2433]/10 flex items-center justify-center shrink-0 text-[#2F5F50]">
               <Sparkles className="w-6 h-6 stroke-[1.8]" aria-hidden="true" />
             </div>
             <div className="space-y-1 max-w-2xl">
               <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest text-[#0E2433]/60 uppercase">
-                <span>ESTRUCTURA DE CRECIMIENTO</span>
+                <span>// ARQUITECTURA DE ESCALA</span>
               </div>
               <h4 className="font-serif text-lg sm:text-xl font-medium text-[#0E2433]">
                 Nuevas iniciativas en desarrollo
