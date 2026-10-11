@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, Sparkles, Cpu, Layers } from 'lucide-react';
-import { JivoteckEmblem } from './JivoteckLogo';
 import { siteConfig } from '../config/siteConfig';
 
 export const Ecosystem: React.FC = () => {
@@ -63,11 +62,11 @@ export const Ecosystem: React.FC = () => {
                   className="absolute -top-6 -right-6 w-12 h-12 bg-[#FF6B35] transform rotate-45 pointer-events-none" 
                   aria-hidden="true" 
                 />
-                {/* Authentic White Jivoteck Emblem */}
-                <JivoteckEmblem
-                  className="w-16 h-16 sm:w-20 sm:h-20 drop-shadow"
-                  color="#FFFFFF"
-                  showAccent={false}
+                {/* Authentic JIVOTECK Brand Mark */}
+                <img
+                  src="/assets/jivoteck_logo_dark.png"
+                  alt="JIVOTECK"
+                  className="w-20 sm:w-24 h-auto object-contain drop-shadow relative z-10"
                 />
               </div>
             </div>

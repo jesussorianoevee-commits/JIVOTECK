@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowDown, ArrowUpRight, ChevronLeft, ChevronRight, Activity } from 'lucide-react';
-import { JivoteckEmblem } from './JivoteckLogo';
 
 export const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -110,9 +109,9 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Exact Geometric Composition with Fixed Non-Overlapping Spacing */}
+          {/* Right Column: Architectural Brand Showcase & Dynamic Carousel */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[530px] aspect-[4/3] sm:aspect-[16/11.5] rounded-3xl overflow-hidden bg-white/70 border border-[#E5E0D5] p-5 sm:p-6 shadow-sm select-none">
+            <div className="relative w-full max-w-[540px] rounded-3xl bg-white/80 border border-[#E5E0D5] p-5 sm:p-7 shadow-sm select-none">
 
               {/* Tech corner crosshair markers (+) */}
               <div className="absolute top-2.5 left-3 text-[10px] font-mono text-[#0E2433]/25" aria-hidden="true">+</div>
@@ -120,54 +119,67 @@ export const Hero: React.FC = () => {
               <div className="absolute bottom-2.5 left-3 text-[10px] font-mono text-[#0E2433]/25" aria-hidden="true">+</div>
               <div className="absolute bottom-2.5 right-3 text-[10px] font-mono text-[#0E2433]/25" aria-hidden="true">+</div>
 
-              {/* Diagonal Background Stripe */}
-              <div 
-                className="absolute top-[-20%] right-[18%] w-[26%] h-[150%] bg-[#FF6B35] transform -skew-x-[26deg] z-10 pointer-events-none"
-                aria-hidden="true"
-              />
+              {/* Graphic Visual Stage: strictly contains all diagonal geometric shapes so they never bleed into text */}
+              <div className="relative w-full h-[210px] sm:h-[250px] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner">
 
-              {/* Architectural Concrete Corner Photo */}
-              <div className="absolute top-4 right-4 sm:top-5 sm:right-6 w-[42%] h-[60%] rounded-2xl overflow-hidden z-0 shadow-inner">
-                <img
-                  src="/assets/hero_architecture.png"
-                  alt="Estructura arquitectónica y geométrica JIVOTECK"
-                  className="w-full h-full object-cover grayscale-[30%] contrast-[1.05]"
-                  loading="eager"
-                />
-              </div>
-
-              {/* Dark Navy Parallelogram with White Authentic Emblem (Calibrated height to NEVER overlap lower text) */}
-              <div 
-                className="absolute top-5 left-4 sm:top-6 sm:left-6 w-[56%] h-[50%] bg-[#0E2433] transform -skew-x-[26deg] rounded-2xl z-20 flex items-center justify-center shadow-xl overflow-hidden"
-                aria-hidden="true"
-              >
-                {/* Tech blueprint dot grid */}
-                <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px]" />
-                
-                {/* Counter-skew the emblem so it stands upright and prominent */}
-                <div className="transform skew-x-[26deg] scale-120 sm:scale-135">
-                  <JivoteckEmblem
-                    className="w-18 h-18 sm:w-22 sm:h-22 drop-shadow-md"
-                    color="#FFFFFF"
-                    showAccent={false}
+                {/* Right: Architectural Concrete Structure Photo */}
+                <div className="absolute top-0 right-0 w-[55%] h-full z-0 overflow-hidden">
+                  <img
+                    src="/assets/hero_architecture.png"
+                    alt="Estructura arquitectónica y geométrica JIVOTECK"
+                    className="w-full h-full object-cover grayscale-[30%] contrast-[1.08]"
+                    loading="eager"
                   />
+                  <div className="absolute inset-0 bg-[#0E2433]/10 mix-blend-multiply" />
+                </div>
+
+                {/* Center Diagonal: Bold Orange Diagonal Stripe Framing the Brand */}
+                <div 
+                  className="absolute -top-[20%] right-[32%] w-[22%] h-[150%] bg-[#FF6B35] transform -skew-x-[22deg] z-10 shadow-lg pointer-events-none"
+                  aria-hidden="true"
+                />
+
+                {/* Front Centerpiece: Dark Navy Parallelogram with Official JIVOTECK Brand */}
+                <div 
+                  className="absolute top-3 left-3 sm:top-4 sm:left-4 w-[60%] sm:w-[58%] h-[84%] sm:h-[82%] bg-[#0E2433] transform -skew-x-[22deg] rounded-2xl z-20 flex items-center justify-center shadow-2xl border border-white/10 overflow-hidden"
+                >
+                  {/* Subtle technical blueprint dot grid */}
+                  <div 
+                    className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px]" 
+                    aria-hidden="true" 
+                  />
+
+                  {/* Counter-skew the brand container so the logo stands upright and prominent */}
+                  <div className="transform skew-x-[22deg] px-3 py-2 flex items-center justify-center">
+                    <img
+                      src="/assets/jivoteck_logo_dark.png"
+                      alt="JIVOTECK"
+                      className="h-10 sm:h-13 w-auto object-contain drop-shadow-md transition-transform duration-300 hover:scale-105"
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+
+                {/* Subtle telemetry stamp inside the visual stage */}
+                <div className="absolute bottom-2.5 right-3 z-20 text-[9px] font-mono tracking-wider text-white/90 bg-[#0E2433]/70 backdrop-blur-xs px-2 py-0.5 rounded border border-white/20 uppercase">
+                  GEO · 21.88°N / 102.29°W
                 </div>
               </div>
 
-              {/* Bottom Information Area: Zero overlap, completely clean layout */}
-              <div className="absolute bottom-4 sm:bottom-5 left-5 right-5 sm:left-6 sm:right-6 z-30 flex items-end justify-between">
+              {/* Bottom Information & Navigation Area: 100% clean, non-overlapping, and spacious */}
+              <div className="pt-5 sm:pt-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
 
-                {/* Floating Strategic Words Column: Clean, completely unobstructed */}
-                <div className="flex flex-col space-y-1.5 pt-2">
+                {/* Floating Strategic Words Column */}
+                <div className="flex flex-col space-y-1.5">
                   {active.words.map((word, idx) => {
                     const isUnderlined = idx === active.highlightIndex;
                     return (
                       <div key={word} className="flex flex-col">
-                        <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-[#0E2433]/85 uppercase leading-none">
+                        <span className="text-xs sm:text-[13px] font-mono font-bold tracking-[0.24em] text-[#0E2433]/90 uppercase leading-none">
                           {word}
                         </span>
                         {isUnderlined && (
-                          <span className="w-8 h-0.5 bg-[#FF6B35] mt-1 rounded-full" aria-hidden="true" />
+                          <span className="w-8 h-0.5 bg-[#FF6B35] mt-1.5 rounded-full" aria-hidden="true" />
                         )}
                       </div>
                     );
@@ -175,12 +187,12 @@ export const Hero: React.FC = () => {
                 </div>
 
                 {/* Carousel Navigation Indicators */}
-                <div className="flex flex-col items-end gap-1.5">
-                  <span className="text-[10px] font-mono text-[#0E2433]/50 hidden sm:block">
+                <div className="flex flex-col items-start sm:items-end gap-2 pt-1 sm:pt-0">
+                  <span className="text-[11px] font-mono text-[#0E2433]/60 hidden sm:block">
                     {active.tagline}
                   </span>
 
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-3">
                     <span className="text-xs font-mono font-bold text-[#0E2433]/80 mr-1">
                       <span className="text-[#0E2433] font-black">{active.num}</span>
                       <span className="text-[#0E2433]/40"> / 03</span>
