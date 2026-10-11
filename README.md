@@ -42,7 +42,7 @@ Consiste en la plataforma inteligente de homologación, comparativa técnica y s
 - **Correo Oficial**: [contacto@jivoteck.com](mailto:contacto@jivoteck.com)
 - **Sede Operativa**: Aguascalientes, México (Operaciones Nacionales e Internacionales)
 - **Horario**: Lunes a Viernes de 9:00 a 18:00 (Hora Centro de México)
-- **Redes Sociales**: Conectores integrados para LinkedIn, X / Twitter, Instagram y GitHub.
+- **LinkedIn Corporativo**: [linkedin.com/company/jivoteck](https://www.linkedin.com/company/jivoteck/)
 
 ---
 

@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
     location: "Aguascalientes, México"
   },
   social: {
-    // Redes sociales sin URL corporativa verificada permanecen inactivas
+    linkedin: "https://www.linkedin.com/company/jivoteck/",
   },
   industrialpedia: {
     websiteUrl: "https://industrialpedia.com.mx/",

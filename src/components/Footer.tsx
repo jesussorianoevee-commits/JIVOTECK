@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Linkedin, Youtube, Mail, ShieldCheck, X } from 'lucide-react';
 import { JivoteckLogo } from './JivoteckLogo';
+import { siteConfig } from '../config/siteConfig';
 
 export const Footer: React.FC = () => {
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
@@ -70,12 +71,12 @@ export const Footer: React.FC = () => {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href={siteConfig.social.linkedin || "https://www.linkedin.com/company/jivoteck/"}
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#FF6B35] flex items-center justify-center text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
-              title="LinkedIn corporativo"
-              aria-label="LinkedIn de JIVOTECK"
+              title="LinkedIn corporativo de JIVOTECK"
+              aria-label="LinkedIn corporativo de JIVOTECK"
             >
               <Linkedin className="w-4 h-4" aria-hidden="true" />
             </a>

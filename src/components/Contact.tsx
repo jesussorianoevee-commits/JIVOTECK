@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, MapPin, Send, ShieldCheck, X } from 'lucide-react';
+import { Mail, Copy, Check, MapPin, Send, ShieldCheck, X, Linkedin, ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 export const Contact: React.FC = () => {
@@ -106,6 +106,36 @@ export const Contact: React.FC = () => {
                 Atención y vinculación corporativa para alianzas, iniciativas tecnológicas e información institucional.
               </p>
             </div>
+
+            {/* LinkedIn Corporativo Card */}
+            {siteConfig.social.linkedin && (
+              <div className="p-6 rounded-3xl bg-white border border-[#E5E0D5] space-y-3 shadow-sm">
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-mono uppercase tracking-[0.2em] text-[#0E2433]/70 font-bold flex items-center gap-2">
+                    <Linkedin className="w-4 h-4 text-[#0A66C2]" aria-hidden="true" />
+                    <span>Red Corporativa</span>
+                  </div>
+                  <span className="w-2 h-2 rounded-full bg-[#2F5F50]" aria-hidden="true" />
+                </div>
+                <div className="text-base font-bold text-[#0E2433] font-serif">
+                  LinkedIn Oficial
+                </div>
+                <p className="text-xs text-[#0E2433]/70 leading-relaxed font-sans">
+                  Comunicados institucionales, avances del ecosistema y vinculación profesional directa.
+                </p>
+                <div className="pt-1">
+                  <a
+                    href={siteConfig.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-[#FF6B35] hover:text-[#E85A24] uppercase transition-colors"
+                  >
+                    <span>Conectar en LinkedIn</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            )}
 
           </div>
 
