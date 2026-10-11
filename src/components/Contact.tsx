@@ -8,12 +8,13 @@ export const Contact: React.FC = () => {
   const [privacyModalOpen, setPrivacyModalOpen] = useState<boolean>(false);
 
   const contactCategories = [
+    'Soluciones para empresas',
+    'Industrialpedia',
     'Alianzas y colaboraciones',
     'Relaciones institucionales',
     'Prensa y comunicación',
     'Administración / facturación',
     'Proveedores',
-    'Industrialpedia',
     'Talento',
     'Otro motivo'
   ];

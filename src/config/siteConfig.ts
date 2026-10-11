@@ -22,8 +22,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "JIVOTECK",
-  tagline: "Corporativo Tecnológico",
-  description: "JIVOTECK es un corporativo tecnológico mexicano que crea y da estructura a proyectos tecnológicos con visión de largo plazo.",
+  tagline: "Casa de Innovación Tecnológica",
+  description: "JIVOTECK es una casa corporativa de innovación tecnológica mexicana. Desarrollamos, estructuramos e impulsamos tecnologías e iniciativas propias que facilitan el acceso a la información, mejoran procesos y ayudan a las personas y empresas a resolver problemas.",
   contact: {
     primaryEmail: "contacto@jivoteck.com",
     location: "Aguascalientes, México"
@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
   industrialpedia: {
     websiteUrl: "https://industrialpedia.com.mx/",
     title: "Industrialpedia",
-    subtitle: "Tecnología e información para la industria",
-    description: "Industrialpedia es la iniciativa tecnológica activa del ecosistema JIVOTECK. Opera con identidad propia y concentra el desarrollo de software e información orientados al entorno industrial."
+    subtitle: "Organización y consulta de información técnica industrial",
+    description: "Plataforma tecnológica especializada en la organización y consulta de información técnica industrial. Centraliza información de componentes y refacciones para facilitar su búsqueda, comparación y evaluación."
   }
 };

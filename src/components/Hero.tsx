@@ -7,21 +7,21 @@ export const Hero: React.FC = () => {
   const slides = [
     {
       num: '01',
-      words: ['TECNOLOGÍA', 'ESTRATEGIA', 'IDEAS', 'PERSONAS'],
+      words: ['CONECTIVIDAD', 'ACCESIBILIDAD', 'INFORMACIÓN', 'PERSONAS'],
       highlightIndex: 3, // PERSONAS underlined
-      tagline: 'Infraestructura y visión de largo plazo',
+      tagline: 'Tecnología intuitiva y centrada en las personas',
     },
     {
       num: '02',
-      words: ['ESTRUCTURA', 'INNOVACIÓN', 'INDUSTRIA', 'PRODUCTOS'],
+      words: ['INNOVACIÓN', 'ESTRUCTURA', 'INDUSTRIA', 'PROCESOS'],
       highlightIndex: 2, // INDUSTRIA underlined
-      tagline: 'Desarrollo enfocado en retos reales',
+      tagline: 'Soluciones que responden a necesidades reales',
     },
     {
       num: '03',
-      words: ['VISIÓN', 'IDENTIDAD', 'GOBERNANZA', 'FUTURO'],
-      highlightIndex: 3, // FUTURO underlined
-      tagline: 'Iniciativas con autonomía propia',
+      words: ['TECNOLOGÍA', 'DECISIONES', 'SIMPLICIDAD', 'PROPÓSITO'],
+      highlightIndex: 3, // PROPÓSITO underlined
+      tagline: 'Impulsando iniciativas con identidad propia',
     },
   ];
 
@@ -55,14 +55,14 @@ export const Hero: React.FC = () => {
               <div className="flex items-center gap-2">
                 <span className="w-5 h-0.5 bg-[#FF6B35] rounded-full" aria-hidden="true" />
                 <span className="text-xs font-mono font-bold tracking-[0.22em] text-[#0E2433]/70 uppercase">
-                  JIVOTECK · CORPORATIVO TECNOLÓGICO
+                  JIVOTECK · CASA DE INNOVACIÓN TECNOLÓGICA
                 </span>
               </div>
 
-              {/* Innovative subtle telemetry pill */}
+              {/* Subtle telemetry pill */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-[#D8D2C6]/80 text-[10px] font-mono font-semibold text-[#0E2433]/65 uppercase shadow-2xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2F5F50] animate-pulse" aria-hidden="true" />
-                <span>NODO HQ · MÉXICO</span>
+                <span>INNOVACIÓN CON PROPÓSITO</span>
               </div>
             </div>
 
@@ -73,18 +73,18 @@ export const Hero: React.FC = () => {
               mundos.
             </h1>
 
-            {/* Description */}
+            {/* Description aligned with LinkedIn & official corporate definition */}
             <p className="text-base sm:text-lg text-[#0E2433]/80 leading-relaxed font-sans max-w-xl font-normal">
-              Creamos y damos estructura a proyectos tecnológicos con visión de largo plazo. JIVOTECK es la casa corporativa desde la que se desarrolla Industrialpedia y desde la que pueden crecer nuevas iniciativas con identidad propia.
+              Creamos tecnología que conecta, facilita e impulsa la innovación. JIVOTECK desarrolla, estructura e impulsa iniciativas tecnológicas propias orientadas a resolver problemas reales, simplificar procesos industriales y hacer la información accesible para todos.
             </p>
 
             {/* Actions: Primary Orange Pill & Secondary Pill */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
-                href="#ecosistema"
+                href="#soluciones"
                 className="bg-[#FF6B35] hover:bg-[#E85A24] text-white px-7 py-3.5 rounded-full font-bold text-xs tracking-wider uppercase inline-flex items-center justify-center gap-2 shadow-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B35]"
               >
-                <span>Conoce el ecosistema</span>
+                <span>Nuestras soluciones</span>
                 <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </a>
 
@@ -97,14 +97,14 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Innovative subtle telemetry footer */}
+            {/* Subtle telemetry footer */}
             <div className="pt-4 border-t border-[#D8D2C6]/60 flex items-center gap-4 text-[11px] font-mono text-[#0E2433]/50">
               <span className="flex items-center gap-1.5">
                 <Activity className="w-3.5 h-3.5 text-[#FF6B35]" aria-hidden="true" />
-                <span>ECOSISTEMA ACTIVO</span>
+                <span>TECNOLOGÍA PROPIA</span>
               </span>
               <span>·</span>
-              <span>ARQUITECTURA EMPRESARIAL B2B</span>
+              <span>INFORMACIÓN ÚTIL & ENFOQUE HUMANO</span>
             </div>
 
           </div>

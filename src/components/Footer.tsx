@@ -8,8 +8,9 @@ export const Footer: React.FC = () => {
 
   const footerLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Quiénes somos', href: '#quienes-somos' },
+    { name: 'Soluciones', href: '#soluciones' },
     { name: 'Ecosistema', href: '#ecosistema' },
+    { name: 'Quiénes somos', href: '#quienes-somos' },
     { name: 'Contacto', href: '#contacto' },
   ];
 
@@ -38,7 +39,7 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-0.5 text-xs text-white/60 font-sans">
               <p className="font-mono text-white/70">© 2026 JIVOTECK</p>
-              <p>Corporativo tecnológico.</p>
+              <p>Casa de innovación tecnológica mexicana.</p>
             </div>
           </div>
 
@@ -98,7 +99,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Privacy & Legal */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-white/50 font-sans">
           <p>
-            Aguascalientes, México · Gestión y desarrollo de iniciativas tecnológicas con visión de largo plazo.
+            Aguascalientes, México · Casa de innovación tecnológica dedicada a desarrollar, estructurar e impulsar iniciativas propias.
           </p>
 
           <button

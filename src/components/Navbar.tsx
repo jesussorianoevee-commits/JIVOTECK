@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'quienes-somos', 'ecosistema', 'contacto'];
+      const sections = ['inicio', 'soluciones', 'ecosistema', 'quienes-somos', 'contacto'];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -30,8 +30,9 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio', id: 'inicio' },
-    { name: 'Quiénes somos', href: '#quienes-somos', id: 'quienes-somos' },
+    { name: 'Soluciones', href: '#soluciones', id: 'soluciones' },
     { name: 'Ecosistema', href: '#ecosistema', id: 'ecosistema' },
+    { name: 'Quiénes somos', href: '#quienes-somos', id: 'quienes-somos' },
     { name: 'Contacto', href: '#contacto', id: 'contacto' },
   ];
 

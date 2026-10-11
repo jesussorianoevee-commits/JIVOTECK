@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { PillarsBar } from './components/PillarsBar';
+import { Solutions } from './components/Solutions';
 import { Ecosystem } from './components/Ecosystem';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
@@ -13,7 +13,7 @@ export const App: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <PillarsBar />
+        <Solutions />
         <Ecosystem />
         <About />
         <Contact />
